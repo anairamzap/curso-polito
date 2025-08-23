@@ -1,18 +1,23 @@
 # Clase 01: ¿qué es un programa? + fases de desarrollo + estructura y sintaxis
 
 ## Breve repaso
-En la clase pasada habíamos intentado encontrar una definición para la acción de programar.
+En la clase pasada habíamos llegado a una definición para la acción de programar.
 Vimos que programar no era exclusivo de la informática, sino una forma de pensar (lógica) para elaborar una serie de
 instrucciones (algoritmo) que serán ejecutadas por una máquina o sistema.
 
 ???+ question "¿Qué es programar?"
     Programar es una forma de pensar para elaborar una serie de instrucciones que serán ejecutadas por un sistema.
 
+???+ question "¿Qué es un algoritmo?"
+    - Un algoritmo es una creación humana.
+    - Se lo puede definir como una serie de instrucciones ordenadas o una lista ordenada de pasos para lograr un objetivo.
+    - Ejemplos clásicos: Una receta de cocina 📖🥣, un manual para armar un mueble 🗒️, tomarse el colectivo :material-bus-stop-covered:
+
 Vimos también qué era un lenguaje de programación: una forma de escribir esas instrucciones. Y los categorizamos por
 algunas de sus posibles características: por su forma de ejecución, por su nivel de rigurosidad en su sintáxis y semántica,
 por sus paradigmas y por su nivel de abstracción.
 
-Vimos también que los lenguajes de programación de "alto nivel" intentan arrimarse al lenguaje humano y al igual que ese
+Vimos también que los lenguajes de programación de "alto nivel" intentan arrimarse al lenguaje humano y, al igual que ese,
 tienen una serie de reglas de sintaxis y semántica con las que hay que cumplir para que, al fin de cuentas, la máquina
 pueda ejecutar nuestras instrucciones de la manera en que las pensamos.
 
@@ -21,12 +26,12 @@ pueda ejecutar nuestras instrucciones de la manera en que las pensamos.
     - Se los suele agrupar por sus características distintivas.
     - Al igual que el lenguaje humano, cada lenguaje tiene reglas **sintácticas** y **semánticas**.
 
-A partir de estas definiciones, ya podemos adentrarnos en dilucidar... ¿qué corno es entonces un programa?
+A partir de estas definiciones, ya podemos adentrarnos en dilucidar... ¿qué es entonces un programa?
 
 ## Programa
 
 La palabra programa puede hacer referencia a muchas cosas no tan disímiles como aparentan:
-Un programa de una materia de la facu, una programa de televisión (¿sigue existiendo ese antro?), un programa político
+Un programa de una materia de la facu, un programa de televisión, un programa político
 (quienes tengan cercanía a espacios de discusión política, habrán notado los constantes reclamos de la existencia de
 dicha cosa), etc...
 
@@ -42,16 +47,24 @@ hasta el final (ya veremos un poco más esto), realizando así las acciones que 
 
 ## Fases de desarrollo
 
-Esto lo veremos en detalle más adelante cuando veamos problemas, pero vale la pena mencionarlo aquí para tener una idea
-general de las fases que tiene el desarrollo de un programa.
+Esto lo veremos en detalle más adelante cuando veamos ejercicios de *problemas*, pero vale la pena mencionarlo aquí para
+tener una idea general de las fases que tiene el desarrollo de un programa.
 
 ¿Por qué insistimos tanto en esto de que programar no es exclusivamente escribir código en un lenguaje elegido? La
 programación empieza mucho antes de sentarse a escribir: **se arranca siempre pensando un problema**, antes incluso de
-pensar en cómo resolverlo. Recuerdan que dijimos en la primera clase que programar es pensar en soluciones creativas
+pensar en cómo resolverlo. Recuerden que dijimos en la primera clase que programar es pensar en soluciones creativas
 para problemas complejos.
 
-Es decir, primero vamos a intentar **descomponer el problema en pasos lógicos**, luego vamos a **imaginar y diseñar soluciones
-posibles** y, finalmente como último paso, vamos a **traducir las soluciones a código** en el lenguaje que hayamos elegido.
+Es decir, primero vamos a intentar **descomponer el problema en pasos lógicos** y ordenados, luego vamos a **imaginar y
+diseñar soluciones posibles** y, finalmente como último paso, vamos a **traducir esas soluciones a código** en el
+lenguaje que hayamos elegido.
+
+???+ abstract "Fases de desarrollo"
+    1. Descomponer el problema en pasos lógicos y ordenados
+    2. Imaginar y diseñar las soluciones posibles
+    3. Traducir las soluciones elegidas a código
+
+
 
 ## Estructura de un programa
 
