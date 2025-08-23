@@ -48,34 +48,36 @@ Dado un número entero, calculá y mostrá el doble y el triple.
 21. **Área y perímetro de un triángulo equilátero**<br>
 Con un lado a, calculá el perímetro (3 * a)  y el área <br>
 <img src="/docs/images/formula_area_equilatero.jpg">
-22. **Conversión de metros a cm y mm**<br>
+
+22. **Conversión de metros a cm y mm** <br>
 Dada una longitud en metros (double), convertíla a centímetros y milímetros.
 23. **Promedio de velocidad en m/s**<br>
 Convertí una velocidad en km/h (vKmH) a m/s (vMs = vKmH * 1000 / 3600).
-24. **Descuento en un producto**<br>
+25. **Descuento en un producto**<br>
 Dado un precio y un porcentaje de descuento, calculá el precio final.
-25. **Tiempo de viaje**<br>
+26. **Tiempo de viaje**<br>
 Dada una distancia en km y una velocidad en km/h, calculá el tiempo de viaje en horas.
-26. **Concatenación de edad**<br>
+28. **Concatenación de edad**<br>
 Dado nombre y edad, mostrá el mensaje "Me llamo <nombre> y tengo <edad> años."
-27. **Interés simple**<br>
+29. **Interés simple**<br>
 Calculá el interés simple con la fórmula: I = capital * tasa * tiempo.
-28. **Interés compuesto**<br>
+30. **Interés compuesto**<br>
 Calculá el monto final con la fórmula: M = capital * (1 + tasa)^tiempo.
-29. **Mayor de dos números**<br>
+31. **Mayor de dos números**<br>
 Dadas dos variables enteras, mostrá cuál es el mayor.
-30. **Menor de tres números**<br>
+32. **Menor de tres números**<br>
 Dadas tres variables enteras, mostrá el menor.
-31. **Conversión de dólares a pesos**<br>
+33. **Conversión de dólares a pesos**<br>
 Dado un monto en dólares y un tipo de cambio, calculá el equivalente en pesos.
-32. **Calcular IMC (Índice de Masa Corporal)**<br>
+34. **Calcular IMC (Índice de Masa Corporal)**<br>
 Dado el peso en kg y la altura en metros, calculá el IMC con la fórmula:
 IMC = peso / (altura * altura).
-33. **Promedio de edad de un grupo**<br>
+35. **Promedio de edad de un grupo**<br>
 Guardá la edad de 4 personas en variables y calculá el promedio.
-34. **Separar decenas y unidades**<br>
+36. **Separar decenas y unidades**<br>
 Dado un número de dos cifras, obtené la decena y la unidad.
 Por ejemplo: 23
 La decena es el 2 y la unidad es el 3
+
 
 
