@@ -145,15 +145,48 @@ manipular.
 Los “tipos primitivos” no son unos ñatos que conviven con dinosaurios y viven en cuevas, sino... los tipos de datos que
 ya vienen definidos por el lenguaje.
 Estos ocuparán un espacio definido en memoria que debemos saber para utilizar cada “tipo” adecuadamente.
-
-1. int
-2. short
-3. long
-4. double
-5. float
-6. boolean
-7. byte
-8. char
+Recordemos que las maquinas solo interpretan datos binarios, esto quiere decir que solo entiende el 1 y el 0
+Por lo tanto para las maquinas todo es una convinación de esos dos valores a los que definimos como bit: Un bit tiene el
+valor 1 o 0.
+Tengamos en claro eso como base para entender como se definien los tipos de datos primitivos.
+Aprovechemos el primer tipo de datos para profundizar en esto:
+1. **byte**  
+Es un tipo de dato que representa una estructura de 8 bits. O sea es el conjunto de 8 bits: 
+byte = 00000000 <br>
+Este tipo de datos puede almacenar los valores númericos enteros que van desde -128 al 127 (ambos inclusive) <br>
+Ustedes se preguntarán ¿Como es que eso sucede? Bueno la maquina construye los números alternando 1 y 0 en esa
+sucesion de bits.<br>
+Por ejemplo lo que escribimos más arriba: **byte = 00000000** representa un 0 para la maquina, o sea nosotros ecribimos un 0 en el teclado y la maquina lo traduce a ese conjunto
+de bits. Si nosotros escribimos un 5 la maquina lo traduce como **00000101**. Como pueden ver siguen siendo 8 bits lo que cambia es
+que posiciones tienen un 1 o un 0.<br>
+Todo esto es importante porque les da la dimensión de lo que se ocupa en la memoria al crear datos.
+Cuando nosotros creamos un dato la computadora reserva en memoria el tamaño mayor que puede alcanzar ese dato.
+En el ejemplo que estamos usando, un byte, la maquina va a reservar 8 bits (8 lugares para poner 1 y 0).<br>
+Entonces es importante que antes de crear datos pensemos qué valores vamos a manejar
+2. **short** <br>
+Representa un tipo de dato de 16 bits. El doble en el uso de la memoria, o sea: **00000000 00000000** <br>
+Puede almacenar valores númericos enteros de -32.768 a 32.767. Por supuesto también lo hace convinando 1 y 0 en esas 16 posiciones
+3. **int** <br> Este tipo de datos puede amacenar valores númericos enteros de 32 bits, o sea **4 veces nuestro primer dato 00000000**
+Los valoes van desde -2³¹ al 2³¹-1. Como pueden ver ya el tamaño del número que permite manejar en mucho más grande.<br>
+Podemos trabajar con números un poco superiores a los 2 mill millones -2.147.483.648 y 2.147.483.647.
+4. **long** <br> Es un tipo de datos de 64 bits o sea 8 veces nuestro primer tipo de dato: <br>
+00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000<br>
+Y puede almacenar números enteros que van desde -2⁶³ al 2⁶³-1. Como se puede imaginar es extremadamente grande:
+9.223372 × 10¹⁸ 
+5. **float** <br> Es un tipo de dato de 32 bits, como el int, solo que permite manejar números com coma flotante.
+Por ejemplo 16,4 o 1879223,45
+6. **double** <br> En este caso es un tipo de dato de 64 bits, como el long, y también premite manejar números con coma
+flotante.<br>
+La direfencia entre el float y double es, obviamente que maneja un número mucho mñas grande, pero principalmente es 
+la precisión del número. Al ser un número decimal su exactitud depende de la cantidad de dígitos maneja después de la coma.
+El tipo de dato double tiene el doble de precisión en ese sentido.
+7. **boolean** <br> Este es un tipo de dato de un bit que representa verdadero o falso.
+8. **char** <br> Es un tipo de dato que representa un carácter Unicode ("https://www.rapidtables.org/code/text/unicode-characters.html")
+de 16 bits. Se utiliza mucho el tipo de dato char para manejar un a letra y no un pedazo de texto.
+9. **String** <br> Este tipo de datos lo ponemos como primitivo, pero no lo es.
+En principio hay que observar que empieza con una mayúscula. En casi todos los lenguajes de
+programación orientada a objetos esto tiene un significado importante. Por ahora podemos decir que
+cuando tenemos que trabajar con textos, usamos este tipo de datos.
 
 ## Operadores
 [Yo sigo acá mañana]
