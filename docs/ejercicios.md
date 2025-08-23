@@ -23,7 +23,7 @@ Creá dos variables nombre y apellido. Mostrá un mensaje que diga "Hola, Nombre
 Dada una variable entera numero, mostrá en consola si es par o impar.
 10. **Hipotenusa (Teorema de Pitágoras)**<br>
 Dadas dos variables catetoA y catetoB (double), calculá la hipotenusa con la fórmula: <br>
-        <image src="/images/formula_hipotenusa.png"> <br>
+        <image src="/docs/images/formula_hipotenusa.png"> <br>
 y mostrá el resultado
 11. **Área de un círculo**<br>
 Dado un radio r, calculá el área con la fórmula π * r²
@@ -47,7 +47,7 @@ Tenés 4 notas. Calculá el promedio y mostrálo con 2 decimales
 Dado un número entero, calculá y mostrá el doble y el triple.
 21. **Área y perímetro de un triángulo equilátero**<br>
 Con un lado a, calculá el perímetro (3 * a)  y el área <br>
-<img src="/images/formula_area_equilatero.png">
+<img src="/docs/images/formula_area_equilatero.png">
 22. **Conversión de metros a cm y mm**<br>
 Dada una longitud en metros (double), convertíla a centímetros y milímetros.
 23. **Promedio de velocidad en m/s**<br>
@@ -77,3 +77,4 @@ Guardá la edad de 4 personas en variables y calculá el promedio.
 Dado un número de dos cifras, obtené la decena y la unidad.
 Por ejemplo: 23
 La decena es el 2 y la unidad es el 3
+
