@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+site_name: 'Polito - Curso de programación 2025'
+site_description: 'Clases, documentación, ejercicios y glosario del curso de Programación de la Polito Arcuschin :)'
+nav:
+  - Inicio: index.md
+  - Clase 0: 'clase_0.md'
+  - Clase 1: 'clase_1.md'
+  - Clase 2: 'clase_2.md'
+  - Clase 3: 'clase_3.md'
+  - Clase 4: 'clase_4.md'
+  - Clase 5: 'clase_5.md'
+  - Glosario: 'glosario.md'
+  - Ejercicios: 'ejercicios.md'
+theme:
+    name: material
+    language: 'es'
+    palette:
+      primary: 'light blue'
+    font:
+      text: 'Roboto'
+      code: 'Roboto Mono'
+    icon:
+      logo: 'fontawesome/solid/hand-peace'
+    favicon: 'images/libro_abierto.ico'
+markdown_extensions:
+  - meta
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - codehilite
+  - footnotes
+  - smarty
+  - toc:
+      permalink: True
+      baselevel: 1
+  - sane_lists
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+extra_css:
+  - 'css/overrides.css'
+plugins:
+  - search:
+      lang: es
+  - print-site
