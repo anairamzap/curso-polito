@@ -574,7 +574,8 @@ instrucciones (algoritmo) que serán ejecutadas por una máquina o sistema.</p>
 </ul>
 </details>
 <p>Vimos también qué era un lenguaje de programación: una forma de escribir esas instrucciones. Y los categorizamos por
-algunas de sus posibles características: por su forma de ejecución, por su nivel de rigurosidad en su sintáxis y semántica,
+algunas de sus posibles características: por su forma de ejecución, por su nivel de rigurosidad en su sintáxis y
+semántica,
 por sus paradigmas y por su nivel de abstracción.</p>
 <p>Vimos también que los lenguajes de programación de &ldquo;alto nivel&rdquo; intentan arrimarse al lenguaje humano y, al igual que ese,
 tienen una serie de reglas de sintaxis y semántica con las que hay que cumplir para que, al fin de cuentas, la máquina
@@ -599,8 +600,7 @@ tópicos que se deben seguir en el orden establecido y de una forma más o menos
 hasta el final (ya veremos un poco más esto), realizando así las acciones que definimos dentro de ese programa.</p>
 <details class="question" open="open">
 <summary>¿Qué es un programa?</summary>
-<p>Un programa informático es un conjunto de sentencias que se ejecutan desde el inicio hasta el final realizando así
-las acciones definidas.</p>
+<p>Un programa informático es un conjunto de sentencias que se ejecutan desde el inicio hasta el final realizando así las acciones definidas.</p>
 </details>
 <h2 id="clase_1-fases-de-desarrollo">Fases de desarrollo<a class="headerlink" href="#clase_1-fases-de-desarrollo" title="Permanent link">&para;</a></h2>
 <p>Esto lo veremos en detalle más adelante cuando veamos ejercicios de <em>problemas</em>, pero vale la pena mencionarlo aquí para
@@ -623,9 +623,20 @@ lenguaje que hayamos elegido.</p>
 <h2 id="clase_1-estructura-de-un-programa">Estructura de un programa<a class="headerlink" href="#clase_1-estructura-de-un-programa" title="Permanent link">&para;</a></h2>
 <p>Vamos a ver cómo se ve un programita básico (&ldquo;<a href="https://es.wikipedia.org/wiki/Hola_mundo">Hola Mundo</a>&ldquo;<sup id="fnref:1"><a class="footnote-ref" href="#clase_1-fn:1">1</a></sup>) para intentar
 descomponer su estructura.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">HolaMundo</span><span class="p">;</span>
-
-<span class="cm">/**</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/**</span>
 <span class="cm"> *</span>
 <span class="cm"> * @author nombre</span>
 <span class="cm"> */</span>
@@ -635,91 +646,240 @@ descomponer su estructura.</p>
 <span class="cm">     * @param args the command line arguments</span>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="c1">// TODO: el código a ejecutar viene acá abajo</span>
+<span class="w">        </span><span class="c1">// TODO: el código a ejecutar viene acá abajo.</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;¡Hola mundo!&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
-</code></pre></div>
+</code></pre></div></td></tr></table></div>
 <p>Descomponemos el programa:</p>
 <ul>
 <li>Vemos que hay <strong>líneas</strong> de texto</li>
-<li>Las líneas parecieran estar agrupadas en “bloques”</li>
-<li>Hay unas líneas &ldquo;especiales&rdquo; que empiezan con símbolos: barras y asteriscos (<code>/**</code> <code>//</code>) </li>
-<li>Para imprimir un texto, el lenguaje &ldquo;ya viene&rdquo; con una función definida para tal fin (<code>System.out.print()</code>)</li>
+<li>Las líneas parecieran estar agrupadas en &ldquo;bloques&rdquo;</li>
+<li>Hay llaves que &ldquo;engloban&rdquo; líneas</li>
+<li>Hay paréntesis que &ldquo;abrazan&rdquo; palabras</li>
+<li>Hay unas líneas &ldquo;especiales&rdquo; que empiezan con símbolos: barras y asteriscos (<code>/**</code> <code>//</code>)</li>
+<li>La línea que imprime el texto (<code>System.out.print()</code>), &ldquo;ya viene&rdquo; con el lenguaje. </li>
 </ul>
-<p><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span></p>
 <h3 id="clase_1-sentencias-y-bloques">Sentencias y bloques<a class="headerlink" href="#clase_1-sentencias-y-bloques" title="Permanent link">&para;</a></h3>
-<p>Las líneas de nuestro programa son&hellip; ¡las sentencias! Estas vienen a ser la representación de las acciones que nuestro
+<p>Las líneas de nuestro programa son&hellip; ¡las sentencias! Una sentencia es una representación de la acción que nuestro
 programa debe ejecutar.</p>
-<p>A la agrupación de líneas de código que conforman una sola sentencia, las llamaremos bloques.
-Indentación</p>
+<p>A la agrupación de líneas de código que conforman una sola sentencia, las llamaremos bloques.</p>
+<h3 id="clase_1-llaves-y-parentesis">Llaves y paréntesis<a class="headerlink" href="#clase_1-llaves-y-parentesis" title="Permanent link">&para;</a></h3>
+<p>Las llaves son las que construyen la estructura del código, delimitando los bloques. Indican que todo lo que está entre
+la llave de apertura (<code>{</code>) y la de clausura (<code>}</code>) &ldquo;pertence&rdquo; a la línea que antecede inmediatamente a la apertura.</p>
+<p>En nuestro ejemplo tenemos dos &ldquo;conjuntos&rdquo; de llaves:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HolaMundo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Hay cosas acá adentro.</span>
+<span class="w">    </span><span class="c1">// Y todas pertenecen a esta clase (class) pública (public) llamada HolaMundo.</span>
+<span class="p">}</span>
+</code></pre></div>
+y</p>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Hay cosas acá adentro.</span>
+<span class="w">    </span><span class="c1">// Y todas pertenecen esta función pública y estática (static) llamada main.</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Los paréntesis también cumplen la función de agrupar, pero a diferencia de las llaves no conforman bloques, sino algo
+similar a un agrupamiento de palabras o incluso una palabra sola.</p>
+<p>Veremos esto más en detalle cuando veamos &ldquo;Funciones&rdquo; (que se suele representar: <code>f(x)</code>) pero por ahora recordemos que lo
+que está dentro de un paréntesis &ldquo;pertenece&rdquo; a la <em>palabra</em> o expresión que antecede inmediatamente el de apertura <code>(</code>.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> *</span>
+<span class="cm"> * @author nombre</span>
+<span class="cm"> */</span>
+<span class="hll"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HolaMundo</span><span class="w"> </span><span class="p">{</span>
+</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * @param args the command line arguments</span>
+<span class="cm">     */</span>
+<span class="hll"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span class="w">        </span><span class="c1">// TODO: el código a ejecutar viene acá abajo.</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;¡Hola mundo!&quot;</span><span class="p">);</span>
+<span class="hll"><span class="w">    </span><span class="p">}</span>
+</span><span class="hll"><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<h3 id="clase_1-indentacion">Indentación<a class="headerlink" href="#clase_1-indentacion" title="Permanent link">&para;</a></h3>
+<p>El espacio en blanco que vemos antes de las líneas de código es la indentación o el indentado. En la sintaxis de los
+lenguajes humanos esto se conoce como sangría. En el caso de Java la indentación no tiene importancia sintáctica ni
+semántica, peeeero es importante respetarla porque facilita visualmente la comprensión y la identificación de los bloques.</p>
 <h3 id="clase_1-comentarios">Comentarios<a class="headerlink" href="#clase_1-comentarios" title="Permanent link">&para;</a></h3>
-<p>Un comentario es una línea de texto que no es ejecutada, es algo así como una nota que agrega quien escribe el programa
-para hacer aclaraciones acerca de ese código. Pueden ser notas sobre la funcionalidad (qué hace), y también para
-facilitar la comprensión de la solución implementada (cómo lo hace). Es una buena práctica utilizar los comentarios para
-&ldquo;documentar&rdquo; nuestro código y así facilitar que otras personas puedan modificarlo (o incluso para nuestro yo del
-futuro :) ).</p>
+<p>Un comentario es una línea de texto que no es ejecutada, es una nota que agrega quien escribe el programa
+para hacer aclaraciones sobre ese código. Pueden ser notas sobre la funcionalidad (qué hace), o para facilitar la
+comprensión de la solución implementada (cómo lo hace).</p>
+<p>Es una buena práctica utilizar los comentarios para &ldquo;documentar&rdquo; nuestro código y así facilitar que otras personas
+puedan modificarlo (o incluso para nuestro <em>yo del futuro</em> :) ).</p>
 <h3 id="clase_1-ciclo-del-programa-inicio-proceso-final">Ciclo del programa: Inicio, proceso, final.<a class="headerlink" href="#clase_1-ciclo-del-programa-inicio-proceso-final" title="Permanent link">&para;</a></h3>
+<p>Veremos esto en clase cuando &ldquo;corramos&rdquo; <img alt="🏃🏿‍➡️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3c3-1f3ff-200d-27a1-fe0f.svg" title=":person_running_facing_right_tone5:" /> nuestro programa, pero dejamos aquí una
+definición muy esquemática de un ciclo. </p>
 <p>Analicemos el ciclo:</p>
 <ul>
-<li>Inicio: Punto de entrada</li>
-<li>Proceso: El código es ejecutado (una vez que se cargó en memoria) y el sistema operativo gestiona los recursos del
-  entorno (asigna recursos, comunica con dispositivos I/O, archivos, etc).</li>
-<li>Final: Códigos de salida</li>
+<li><strong>Inicio</strong>: Punto de entrada (o <em>entrypoint</em> en inglés)</li>
+<li><strong>Proceso</strong>: Una vez que se cargó en memoria, el código es ejecutado y el sistema operativo gestionará los recursos del
+  entorno (asignando recursos, comunicando con dispositivos de entrada y salida, archivos, etc&hellip;).</li>
+<li><strong>Final</strong>: Código de salida.</li>
 </ul>
 <h2 id="clase_1-tipos-de-datos-y-valores">Tipos de datos y valores<a class="headerlink" href="#clase_1-tipos-de-datos-y-valores" title="Permanent link">&para;</a></h2>
-<p>Los tipos de datos clasifican datos según sus características específicas. Por otro lado, los valores son los datos
-dentro de cada tipo.</p>
+<p>Los tipos de datos <strong>clasifican datos según sus características específicas</strong>. Los valores son los datos en sí mismos
+(y pertenecerán a un tipo u otro).
+Entenderemos un poco más el concepto de valor y dato cuando veamos Variables.</p>
 <p>Recuerdan que en la primera clase vimos que había lenguajes fuertemente tipados o débilmente tipados, esta
 caractéristica de los lenguajes hará que en nuestro programa debamos explicitar (o no) el tipo de dato que vamos a
-manipular.</p>
+manipular. Veamos entonces ahora los tipos de datos llamados primitivos o elementales que nos ofrece Java.</p>
 <h3 id="clase_1-tipos-primitivos">Tipos primitivos<a class="headerlink" href="#clase_1-tipos-primitivos" title="Permanent link">&para;</a></h3>
-<p>[Abe:: Copié esto del doc de la clase, pero modificalo, agregá, borrá]</p>
-<p>Los “tipos primitivos” no son unos ñatos que conviven con dinosaurios y viven en cuevas, sino&hellip; los tipos de datos que
-ya vienen definidos por el lenguaje.
-Estos ocuparán un espacio definido en memoria que debemos saber para utilizar cada “tipo” adecuadamente.
-Recordemos que las maquinas solo interpretan datos binarios, esto quiere decir que solo entiende el 1 y el 0
-Por lo tanto para las maquinas todo es una convinación de esos dos valores a los que definimos como bit: Un bit tiene el
-valor 1 o 0.
-Tengamos en claro eso como base para entender como se definien los tipos de datos primitivos.
-Aprovechemos el primer tipo de datos para profundizar en esto:
-1. <strong>byte</strong><br />
-Es un tipo de dato que representa una estructura de 8 bits. O sea es el conjunto de 8 bits: 
-byte = 00000000 <br>
-Este tipo de datos puede almacenar los valores númericos enteros que van desde -128 al 127 (ambos inclusive) <br>
-Ustedes se preguntarán ¿Como es que eso sucede? Bueno la maquina construye los números alternando 1 y 0 en esa
-sucesion de bits.<br>
-Por ejemplo lo que escribimos más arriba: <strong>byte = 00000000</strong> representa un 0 para la maquina, o sea nosotros ecribimos un 0 en el teclado y la maquina lo traduce a ese conjunto
-de bits. Si nosotros escribimos un 5 la maquina lo traduce como <strong>00000101</strong>. Como pueden ver siguen siendo 8 bits lo que cambia es
-que posiciones tienen un 1 o un 0.<br>
-Todo esto es importante porque les da la dimensión de lo que se ocupa en la memoria al crear datos.
-Cuando nosotros creamos un dato la computadora reserva en memoria el tamaño mayor que puede alcanzar ese dato.
-En el ejemplo que estamos usando, un byte, la maquina va a reservar 8 bits (8 lugares para poner 1 y 0).<br>
-Entonces es importante que antes de crear datos pensemos qué valores vamos a manejar
-2. <strong>short</strong> <br>
-Representa un tipo de dato de 16 bits. El doble en el uso de la memoria, o sea: <strong>00000000 00000000</strong> <br>
-Puede almacenar valores númericos enteros de -32.768 a 32.767. Por supuesto también lo hace convinando 1 y 0 en esas 16 posiciones
-3. <strong>int</strong> <br> Este tipo de datos puede amacenar valores númericos enteros de 32 bits, o sea <strong>4 veces nuestro primer dato 00000000</strong>
-Los valoes van desde -2³¹ al 2³¹-1. Como pueden ver ya el tamaño del número que permite manejar en mucho más grande.<br>
-Podemos trabajar con números un poco superiores a los 2 mill millones -2.147.483.648 y 2.147.483.647.
-4. <strong>long</strong> <br> Es un tipo de datos de 64 bits o sea 8 veces nuestro primer tipo de dato: <br>
-00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000<br>
-Y puede almacenar números enteros que van desde -2⁶³ al 2⁶³-1. Como se puede imaginar es extremadamente grande:
-9.223372 × 10¹⁸ 
-5. <strong>float</strong> <br> Es un tipo de dato de 32 bits, como el int, solo que permite manejar números com coma flotante.
-Por ejemplo 16,4 o 1879223,45
-6. <strong>double</strong> <br> En este caso es un tipo de dato de 64 bits, como el long, y también premite manejar números con coma
-flotante.<br>
-La direfencia entre el float y double es, obviamente que maneja un número mucho mñas grande, pero principalmente es 
-la precisión del número. Al ser un número decimal su exactitud depende de la cantidad de dígitos maneja después de la coma.
-El tipo de dato double tiene el doble de precisión en ese sentido.
-7. <strong>boolean</strong> <br> Este es un tipo de dato de un bit que representa verdadero o falso.
-8. <strong>char</strong> <br> Es un tipo de dato que representa un carácter Unicode (&ldquo;https://www.rapidtables.org/code/text/unicode-characters.html&rdquo;)
-de 16 bits. Se utiliza mucho el tipo de dato char para manejar un a letra y no un pedazo de texto.
-9. <strong>String</strong> <br> Este tipo de datos lo ponemos como primitivo, pero no lo es.
-En principio hay que observar que empieza con una mayúscula. En casi todos los lenguajes de
-programación orientada a objetos esto tiene un significado importante. Por ahora podemos decir que
-cuando tenemos que trabajar con textos, usamos este tipo de datos.</p>
+<p>Los &ldquo;tipos primitivos&rdquo;<sup id="fnref:2"><a class="footnote-ref" href="#clase_1-fn:2">2</a></sup>, a veces llamados también Tipos Elementales, son los tipos de datos originales de cada lenguaje.
+Es decir que cada lenguaje ya nos proporciona esos tipos y así también los define:</p>
+<ol>
+<li>Qué <strong>tipo de dato</strong> se puede representar (números -enteros o decimales-, caractéres -letras y símbolos-, etc&hellip;)</li>
+<li>Sus <strong>rangos de valores posibles</strong></li>
+<li>Y por lo anterior entonces también se define <strong>el espacio que ocuparán en memoria</strong> los datos pertenecientes a cada
+tipo</li>
+</ol>
+<p>Recordemos que las máquinas solamente &ldquo;entienden&rdquo; datos que llamamos <strong>binarios</strong>, esto quiere decir que sólo pueden
+ejecutar unos y ceros. Por lo tanto, para las máquinas todo será una combinación de esos dos valores a los que definimos
+como <strong>bits</strong>: Un bit puede tener un valor de 1 o de 0.</p>
+<p>Esto lo tenemos que tener claro para entender como se definen los tipos de datos primitivos.</p>
+<p>Aprovechemos el primer tipo de datos para profundizar en esto:</p>
+<h4 id="clase_1-byte-byte-anglicismo-u-octeto">byte (byte -anglicismo- u octeto)<a class="headerlink" href="#clase_1-byte-byte-anglicismo-u-octeto" title="Permanent link">&para;</a></h4>
+<p>Es un tipo de dato que representa una estructura de <strong>8 bits</strong>. O sea, es el conjunto de 8 bits:</p>
+<div class="highlight"><pre><span></span><code>byte = 00000000
+</code></pre></div>
+<p>Este tipo de dato puede almacenar <strong>valores numéricos enteros</strong> que van desde -128 hasta 127 (ambos inclusive).</p>
+<p>Ustedes se preguntarán ¿cómo es que eso sucede? bueno, la maquina construye los números alternando <code>1</code> y <code>0</code> en esa
+sucesión de bits.</p>
+<p>Por ejemplo, lo que escribimos más arriba: <code>byte = 00000000</code> para la máquina representa <code>0</code>. O sea, nosotros
+escribimos un <code>0</code> en el teclado y la máquina lo &ldquo;traducirá&rdquo; a ese conjunto de (8) bits. Si nosotros escribimos un 5,
+la máquina lo traducirá como <code>00000101</code>. Como pueden ver siguen siendo 8 bits, lo que cambian son las posiciones que tienen
+un <code>1</code> o un <code>0</code>.</p>
+<p>Todo esto es importante porque les da la dimensión de lo que ocupan en memoria los datos.</p>
+<p>Cuando nosotros creamos un dato, la computadora reserva en memoria el tamaño mayor que puede llegar a alcanzar ese dato.
+En el ejemplo que estamos usando, un byte, la máquina va a reservar 8 bits (8 lugares para poner unos y ceros).</p>
+<p>Entonces es importante que <strong>antes de crear datos pensemos qué valores vamos a querer manejar</strong>.</p>
+<h4 id="clase_1-short-entero-corto">short (entero corto)<a class="headerlink" href="#clase_1-short-entero-corto" title="Permanent link">&para;</a></h4>
+<p>Representa un tipo de dato de <strong>16 bits</strong>. O sea, que usará el doble de memoria que nuestro tipo anterior: <code>00000000 00000000</code>.</p>
+<p>Puede almacenar <strong>valores numéricos enteros desde -32.768 hasta 32.767</strong>. Por supuesto también lo hace combinando <code>1</code>s y <code>0</code>s
+en esas 16 posiciones.</p>
+<h4 id="clase_1-int-entero">int (entero)<a class="headerlink" href="#clase_1-int-entero" title="Permanent link">&para;</a></h4>
+<p>Este tipo de dato puede almacenar <strong>valores numéricos enteros</strong> de 32 bits, o sea <strong>4 veces nuestro primer dato <code>00000000</code></strong>
+Los valores van desde -2<sup>31</sup> hasta 2<sup>31</sup>-1. Como pueden ver, el tamaño del número que permite manejar en mucho más
+grande.</p>
+<p>Podemos trabajar con números un poco superiores a los 2 mill millones -2.147.483.648 y 2.147.483.647.</p>
+<h4 id="clase_1-long-entero-largo">long (entero largo)<a class="headerlink" href="#clase_1-long-entero-largo" title="Permanent link">&para;</a></h4>
+<p>Es un tipo de datos de <strong>64 bits</strong> o sea <strong>8 veces nuestro primer tipo de dato</strong>:
+ <code>00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000</code>
+Y puede almacenar <strong>números enteros que van desde -2<sup>63</sup> hasta 2<sup>63</sup>-1</strong>. Como se puede imaginar es extremadamente grande:
+9.223372 × 10<sup>18</sup></p>
+<h4 id="clase_1-float-coma-flotante-o-real">float (coma flotante o &lsquo;real&rsquo;)<a class="headerlink" href="#clase_1-float-coma-flotante-o-real" title="Permanent link">&para;</a></h4>
+<p>Es un tipo de dato de <strong>32 bits</strong>, como el int, pero permite manejar números com coma flotante. Por ejemplo <code>16,4</code> o
+<code>1879223,45</code>. Estos números son los que usualmente se conocen como &ldquo;decimales&rdquo;.</p>
+<p>Este tipo de dato tiene una precisión simple, esto es algo que veremos más adelante, pero por el momento alcanza con
+saber que no debe ser utilizado si vamos a necesitar números con alta precisión (es decir, lo podemos usar para
+aplicaciones gráficas o videojuegos, pero no para información científica o financiera).</p>
+<h4 id="clase_1-double-coma-flotante-doble-o-real-largo">double (coma flotante doble o &lsquo;real largo&rsquo;)<a class="headerlink" href="#clase_1-double-coma-flotante-doble-o-real-largo" title="Permanent link">&para;</a></h4>
+<p>En este caso es un tipo de dato de <strong>64 bits</strong>, como el long, pero permite manejar números con coma flotante, como el float.</p>
+<p>Las diferencias entre el float y double son:
+- El rango numérico (es el doble) 
+- La precisión (es, también, el doble)
+  Al ser un número decimal su &ldquo;exactitud&rdquo; depende de la cantidad de dígitos que puede manejar después de la coma. Por eso,
+  el tipo de dato &ldquo;double&rdquo; tiene el doble de precisión que el &ldquo;float&rdquo;.</p>
+<h4 id="clase_1-boolean-booleano-anglicismo-o-logico">boolean (booleano -anglicismo- o lógico)<a class="headerlink" href="#clase_1-boolean-booleano-anglicismo-o-logico" title="Permanent link">&para;</a></h4>
+<p>Este es un tipo de dato de <strong>un bit</strong> que representa verdadero (en inglés &ldquo;true&rdquo;) o falso (en inglés &ldquo;false&rdquo;)
+(que también podría ser sí o no, 1 o 0, lleno o vacío, etc&hellip;).</p>
+<p>Se los llama así en honor al filósofo y matemático inglés <a href="https://es.wikipedia.org/wiki/George_Boole">George Boole</a>. </p>
+<h4 id="clase_1-char-caracter-o-simbolo">char (carácter o símbolo)<a class="headerlink" href="#clase_1-char-caracter-o-simbolo" title="Permanent link">&para;</a></h4>
+<p>Es un tipo de dato que representa un carácter <a href="https://www.rapidtables.org/code/text/unicode-characters.html">Unicode</a>
+de <strong>16 bits</strong>. Se utiliza mucho el tipo de dato char para manejar un símbolo o una letra (¡que es en última instancia un
+símbolo!) y no un fragmento de texto.</p>
+<h4 id="clase_1-string-cadena-de-texto">String (cadena de texto)<a class="headerlink" href="#clase_1-string-cadena-de-texto" title="Permanent link">&para;</a></h4>
+<p>Este tipo de dato lo ponemos como primitivo ¡pero no lo es! Lo incluimos aquí porque es tan utilizado como los primitivos.</p>
+<p>En principio hay que observar que empieza con una mayúscula. En casi todos los lenguajes de programación orientada a
+objetos esto tiene un significado importante. Por ahora podemos decir que cuando tenemos que trabajar con textos (frases
+o palabras), usamos este tipo de dato.</p>
+<hr />
+<details class="tip">
+<summary>Tipos primitivos de JAVA</summary>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Tipo</th>
+<th style="text-align: center;">Traducción</th>
+<th style="text-align: center;">Memoria utilizada</th>
+<th style="text-align: center;">Rango de valores</th>
+<th>Breve descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">byte</td>
+<td style="text-align: center;">Byte u Octeto (raro)</td>
+<td style="text-align: center;">1 byte (8 bits)</td>
+<td style="text-align: center;">de -128 a 127</td>
+<td>Representación de un número entero positivo o negativo.</td>
+</tr>
+<tr>
+<td style="text-align: center;">short</td>
+<td style="text-align: center;">Entero corto</td>
+<td style="text-align: center;">2 byte (16 bits)</td>
+<td style="text-align: center;">de -32.768 a 32.767</td>
+<td>Representación de un entero positivo o negativo con rango corto.</td>
+</tr>
+<tr>
+<td style="text-align: center;">int</td>
+<td style="text-align: center;">Entero</td>
+<td style="text-align: center;">4 byte (32 bits)</td>
+<td style="text-align: center;">de -2<sup>31</sup> a 2<sup>31</sup>-1</td>
+<td>Representación de un entero estándar.</td>
+</tr>
+<tr>
+<td style="text-align: center;">long</td>
+<td style="text-align: center;">Entero largo</td>
+<td style="text-align: center;">8 byte (64 bits)</td>
+<td style="text-align: center;">de -2<sup>63</sup> a 2<sup>63</sup>-1</td>
+<td>Representación de un entero de rango ampliado.</td>
+</tr>
+<tr>
+<td style="text-align: center;">float</td>
+<td style="text-align: center;">Coma flotante o Real</td>
+<td style="text-align: center;">4 byte (32 bits)</td>
+<td style="text-align: center;">de -10<sup>32</sup> a 10<sup>32</sup></td>
+<td>Representación de un número real estándar. La precisión del dato contenido varía en función del tamaño del número: la precisión se amplia con números más próximos a 0 y disminuye cuanto más se aleja del mismo.</td>
+</tr>
+<tr>
+<td style="text-align: center;">double</td>
+<td style="text-align: center;">Real largo</td>
+<td style="text-align: center;">8 byte (64 bits)</td>
+<td style="text-align: center;">de -10<sup>300</sup> a 10<sup>300</sup></td>
+<td>Representación de un número real con mucha precisión.</td>
+</tr>
+<tr>
+<td style="text-align: center;">char</td>
+<td style="text-align: center;">Carácter</td>
+<td style="text-align: center;">2 byte (16 bits)</td>
+<td style="text-align: center;">de &lsquo;\u0000&rsquo; a &lsquo;\uffff&rsquo;</td>
+<td>Carácter o símbolo. Recordar que para utilizar una &ldquo;cadena de texto&rdquo; se debe usar la clase String.</td>
+</tr>
+<tr>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: center;">Booleano o Lógico</td>
+<td style="text-align: center;">1 bit</td>
+<td style="text-align: center;">true - false</td>
+<td>Representa una &lsquo;posición&rsquo; lógica con dos valores posibles: verdadero (true) o falso (false)</td>
+</tr>
+</tbody>
+</table>
+</details>
 <h2 id="clase_1-operadores">Operadores<a class="headerlink" href="#clase_1-operadores" title="Permanent link">&para;</a></h2>
 <p>[Yo sigo acá mañana]</p>
 <div class="footnote">
@@ -729,6 +889,10 @@ cuando tenemos que trabajar con textos, usamos este tipo de datos.</p>
 <p>&ldquo;Hola, mundo&rdquo; en informática es un programa que muestra el texto «Hola, mundo» en un dispositivo de visualización,
 en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un
 lenguaje de programación, siendo un primer ejercicio típico considerado fundamental desde el punto de vista didáctico.&#160;<a class="footnote-backref" href="#clase_1-fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="clase_1-fn:2">
+<p>En todos los elementos de Java vamos a ver que estos reciben nombres en inglés. Junto a cada tipo vamos a poner su
+traducción en castellano para entenderlos, pero cuando los utilicemos siempre tendrá que ser con su nombre inglés.&#160;<a class="footnote-backref" href="#clase_1-fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
