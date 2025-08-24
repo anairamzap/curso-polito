@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../images/libro_abierto.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
     
     
       
@@ -797,7 +797,8 @@ aplicaciones gráficas o videojuegos, pero no para información científica o fi
 <h4 id="clase_1-boolean-booleano-anglicismo-o-logico">boolean (booleano -anglicismo- o lógico)<a class="headerlink" href="#clase_1-boolean-booleano-anglicismo-o-logico" title="Permanent link">&para;</a></h4>
 <p>Este es un tipo de dato de <strong>un bit</strong> que representa verdadero (en inglés &ldquo;true&rdquo;) o falso (en inglés &ldquo;false&rdquo;)
 (que también podría ser sí o no, 1 o 0, lleno o vacío, etc&hellip;).</p>
-<p>Se los llama así en honor al filósofo y matemático inglés <a href="https://es.wikipedia.org/wiki/George_Boole">George Boole</a>. </p>
+<p>Se los llama así porque está basado en el álgebra &ldquo;booleana&rdquo;, del filósofo y matemático inglés
+<a href="https://es.wikipedia.org/wiki/George_Boole">George Boole</a>. </p>
 <h4 id="clase_1-char-caracter-o-simbolo">char (carácter o símbolo)<a class="headerlink" href="#clase_1-char-caracter-o-simbolo" title="Permanent link">&para;</a></h4>
 <p>Es un tipo de dato que representa un carácter <a href="https://www.rapidtables.org/code/text/unicode-characters.html">Unicode</a>
 de <strong>16 bits</strong>. Se utiliza mucho el tipo de dato char para manejar un símbolo o una letra (¡que es en última instancia un
@@ -808,6 +809,7 @@ símbolo!) y no un fragmento de texto.</p>
 objetos esto tiene un significado importante. Por ahora podemos decir que cuando tenemos que trabajar con textos (frases
 o palabras), usamos este tipo de dato.</p>
 <hr />
+<h3 id="clase_1-tipos-primitivos-tabla">Tipos primitivos - Tabla<a class="headerlink" href="#clase_1-tipos-primitivos-tabla" title="Permanent link">&para;</a></h3>
 <details class="tip">
 <summary>Tipos primitivos de JAVA</summary>
 <table>
@@ -881,7 +883,167 @@ o palabras), usamos este tipo de dato.</p>
 </table>
 </details>
 <h2 id="clase_1-operadores">Operadores<a class="headerlink" href="#clase_1-operadores" title="Permanent link">&para;</a></h2>
-<p>[Yo sigo acá mañana]</p>
+<p>Los operadores son símbolos o palabras que utilizamos para manipular y combinar expresiones.
+Son elemento que nos permiten realizar, como su nombre lo indica, operaciones como:</p>
+<ul>
+<li>Comparaciones</li>
+<li>Procedimientos lógicos</li>
+<li>Cálculos aritméticos</li>
+<li>Asignaciones</li>
+</ul>
+<h3 id="clase_1-operadores-relacionales">Operadores relacionales<a class="headerlink" href="#clase_1-operadores-relacionales" title="Permanent link">&para;</a></h3>
+<p>Utilizamos los operadores relacionales cuando necesitamos comparar dos elementos o valores.</p>
+<p>Dependiendo el operador que usemos tendremos que tener en cuenta, o no, la posición de los elementos con relación al
+operador.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>OPERADOR</strong></th>
+<th style="text-align: center;"><strong>DESCRIPCIÓN</strong></th>
+<th style="text-align: center;"><strong>EJEMPLO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>==</code></td>
+<td style="text-align: center;">Es igual</td>
+<td style="text-align: center;">a == b</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>!=</code></td>
+<td style="text-align: center;">Es distinto</td>
+<td style="text-align: center;">a != b</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&lt;</code></td>
+<td style="text-align: center;">Menor que</td>
+<td style="text-align: center;">a &lt; b</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&gt;</code></td>
+<td style="text-align: center;">Mayor que</td>
+<td style="text-align: center;">a &gt; b</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&lt;=</code></td>
+<td style="text-align: center;">Menor o igual que</td>
+<td style="text-align: center;">a &lt;= b</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>&gt;=</code></td>
+<td style="text-align: center;">Mayor o igual que</td>
+<td style="text-align: center;">a &gt;= b</td>
+</tr>
+</tbody>
+</table>
+<p>Es decir, decir que <code>a == b</code> es lo mismo que decir que <code>b == a</code>, sin embargo, no sería lo mismo intercambiar los operandos
+cuando hacemos una comparación o relación mayor/menor: <code>a &lt; b</code> no es lo mismo que <code>b &lt; a</code>.</p>
+<h3 id="clase_1-operadores-logicos">Operadores lógicos<a class="headerlink" href="#clase_1-operadores-logicos" title="Permanent link">&para;</a></h3>
+<p>A diferencia de los relacionales que <strong>comparan</strong> elementos o valores, los operadores lógicos <strong>combinan</strong> operaciones
+<em>booleanas</em>.</p>
+<p>Son muy utilizados en estructuras condicionadles y <em>loops</em>, que veremos más adelante, para combinar condiciones y obtener
+luego un resultado.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>OPERADOR</strong></th>
+<th style="text-align: center;"><strong>DESCRIPCIÓN</strong></th>
+<th><strong>EJEMPLO</strong></th>
+<th><strong>EJEMPLO COTIDIANO</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>&amp;&amp;</code></td>
+<td style="text-align: center;">Y (de adición)</td>
+<td>si [condición] Y [otra condición]</td>
+<td>Agarro la campera si hace frío Y llueve</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>||</code></td>
+<td style="text-align: center;">O (de exclusión)</td>
+<td>si [condición] U [otra condición]</td>
+<td>Agarro la campera si hace frío O llueve</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>!</code></td>
+<td style="text-align: center;">NO (de negación)</td>
+<td>si NO [condición]</td>
+<td>Dejo la campera si NO hace frío</td>
+</tr>
+</tbody>
+</table>
+<p>Cuando usamos los operadores <code>&amp;&amp;</code> si nuestra primera condición devuelve <em>falso</em> o usando el comparador <code>||</code> sin nuestra primera
+condición devuelve <em>verdadero</em> , en ambos casos la segunda condición no se evaluará.</p>
+<p>Los operadores de negación simplemente invierten un valor lógico.</p>
+<h3 id="clase_1-operadores-aritmeticos">Operadores aritméticos<a class="headerlink" href="#clase_1-operadores-aritmeticos" title="Permanent link">&para;</a></h3>
+<p>Los operadores aritméticos se utilizan para realizar operaciones matemáticas básicas.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>OPERADOR</strong></th>
+<th style="text-align: center;"><strong>DESCRIPCIÓN</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>+</code></td>
+<td style="text-align: center;">Adición</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>-</code></td>
+<td style="text-align: center;">Resta</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>*</code></td>
+<td style="text-align: center;">Multiplicación</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>/</code></td>
+<td style="text-align: center;">División</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>%</code></td>
+<td style="text-align: center;">Módulo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clase_1-operadores-de-asignacion">Operadores de asignación<a class="headerlink" href="#clase_1-operadores-de-asignacion" title="Permanent link">&para;</a></h3>
+<p>Los operadores de asignación se utilizan para asignar valores a las variables.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong>OPERADOR</strong></th>
+<th style="text-align: center;"><strong>DESCRIPCIÓN</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>=</code></td>
+<td style="text-align: center;">Asignación simple</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>+=</code></td>
+<td style="text-align: center;">Añadir y asignar</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>-=</code></td>
+<td style="text-align: center;">`Restar y asignar</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>*=</code></td>
+<td style="text-align: center;">Multiplica y asigna</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>/=</code></td>
+<td style="text-align: center;">Divide y asigna</td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>%=</code></td>
+<td style="text-align: center;">Módulo y asignar</td>
+</tr>
+</tbody>
+</table>
 <div class="footnote">
 <hr />
 <ol>
@@ -895,7 +1057,90 @@ lenguaje de programación, siendo un primer ejercicio típico considerado fundam
 traducción en castellano para entenderlos, pero cuando los utilicemos siempre tendrá que ser con su nombre inglés.&#160;<a class="footnote-backref" href="#clase_1-fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 </ol>
-</div></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+</div></section><section class="print-page" id="ejercicios" heading-number="9"><h1 id="ejercicios-ejercicios-variables">Ejercicios Variables<a class="headerlink" href="#ejercicios-ejercicios-variables" title="Permanent link">&para;</a></h1>
+<ol>
+<li><strong>Suma de enteros</strong> <br>
+Declará dos variables enteras a y b, asígnales valores y mostrá por consola la suma de ambas.</li>
+<li><strong>Área de un rectángulo</strong> <br>
+Usá dos variables base y altura (tipo double) y calculá el área (base * altura). Mostrá el resultado.</li>
+<li><strong>Promedio de tres números</strong> <br>
+Guardá tres notas en variables enteras y calculá el promedio. Mostrálo con decimales.</li>
+<li><strong>Intercambio de valores</strong> <br>
+Tenés dos variables x = 5 e y = 10. Intercambiá los valores y mostrá el resultado.</li>
+<li><strong>Conversión de temperatura</strong> <br>
+Dada una variable celsius, calculá y mostrá la temperatura en Fahrenheit.
+Fórmula: F = (C * 9/5) + 32.</li>
+<li><strong>Cálculo de sueldo</strong> <br>
+Guardá en variables el sueldo base y un bono extra. Calculá el sueldo total y mostralo. (Pensá si los sueldos y el bono
+son valores enteros o reales)</li>
+<li><strong>Edad en meses y días</strong><br>
+Dada una variable edadAnios, calculá la edad en meses y en días (aproximando con 365 días al año).
+Mostrá ambos resultados.</li>
+<li><strong>Concatenación de cadenas</strong><br>
+Creá dos variables nombre y apellido. Mostrá un mensaje que diga &ldquo;Hola, Nombre Apellido&rdquo;.</li>
+<li><strong>Número par o impar</strong><br>
+Dada una variable entera numero, mostrá en consola si es par o impar.</li>
+<li><strong>Hipotenusa (Teorema de Pitágoras)</strong><br>
+Dadas dos variables catetoA y catetoB (double), calculá la hipotenusa con la fórmula: <br>
+        <image src="/docs/images/formula_hipotenusa.jpg"> <br>
+y mostrá el resultado</li>
+<li><strong>Área de un círculo</strong><br>
+Dado un radio r, calculá el área con la fórmula π * r²</li>
+<li><strong>Perímetro de un cuadrado</strong><br>
+Dado el valor del lado lado, calculá el perímetro (4 * lado).</li>
+<li><strong>Velocidad promedio</strong><br>
+Tenés una distancia (distanciaKm) y un tiempo (horas). Calculá la velocidad promedio en km/h.</li>
+<li><strong>Minutos a horas y minutos</strong>
+Tenés un número entero de minutos. Convertílo a horas y minutos. Ejemplo: 130 minutos → 2 horas y 10 minutos</li>
+<li><strong>Dígito de las unidades</strong><br>
+Dado un número entero num, obtené el dígito de las unidades con num % 10.</li>
+<li><strong>División entera y resto</strong><br>
+Dadas dos variables enteras a y b, mostrá el cociente entero y el resto.</li>
+<li><strong>Potencia</strong><br>
+Dadas dos variables enteras base y exponente, calculá la potencia</li>
+<li><strong>Kilogramos a libras</strong><br>
+Convertí un peso en kilogramos (kg) a libras usando la fórmula libras = kg * 2.20462.</li>
+<li><strong>Promedio de notas con decimales</strong><br>
+Tenés 4 notas. Calculá el promedio y mostrálo con 2 decimales</li>
+<li><strong>Doble y triple de un número</strong><br>
+Dado un número entero, calculá y mostrá el doble y el triple.</li>
+<li>
+<p><strong>Área y perímetro de un triángulo equilátero</strong><br>
+Con un lado a, calculá el perímetro (3 * a)  y el área <br>
+<img src="/docs/images/formula_area_equilatero.jpg"></p>
+</li>
+<li>
+<p><strong>Conversión de metros a cm y mm</strong> <br>
+Dada una longitud en metros (double), convertíla a centímetros y milímetros.</p>
+</li>
+<li><strong>Promedio de velocidad en m/s</strong><br>
+Convertí una velocidad en km/h (vKmH) a m/s (vMs = vKmH * 1000 / 3600).</li>
+<li><strong>Descuento en un producto</strong><br>
+Dado un precio y un porcentaje de descuento, calculá el precio final.</li>
+<li><strong>Tiempo de viaje</strong><br>
+Dada una distancia en km y una velocidad en km/h, calculá el tiempo de viaje en horas.</li>
+<li><strong>Concatenación de edad</strong><br>
+Dado nombre y edad, mostrá el mensaje &ldquo;Me llamo <nombre> y tengo <edad> años.&rdquo;</li>
+<li><strong>Interés simple</strong><br>
+Calculá el interés simple con la fórmula: I = capital * tasa * tiempo.</li>
+<li><strong>Interés compuesto</strong><br>
+Calculá el monto final con la fórmula: M = capital * (1 + tasa)^tiempo.</li>
+<li><strong>Mayor de dos números</strong><br>
+Dadas dos variables enteras, mostrá cuál es el mayor.</li>
+<li><strong>Menor de tres números</strong><br>
+Dadas tres variables enteras, mostrá el menor.</li>
+<li><strong>Conversión de dólares a pesos</strong><br>
+Dado un monto en dólares y un tipo de cambio, calculá el equivalente en pesos.</li>
+<li><strong>Calcular IMC (Índice de Masa Corporal)</strong><br>
+Dado el peso en kg y la altura en metros, calculá el IMC con la fórmula:
+IMC = peso / (altura * altura).</li>
+<li><strong>Promedio de edad de un grupo</strong><br>
+Guardá la edad de 4 personas en variables y calculá el promedio.</li>
+<li><strong>Separar decenas y unidades</strong><br>
+Dado un número de dos cifras, obtené la decena y la unidad.
+Por ejemplo: 23
+La decena es el 2 y la unidad es el 3</li>
+</ol></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
 
                 .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
                 .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
@@ -917,7 +1162,14 @@ traducción en castellano para entenderlos, pero cuando los utilicemos siempre t
 .print-site-enumerate-headings #clase_4 > h1:before { content: '6 ' }
 .print-site-enumerate-headings #clase_5 > h1:before { content: '7 ' }
 .print-site-enumerate-headings #glosario > h1:before { content: '8 ' }
-.print-site-enumerate-headings #ejercicios > h1:before { content: '9 ' }</style>
+.print-site-enumerate-headings #ejercicios > h1:before { content: '9 ' }
+
+                .print-site-enumerate-headings #ejercicios h2:before { content: '9.' counter(counter-ejercicios-2) ' ' }
+                .print-site-enumerate-headings #ejercicios h2 {  counter-reset: counter-ejercicios-3 ;  counter-increment: counter-ejercicios-2 }
+            
+                .print-site-enumerate-headings #ejercicios h3:before { content: '9.' counter(counter-ejercicios-2) '.' counter(counter-ejercicios-3) ' ' }
+                .print-site-enumerate-headings #ejercicios h3 {  counter-increment: counter-ejercicios-3 }
+            </style>
 
 
 
