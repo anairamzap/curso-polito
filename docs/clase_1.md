@@ -278,7 +278,8 @@ Las diferencias entre el float y double son:
 Este es un tipo de dato de **un bit** que representa verdadero (en inglés "true") o falso (en inglés "false")
 (que también podría ser sí o no, 1 o 0, lleno o vacío, etc...).
 
-Se los llama así en honor al filósofo y matemático inglés [George Boole](https://es.wikipedia.org/wiki/George_Boole). 
+Se los llama así porque está basado en el álgebra "booleana", del filósofo y matemático inglés
+[George Boole](https://es.wikipedia.org/wiki/George_Boole). 
 
 #### char (carácter o símbolo)
 Es un tipo de dato que representa un carácter [Unicode](https://www.rapidtables.org/code/text/unicode-characters.html)
@@ -293,7 +294,7 @@ objetos esto tiene un significado importante. Por ahora podemos decir que cuando
 o palabras), usamos este tipo de dato.
 
 ---
-
+### Tipos primitivos - Tabla
 ??? tip "Tipos primitivos de JAVA"
     |Tipo   |Traducción          |Memoria utilizada             |Rango de valores                   |Breve descripción                                                                                                                                                                                                |
     |:-----:|:------------------:|:----------------------------:|:---------------------------------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -308,5 +309,69 @@ o palabras), usamos este tipo de dato.
 
 
 ## Operadores
+Los operadores son símbolos o palabras que utilizamos para manipular y combinar expresiones.
+Son elemento que nos permiten realizar, como su nombre lo indica, operaciones como:
 
-[Yo sigo acá mañana]
+- Comparaciones
+- Procedimientos lógicos
+- Cálculos aritméticos
+- Asignaciones
+
+### Operadores relacionales
+Utilizamos los operadores relacionales cuando necesitamos comparar dos elementos o valores.
+
+Dependiendo el operador que usemos tendremos que tener en cuenta, o no, la posición de los elementos con relación al
+operador.
+
+| **OPERADOR** | **DESCRIPCIÓN**   | **EJEMPLO** |
+|:------------:|:-----------------:|:-----------:|
+| `==`         | Es igual          | a == b      |
+| `!=`         | Es distinto       | a != b      |
+| `<`          | Menor que         | a < b       |
+| `>`          | Mayor que         | a > b       |
+| `<=`         | Menor o igual que | a <= b      |
+| `>=`         | Mayor o igual que | a >= b      |
+
+Es decir, decir que `a == b` es lo mismo que decir que `b == a`, sin embargo, no sería lo mismo intercambiar los operandos
+cuando hacemos una comparación o relación mayor/menor: `a < b` no es lo mismo que `b < a`.
+
+### Operadores lógicos
+A diferencia de los relacionales que **comparan** elementos o valores, los operadores lógicos **combinan** operaciones
+_booleanas_.
+
+Son muy utilizados en estructuras condicionadles y _loops_, que veremos más adelante, para combinar condiciones y obtener
+luego un resultado.
+
+| **OPERADOR** | **DESCRIPCIÓN**  | **EJEMPLO**                       | **EJEMPLO COTIDIANO**                   |
+|:------------:|:----------------:|-----------------------------------|-----------------------------------------|
+| `&&`         | Y (de adición)   | si [condición] Y [otra condición] | Agarro la campera si hace frío Y llueve |
+| `||`         | O (de exclusión) | si [condición] U [otra condición] | Agarro la campera si hace frío O llueve |
+| `!`          | NO (de negación) | si NO [condición]                 | Dejo la campera si NO hace frío         |
+
+Cuando usamos los operadores `&&` si nuestra primera condición devuelve _falso_ o usando el comparador `||` sin nuestra primera
+condición devuelve _verdadero_ , en ambos casos la segunda condición no se evaluará.
+
+Los operadores de negación simplemente invierten un valor lógico.
+
+### Operadores aritméticos
+Los operadores aritméticos se utilizan para realizar operaciones matemáticas básicas.
+
+| **OPERADOR** | **DESCRIPCIÓN** |
+|:------------:|:---------------:|
+| `+`          | Adición         |
+| `-`          | Resta           |
+| `*`          | Multiplicación  |
+| `/`          | División        |
+| `%`          | Módulo          |
+
+### Operadores de asignación
+Los operadores de asignación se utilizan para asignar valores a las variables.
+
+| **OPERADOR** | **DESCRIPCIÓN**     |
+|:------------:|:-------------------:|
+| `=`          | Asignación simple   |
+| `+=`         | Añadir y asignar    |
+| `-=`         | `Restar y asignar   |
+| `*=`         | Multiplica y asigna |
+| `/=`         | Divide y asigna     |
+| `%=`         | Módulo y asignar    |
