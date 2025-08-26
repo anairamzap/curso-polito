@@ -21,7 +21,12 @@ theme:
       code: 'Roboto Mono'
     icon:
       logo: 'fontawesome/solid/hand-peace'
+      annotation: material/plus-circle
     favicon: 'images/libro_abierto.ico'
+    features:
+      - content.code.copy
+      - content.code.select
+      - content.code.annotate
 markdown_extensions:
   - meta
   - tables
