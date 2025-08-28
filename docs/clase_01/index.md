@@ -1,4 +1,8 @@
-# Clase 01: ¿qué es un programa? + fases de desarrollo + estructura y sintaxis
+---
+icon: material/script-text-outline
+---
+
+# ¿Qué es un programa? | Fases de desarrollo | estructura y sintaxis
 
 ## Breve repaso
 
@@ -72,6 +76,7 @@ Vamos a ver cómo se ve un programita básico ("[Hola Mundo](https://es.wikipedi
 descomponer su estructura.
 
 ```java linenums="1"
+package holamundo;
 
 /**
  *
@@ -97,7 +102,7 @@ Descomponemos el programa:
 - Hay llaves que "engloban" líneas
 - Hay paréntesis que "abrazan" palabras
 - Hay unas líneas "especiales" que empiezan con símbolos: barras y asteriscos (`/**` `//`)
-- La línea que imprime el texto (`System.out.print()`), "ya viene" con el lenguaje. 
+- La línea que imprime el texto (`System.out.print()`), "ya viene" con el lenguaje.
 
 [^1]:"Hola, mundo" en informática es un programa que muestra el texto «Hola, mundo» en un dispositivo de visualización,
 en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un
@@ -122,8 +127,6 @@ public class HolaMundo {
     // Y todas pertenecen a esta clase (class) pública (public) llamada HolaMundo.
 }
 ```
-y
-
 ```java
 public static void main(String[] args) {
     // Hay cosas acá adentro.
@@ -172,7 +175,7 @@ puedan modificarlo (o incluso para nuestro *yo del futuro* :) ).
 
 ### Ciclo del programa: Inicio, proceso, final.
 Veremos esto en clase cuando "corramos" :person_running_facing_right_tone5: nuestro programa, pero dejamos aquí una
-definición muy esquemática de un ciclo. 
+definición muy esquemática de un ciclo.
 
 Analicemos el ciclo:
 
@@ -199,7 +202,7 @@ Es decir que cada lenguaje ya nos proporciona esos tipos y así también los def
 1. Qué **tipo de dato** se puede representar (números -enteros o decimales-, caractéres -letras y símbolos-, etc...)
 2. Sus **rangos de valores posibles**
 3. Y por lo anterior entonces también se define **el espacio que ocuparán en memoria** los datos pertenecientes a cada
-tipo
+   tipo
 
 [^2]: En todos los elementos de Java vamos a ver que estos reciben nombres en inglés. Junto a cada tipo vamos a poner su
 traducción en castellano para entenderlos, pero cuando los utilicemos siempre tendrá que ser con su nombre inglés.
@@ -253,7 +256,7 @@ Podemos trabajar con números un poco superiores a los 2 mill millones -2.147.48
 
 #### long (entero largo)
 Es un tipo de datos de **64 bits** o sea **8 veces nuestro primer tipo de dato**:
- `00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000`
+`00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000`
 Y puede almacenar **números enteros que van desde -2^63^ hasta 2^63^-1**. Como se puede imaginar es extremadamente grande:
 9.223372 × 10^18^
 
@@ -265,11 +268,12 @@ Este tipo de dato tiene una precisión simple, esto es algo que veremos más ade
 saber que no debe ser utilizado si vamos a necesitar números con alta precisión (es decir, lo podemos usar para
 aplicaciones gráficas o videojuegos, pero no para información científica o financiera).
 
-#### double (coma flotante doble o 'real largo') 
+#### double (coma flotante doble o 'real largo')
 En este caso es un tipo de dato de **64 bits**, como el long, pero permite manejar números con coma flotante, como el float.
 
 Las diferencias entre el float y double son:
-- El rango numérico (es el doble) 
+
+- El rango numérico (es el doble)
 - La precisión (es, también, el doble)
   Al ser un número decimal su "exactitud" depende de la cantidad de dígitos que puede manejar después de la coma. Por eso,
   el tipo de dato "double" tiene el doble de precisión que el "float".
@@ -279,7 +283,7 @@ Este es un tipo de dato de **un bit** que representa verdadero (en inglés "true
 (que también podría ser sí o no, 1 o 0, lleno o vacío, etc...).
 
 Se los llama así porque está basado en el álgebra "booleana", del filósofo y matemático inglés
-[George Boole](https://es.wikipedia.org/wiki/George_Boole). 
+[George Boole](https://es.wikipedia.org/wiki/George_Boole).
 
 #### char (carácter o símbolo)
 Es un tipo de dato que representa un carácter [Unicode](https://www.rapidtables.org/code/text/unicode-characters.html)
