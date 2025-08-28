@@ -32,6 +32,10 @@
   font-size: 0.74rem;
 }
 
+.katex .hide-tail {
+  min-height: 1.18em !important;
+}
+
 /**
  * Print styles.
  */

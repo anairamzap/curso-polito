@@ -16,17 +16,18 @@ nav:
   - "Clase 03: Funciones":
     - clase_03/index.md
     - Ejercicios: clase_03/c_03_ejercicios.md
-  - Clase 04:
+  - "Clase 04: API de Java":
     - clase_04/index.md
     - Ejercicios: clase_04/c_04_ejercicios.md
-  - Clase 05:
+  - "Clase 05: Clases":
     - clase_05/index.md
     - Ejercicios: clase_05/c_05_ejercicios.md
-  - Clase 06:
+  - "Clase 06: Misterio":
       - clase_06/index.md
       - Ejercicios: clase_06/c_06_ejercicios.md
   - Glosario: 'glosario.md'
-  - Ejercicios: 'ejercicios.md'
+  - Ejercicios:
+      - Clase xx: ejercicios/index.md
 theme:
     name: material
 #    custom_dir: docs/overrides
@@ -75,8 +76,17 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+#  - 'js/mathjax.js'
+#  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - 'js/katex.js'
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 extra_css:
   - 'css/overrides.css'
+  - https://unpkg.com/katex@0/dist/katex.min.css
 plugins:
   - search:
       lang: es
