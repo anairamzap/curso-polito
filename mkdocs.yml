@@ -5,7 +5,7 @@ repo_url: https://github.com/anairamzap/curso-polito
 edit_uri: tree/main/docs
 nav:
   - Inicio: index.md
-  - "Clase 0: Historia y fundamentos":
+  - "Clase 00: Historia y fundamentos":
     - clase_00/index.md
   - "Clase 01: Programa y Operadores":
     - clase_01/index.md
