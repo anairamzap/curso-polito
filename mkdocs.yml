@@ -1,18 +1,36 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: 'Polito - Curso de programación 2025'
 site_description: 'Clases, documentación, ejercicios y glosario del curso de Programación de la Polito Arcuschin :)'
+repo_url: https://github.com/anairamzap/curso-polito
+edit_uri: tree/main/docs
 nav:
   - Inicio: index.md
-  - Clase 0: 'clase_0.md'
-  - Clase 1: 'clase_1.md'
-  - Clase 2: 'clase_2.md'
-  - Clase 3: 'clase_3.md'
-  - Clase 4: 'clase_4.md'
-  - Clase 5: 'clase_5.md'
+  - "Clase 00: Historia y fundamentos":
+    - clase_00/index.md
+  - "Clase 01: Programa y Operadores":
+    - clase_01/index.md
+    - Ejercicios: clase_01/c_01_ejercicios.md
+  - "Clase 02: Variables y Expresiones":
+    - clase_02/index.md
+    - Ejercicios: clase_02/c_02_ejercicios.md
+  - "Clase 03: Funciones":
+    - clase_03/index.md
+    - Ejercicios: clase_03/c_03_ejercicios.md
+  - "Clase 04: API de Java":
+    - clase_04/index.md
+    - Ejercicios: clase_04/c_04_ejercicios.md
+  - "Clase 05: Clases":
+    - clase_05/index.md
+    - Ejercicios: clase_05/c_05_ejercicios.md
+  - "Clase 06: Misterio":
+      - clase_06/index.md
+      - Ejercicios: clase_06/c_06_ejercicios.md
   - Glosario: 'glosario.md'
-  - Ejercicios: 'ejercicios.md'
+  - Ejercicios:
+      - Clase xx: ejercicios/index.md
 theme:
     name: material
+#    custom_dir: docs/overrides
     language: 'es'
     palette:
       primary: 'light blue'
@@ -21,7 +39,18 @@ theme:
       code: 'Roboto Mono'
     icon:
       logo: 'fontawesome/solid/hand-peace'
+      annotation: material/plus-circle
     favicon: 'images/libro_abierto.ico'
+    features:
+      - content.code.copy
+      - content.code.select
+      - content.code.annotate
+      - content.footnote.tooltips
+      - navigation.top
+      - navigation.path
+      - navigation.indexes
+#      - navigation.expand
+
 markdown_extensions:
   - meta
   - tables
@@ -37,8 +66,9 @@ markdown_extensions:
   - footnotes
   - smarty
   - toc:
-      permalink: True
+      permalink: true
       baselevel: 1
+      toc_depth: 3
   - sane_lists
   - attr_list
   - md_in_html
@@ -46,9 +76,39 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+#  - 'js/mathjax.js'
+#  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - 'js/katex.js'
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
 extra_css:
   - 'css/overrides.css'
+  - https://unpkg.com/katex@0/dist/katex.min.css
 plugins:
   - search:
       lang: es
-  - print-site
+  - to-pdf:
+      # All docs https://mkdocs-to-pdf.readthedocs.io/en/latest/usage/
+      author: "UB Polito Arcuschin"
+      cover: true
+      back_cover: true
+      cover_subtitle: "Documentación y ejercicios <3"
+      copyright: "🄯 Por y para todxs"
+      download_link: header
+      toc_title: "Índice"
+      heading_shift: true
+      toc_level: 3
+      ordered_chapter_level: 3
+      two_columns_level: 0
+      render_js: false
+      headless_chrome_path: headless-chromium
+#      custom_template_path: TEMPLATES PATH
+#      output_path: pdf/document.pdf
+      # Si descomentamos esto, el build lo corremos con el param: $ ENABLE_PDF_EXPORT=1 mkdocs build
+      enabled_if_env: ENABLE_PDF_EXPORT
+      debug_html: true
+#      show_anchors: false
+#      verbose: false

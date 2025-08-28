@@ -9,3 +9,53 @@
   margin: 1.8em 0 0.7em;
   font-size: 1rem;
 }
+
+.md-grid {
+  max-width: 1440px;
+}
+
+.md-sidebar {
+  width: 14.1rem;
+}
+
+.md-header-nav__button.md-icon {
+  margin-left: 1em;
+}
+
+.md-typeset__scrollwrap:has(> .md-typeset__table) {
+  display: block;
+  text-align: center;
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 0.74rem;
+}
+
+.katex .hide-tail {
+  min-height: 1.18em !important;
+}
+
+/**
+ * Print styles.
+ */
+@media print {
+  article h1, article h2, article h3 {
+    border-bottom-color: #02a6f2 !important;
+  }
+
+  .md-typeset {
+    font-size:1rem !important;
+  }
+
+  .md-typeset h1 {
+    font-size:2em !important;
+  }
+  .md-typeset h2 {
+    font-size:1.5625em !important;
+  }
+  .md-typeset h3 {
+    font-size:1.25em !important;
+  }
+
+}

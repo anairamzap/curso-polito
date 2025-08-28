@@ -1,30 +1,19 @@
+---
+icon: material/hand-wave
+---
+
 # Bienvenidxs :)
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+En este lugar iremos cargando las clases, ejercicios y otros recursos que servirán como la documentación del curso de
+programación de la UB Polito Arcushin del año 2025.
 
-## Commands
+La idea es que puedan recurrir a estas páginas para refrescar conceptos entre clases y tener ejercicios a mano para
+practicar.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Como ya hemos dicho muchas veces: todos es perfectible, así que no duden en buscar errores :detective: o cosas que no
+quedan claras :thinking: y avisarnos para que podamos revisar los contenidos.
 
-## Project layout
+¡Esperamos que aprendan cosas nuevas, se les ocurran ideas extravagantes y sobre todo que disfruten la experiencia de
+pensar con otrxs!
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-## Probando cajitas
-A ver una info
-
-???+ note
-    Recuerdan que en la primera clase vimos que había lenguajes fuertemente tipados o débilmente tipados, esta caractéristica de los lenguajes hará que en nuestro programa debamos explicitar (o no) el tipo de dato que vamos a manipular.
-
-
-¡Vamos entonces a los tipos de datos de Java!
-
-## Tipos primitivos
-Suena como un conjunto de cazadores-recolectores que conviven con dinosaurios, pero, no son eso...
-
-
+Abel, Mariana, Cami y Manu :fontawesome-regular-hand-peace:
