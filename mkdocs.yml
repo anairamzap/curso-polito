@@ -111,7 +111,7 @@ plugins:
       render_js: false
       verbose: false
 #      custom_template_path: TEMPLATES PATH
-#      output_path: pdf/document.pdf
+      output_path: pdf/prog_polito_2025.pdf
       # Si descomentamos esto, el build lo corremos con el param: $ ENABLE_PDF_EXPORT=1 mkdocs build
       enabled_if_env: ENABLE_PDF_EXPORT
       debug_html: true
