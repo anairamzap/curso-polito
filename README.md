@@ -43,6 +43,7 @@ https://www.mkdocs.org/getting-started/
     ```shell
     mkdocs serve
     ```
+---
 
 ### "Servir" los docs en local (cada cambio autorefresca el browser).
 Muy útil pa escribir y ver cómo va quedando.
