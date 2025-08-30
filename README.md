@@ -10,38 +10,39 @@ https://www.mkdocs.org/getting-started/
 
 ## Correr en local
 1. Clonar el repo
-```shell
-cd /path/donde/lo/quieras/tener
-
-git clone git@github.com:anairamzap/curso-polito.git
-```
+    ```shell
+    cd /path/donde/lo/quieras/tener
+    
+    git clone git@github.com:anairamzap/curso-polito.git
+    ```
 2. Pararse en el dir raíz del repo
-```shell
-cd curso-polito
-```
+    ```shell
+    cd curso-polito
+    ```
 3. Crear un virtualenv para instalar mkdocs y sus dependencias (o en su defecto usar un IDE para crearlo)
-```shell
-python3.9 -m venv venv
-```
-**NOTA**: Tuve problemas con python 3.11, pero tal vez fue cosa de mi local, por si querés hacer la prueba. Sino con 3.9
-va ok.
+    ```shell
+    python3.9 -m venv venv
+    ```
+    **NOTA**: Tuve problemas con python 3.11, pero tal vez fue cosa de mi local, por si querés hacer la prueba. Sino con 3.9
+    va ok.
+
 
 4. Activar el virtual env (si usaste una IDE, entiendo te lo hace automáticamente)
-```shell
-source venv/bin/activate
-```
+    ```shell
+    source venv/bin/activate
+    ```
 5. Chequeemos que el entorno está OK (no sea cosa te pase como al gobernador :P)
-```shell
-python -V && pip -V
-```
+    ```shell
+    python -V && pip -V
+    ```
 6. Ahora si todo fue bien (es decir python es 3.9 y pip es para esa versión), instalamos dependencias
-```shell
-pip install -r requirements.txt
-```
+    ```shell
+    pip install -r requirements.txt
+    ```
 7. Si todo sale bien, ya podemos correr mkdocs
-```shell
-mkdocs serve
-```
+    ```shell
+    mkdocs serve
+    ```
 
 ### "Servir" los docs en local (cada cambio autorefresca el browser).
 Muy útil pa escribir y ver cómo va quedando.
