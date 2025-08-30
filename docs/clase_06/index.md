@@ -1,5 +1,6 @@
 ---
-icon: material/head-question
+icon: material/function
 ---
 
-# Clase 06: Nadie nada nunca
+# Clase 06: Funciones segunda parte
+

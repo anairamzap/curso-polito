@@ -1,4 +1,0 @@
-mkdocs
-mkdocs-material
-mkdocs-to-pdf
-qr
