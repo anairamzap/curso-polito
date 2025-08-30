@@ -25,6 +25,7 @@ python3.9 -m venv venv
 ```
 **NOTA**: Tuve problemas con python 3.11, pero tal vez fue cosa de mi local, por si querés hacer la prueba. Sino con 3.9
 va ok.
+
 4. Activar el virtual env (si usaste una IDE, entiendo te lo hace automáticamente)
 ```shell
 source venv/bin/activate
