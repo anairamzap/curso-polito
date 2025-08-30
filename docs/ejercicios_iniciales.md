@@ -1,9 +1,9 @@
-#Ejercicios Inciales
+# Ejercicios Iniciales
 
 1. **Crear un proyecto en la IDE NetBeans. Usando la función System.out.print();** <br>
 Hacer estos dos mensajes:
-System.out.print(“Curso de Java”);
-System.out.println(“ en la Polito”);
+System.out.print("Curso de Java");
+System.out.println(" en la Polito");
 
 2. **Crear un proyecto nuevo en la IDE NetBeans. Usando la función System.out.print();** <br>
 Mostrar por consola el mensaje: Estudiamos Java
@@ -32,7 +32,7 @@ Mostrar: Por consola mostramos el mensaje del proyecto.
 7. **En un proyecto nuevo ejecutá este código en nuestra IDE** <br>
 
 public static void main(String[], args) {
-	System.out.println(“Hola Mundo”;);
+	System.out.println("Hola Mundo";);
 
 }
 
@@ -42,7 +42,7 @@ public static void main(String[], args) {
 
 public static void main(String[], args) {
 
-	System.out.print(“Curso de programacion”); System.out.print(“ en la polito”);
+	System.out.print("Curso de programacion"); System.out.print(" en la polito");
 
 }
 

@@ -1,1 +1,5 @@
-# Clase 09: 
+---
+icon: material/code-array
+---
+
+# Clase 09: Arrays (o vectores)

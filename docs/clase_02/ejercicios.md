@@ -9,6 +9,7 @@ Primeros pasos para estos ejercicios:
 
 1. Abrir la IDE (Netbeans)
 2. Crear un nuevo programa (o abrir uno existente)
+     1. Si estás creando uno nuevo, acordate de seleccionar la opción "Java with Ant".
 
 ## Ejercicio 01: Suma de enteros
 Declará dos variables enteras `a` y `b`, asignales valores y mostrá por consola la suma de ambas.
@@ -53,14 +54,14 @@ Ingresar el valor de una variable entera numero, mostrá en consola si es par o 
 ## Ejercicio 10: Hipotenusa (Teorema de Pitágoras)
 
 1. Ingresar los valores de dos variables catetoA y catetoB (`double`),
-2. calculá la hipotenusa con la fórmula: $h = \sqrt{a^2 + b^2}$
+2. calculá la hipotenusa con la fórmula: $`h = \sqrt{a^2 + b^2}`$
 3. y mostrá el resultado
 
 ## Ejercicio 11: Área de un círculo
-Pedir que se ingrese el valor del radio `r`, calculá el área con la fórmula: $A = \pi \times r^2$
+Pedir que se ingrese el valor del radio `r`, calculá el área con la fórmula: $`A = \pi \times r^2`$
 
 ## Ejercicio 12: Perímetro de un cuadrado
-Ingresar el valor del valor del lado (`l`), calculá el perímetro con la fórmula: $4 \times l$.
+Ingresar el valor del valor del lado (`l`), calculá el perímetro con la fórmula: $`4 \times l`$.
 
 ## Ejercicio 13: Velocidad promedio
 Tenés una distancia (`distanciaKm`) y un tiempo (`horas`). Calculá la velocidad promedio en km/h.
@@ -78,7 +79,7 @@ Pedir el valor de dos variables enteras a y b, mostrá el cociente entero y el r
 Pedir el valor de dos variables enteras base y exponente, calculá la potencia
 
 ## Ejercicio 18: Kilogramos a libras
-Convertí un peso en kilogramos (kg) a libras usando la fórmula: $libras = kg \times 2.20462$.
+Convertí un peso en kilogramos (kg) a libras usando la fórmula: $`libras = kg \times 2.20462`$.
 
 ## Ejercicio 19: Promedio de notas con decimales
 Pedir el ingreso de 4 notas. Calculá el promedio y mostrálo con 2 decimales
@@ -89,14 +90,14 @@ Pedir que se ingrese el valor de un número entero, calculá y mostrá el doble 
 ## Ejercicio 21: Área y perímetro de un triángulo equilátero
 Sabiendo el valor de una lado `a`
 
-1. Calculá el perímetro con la fórmula: $P = a \times 3$
-2. Calculá el area. Con la fórmula: $A = a^2 \times \frac{\sqrt{3}}{4} $
+1. Calculá el perímetro con la fórmula: $`P = a \times 3`$
+2. Calculá el area. Con la fórmula: $`A = a^2 \times \frac{\sqrt{3}}{4}`$
 
 ## Ejercicio 22: Conversión de metros a cm y mm
 Pedir que se ingrese el valor de una longitud en metros (double), convertila a centímetros y milímetros.
 
 ## Ejercicio 23: Promedio de velocidad en metros por segundo
-Convertí una velocidad en km/h (`vKmH`) a m/s (`vMs`) $vMs = vKmH \times 1000 \div 3600$.
+Convertí una velocidad en km/h (`vKmH`) a m/s (`vMs`) $`vMs = vKmH \times 1000 \div 3600`$.
 
 ## Ejercicio 24: Descuento en un producto
 Pedir que se ingresen los valores de un precio y un porcentaje de descuento, calculá el precio final.
@@ -117,7 +118,7 @@ Calculá el monto final con la fórmula: M = capital * (1 + tasa)^tiempo.
 Pedir que se ingrese un monto en dólares y un tipo de cambio, calculá el equivalente en pesos.
 
 ## Ejercicio 30: Conversión de segundos a horas:minutos:segundos
-Pedir que se ingrese el valor de un entero segundosTotales, convertílo a formato hh:mm:ss.
+Pedir que se ingrese el valor de un entero segundosTotales, convertilo a formato `hh:mm:ss`.
 
 ## {==Ejercicio 31: Promedio ponderado==}
 Tenés tres notas: n1, n2, n3 con pesos 0.2, 0.3 y 0.5 respectivamente. Calculá el promedio ponderado.

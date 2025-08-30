@@ -6,9 +6,10 @@ En esta clase vimos cómo crear nuestro primer programa (HolaMundo) y como hacer
 del IDE.
 
 Primeros pasos para estos ejercicios:
+
 1. Abrir la IDE (Netbeans)
 2. Crear un nuevo programa (o abrir uno existente)
-3. 
+     1. Si estás creando uno nuevo, acordate de seleccionar la opción "Java with Ant".
 
 ## Ejercicio 1 :wave_tone4:
 Usando las herramientas del sistema (`System.out.print`), impriman un texto en la consola de Netbeans.

@@ -1,5 +1,5 @@
 ---
-icon: material/function
+icon: material/code-braces
 ---
 
-# Clase 03: Estructuras de control + Funciones
+# Clase 03: Más variables

@@ -45,7 +45,11 @@
   }
 
   .md-typeset {
-    font-size:1rem !important;
+    font-size:1.1rem !important;
+  }
+
+  details {
+    font-size: 1rem !important;
   }
 
   .md-typeset h1 {
@@ -56,6 +60,17 @@
   }
   .md-typeset h3 {
     font-size:1.25em !important;
+  }
+
+  #doc-toc {
+    .twemoji {
+      max-height: 1.125em;
+    }
+  }
+
+  .twemoji img {
+    display: inline-block !important;
+    vertical-align: middle !important;
   }
 
 }
