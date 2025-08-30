@@ -6,11 +6,11 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Clases, documentación, ejercicios y glosario del curso de Programación de la Polito Arcuschin :)" name="description"/>
-<link href="../clase_09/ejercicios/" rel="prev"/>
-<link href="../ejercicios/" rel="next"/>
+<link href="../clase_01/ejercicios/" rel="prev"/>
+<link href="ejercicios/" rel="next"/>
 <link href="../images/libro_abierto.ico" rel="icon"/>
 <meta content="mkdocs-1.6.1, mkdocs-material-9.6.18" name="generator"/>
-<title>Glosario - Polito - Curso de programación 2025</title>
+<title>Clase 02: Variables + Expresiones - Polito - Curso de programación 2025</title>
 <link href="../assets/stylesheets/main.7e37652d.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
 <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
@@ -25,6 +25,9 @@
 <input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
 <label class="md-overlay" for="__drawer"></label>
 <div data-md-component="skip">
+<a class="md-skip" href="#clase-02-variables-expresiones">
+          Saltar a contenido
+        </a>
 </div>
 <div data-md-component="announce">
 </div>
@@ -46,7 +49,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Glosario
+              Clase 02: Variables + Expresiones
             
           </span>
 </div>
@@ -192,28 +195,28 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
 <div class="md-nav__link md-nav__container">
-<a class="md-nav__link" href="../clase_02/">
+<a class="md-nav__link md-nav__link--active" href="./">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"></path></svg>
 <span class="md-ellipsis">
     Clase 02: Variables y Expresiones
     
   </span>
 </a>
-<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<label class="md-nav__link md-nav__link--active" for="__nav_4" id="__nav_4_label" tabindex="0">
 <span class="md-nav__icon md-icon"></span>
 </label>
 </div>
-<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<nav aria-expanded="true" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
 <label class="md-nav__title" for="__nav_4">
 <span class="md-nav__icon md-icon"></span>
             Clase 02: Variables y Expresiones
           </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
-<a class="md-nav__link" href="../clase_02/ejercicios/">
+<a class="md-nav__link" href="ejercicios/">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
 <span class="md-ellipsis">
     Ejercicios
@@ -448,9 +451,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../glosario/">
 <span class="md-ellipsis">
     Glosario
     
@@ -486,13 +488,351 @@
 <div class="md-sidebar__scrollwrap">
 <div class="md-sidebar__inner">
 <nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#variables">
+<span class="md-ellipsis">
+      Variables
+    </span>
+</a>
+<nav aria-label="Variables" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#atencion-maxima">
+<span class="md-ellipsis">
+      Atención máxima
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#constantes">
+<span class="md-ellipsis">
+      Constantes
+    </span>
+</a>
+<nav aria-label="Constantes" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identificadores">
+<span class="md-ellipsis">
+      Identificadores
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#expresiones">
+<span class="md-ellipsis">
+      Expresiones
+    </span>
+</a>
+<nav aria-label="Expresiones" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#type-cast-y-precedencia">
+<span class="md-ellipsis">
+      Type cast y precedencia ?
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#palabras-reservadas">
+<span class="md-ellipsis">
+      Palabras reservadas
+    </span>
+</a>
+</li>
+</ul>
 </nav>
 </div>
 </div>
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>Glosario</h1>
+<h1 id="clase-02-variables-expresiones">Clase 02: Variables + Expresiones<a class="headerlink" href="#clase-02-variables-expresiones" title="Permanent link">¶</a></h1>
+<p>En esta clase veremos qué son las variables y constantes, aprenderemos a definirlas y usarlas junto con los
+elementos que vimos hasta ahora (nuestros tipos primitivos, cadenas de texto o <code>String</code> y operadores). Veremos también a
+qué se llama "expresión" y cómo las construimos.</p>
+<h2 id="variables">Variables<a class="headerlink" href="#variables" title="Permanent link">¶</a></h2>
+<p>Una variable es un contenedor en el que se guarda un valor o dato. Sería algo similar a una caja donde <em>metemos</em> un valor
+y a la que le ponemos una etiqueta en el frente.
+La etiqueta es el nombre o, técnicamente hablando el <strong>identificador</strong> de la variable, que nos va a permitir acceder a ella
+(y así a su valor), manipularla y reutilizarla.</p>
+<p>Las variables nos permiten reutilizar valores tantas veces como queramos sin tener que estar repitiendo ese valor cada
+vez. El nombre de la variable se convierte entonces en una <strong>representación del valor</strong> que le <em><em>asignamos</em></em> (atención a esta
+palabrita).</p>
+<p>Por otro lado, y como lo indica su nombre, las variables pueden cambiar su valor a lo largo de nuestro programa. Por
+ejemplo, una variable <code>nombre</code> puede tener un valor inicial de <strong>"Juan Domingo"</strong> luego ese valor puede transformarse
+en <strong>"Cristina"</strong>.</p>
+<details class="note" open="open">
+<summary>Variable</summary>
+<p>Una variable es un elemento en el que podemos almacenar datos.</p>
+<ul>
+<li>Tienen un identificador (o nombre) <img alt="🏷" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3f7.svg" title=":label:"/></li>
+<li>Su valor puede modificarse a lo largo de la ejecución del programa <span class="twemoji"><svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M481.7 240.1c-17.6-1.2-32.9 12-34.2 29.7-3.3 47-23.6 89.4-54.8 121L361 359c-6.9-6.9-17.2-8.9-26.2-5.2S320 366.3 320 376v112c0 13.3 10.7 24 24 24h112c9.7 0 18.5-5.8 22.2-14.8s1.7-19.3-5.2-26.2l-35-35c41.7-42.2 68.9-98.8 73.4-161.8 1.2-17.6-12-32.9-29.7-34.2zM39 41l35 35C32.3 118.2 5.1 174.8.6 237.8c-1.2 17.6 12 32.9 29.7 34.2s32.9-12 34.2-29.7c3.3-47 23.6-89.4 54.8-121L151 153c6.9 6.9 17.2 8.9 26.2 5.2S192 145.7 192 136V24c0-13.3-10.7-24-24-24H56c-9.7 0-18.5 5.8-22.2 14.8S32.2 34.1 39 41m201-10.7c-1.2 17.6 12 32.9 29.7 34.2 47 3.3 89.4 23.6 121 54.8L359 151c-6.9 6.9-8.9 17.2-5.2 26.2S366.3 192 376 192h112c13.3 0 24-10.7 24-24V56c0-9.7-5.8-18.5-14.8-22.2S477.9 32.2 471 39l-35 35C393.8 32.3 337.2 5.1 274.2.6c-17.6-1.2-32.9 12-34.2 29.7M41 473l35-35c42.2 41.7 98.8 68.9 161.8 73.4 17.6 1.2 32.9-12 34.2-29.7s-12-32.9-29.7-34.2c-47-3.3-89.4-23.6-121-54.8L153 361c6.9-6.9 8.9-17.2 5.2-26.2S145.7 320 136 320H24c-13.3 0-24 10.7-24 24v112c0 9.7 5.8 18.5 14.8 22.2s19.3 1.6 26.2-5.2" fill="currentColor"></path></svg></span></li>
+</ul>
+</details>
+<p>¿Cómo creamos entonces una variable? Bien sencillo, vamos a escribir el nombre o identificador de nuestra variable, pero
+¡OJO! <img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f440.svg" title=":eyes:"/> En Java, al ser un lenguaje de tipado estricto, debemos además decirle al sistema qué tipo de dato vamos a querer
+guardar ahí. Esto se llama en programación <strong>declaración de variables</strong>. Porque al crearla estamos también declarando su
+<strong>tipo</strong> y comprometiéndonos con el sistema a sólo guardar valores que sean admitidos por ese tipo. Veamos:</p>
+<p><div class="highlight"><pre><span></span><code><span class="kt">byte</span><span class="w"> </span><span class="n">totalAsientos</span><span class="p">;</span>
+</code></pre></div>
+Con esa línea ya estamos declarando nuestra variable y le estamos diciendo al sistema que <code>totalAsientos</code> tendrá un valor
+del tipo <code>byte</code>. El sistema entonces nos tomará la palabra y reservará en memoria ese cachito de espacio minúsculo que
+requiere un byte. Noten como nuestra línea termina con un punto y coma. Eso forma parte de la sintaxis de Java y lo
+veremos más adelante cuando veamos <a href="#expresiones">Expresiones</a>.</p>
+<p>Vamos ahora a <strong>asignarle</strong> un valor a nuestra flamante variable. ¿Les suena de algún lado esa palabrita "asignar"?
+Ciertamente, ya la habíamos visto cuando vimos <a href="../clase_01/#operadores-de-asignacion">Operadores</a>, así que usaremos el
+operador de asignación (<code>=</code>) para asignarle un valor:</p>
+<div class="highlight"><pre><span></span><code><span class="n">totalAsientos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">125</span><span class="p">;</span>
+</code></pre></div>
+<p>Estas dos líneas de código también se pueden sintetizar en una sola si queremos <strong>declarar</strong> nuestra variable Y <strong>asignarle</strong> un
+valor en el mismo momento, simplemente unimos las dos sentencias:</p>
+<p><div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">byte</span><span class="w"> </span><span class="n">totalAsientos</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mi">125</span><span class="p">;</span>
+<span class="c1">//  ^        ^        ^   ^</span>
+<span class="c1">// TIPO    NOMBRE     OP  VAL</span>
+</code></pre></div>
+De esta manera estaremos declarando nuestra variable de tipo byte y le asignaremos un valor numérico de 125.</p>
+<h3 id="atencion-maxima"><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:"/> Atención máxima <img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f440.svg" title=":eyes:"/><a class="headerlink" href="#atencion-maxima" title="Permanent link">¶</a></h3>
+<p>Ahora bien, ¿qué pasa si cuando estamos desarrollando nuestro programa algo cambia y resulta que el total de asientos
+disponibles ya no es 125, sino 300?</p>
+<p>Cuando decimos que el valor de la variable puede cambiar y el sistema no nos va
+a reprochar nada, pues las <em>variables varían</em>… debemos prestar mucha atención a un tema ya a esta altura recurrente:
+<strong>Java es un lenguaje estricto con sus tipos de datos</strong>.</p>
+<p>Ya nos habíamos comprometido con el sistema a guardar valores de tipo byte en nuestra variable <code>totalAsientos</code>, y el
+sistema ya nos había reservado ese espacio en memoria, pero resulta que <code>300</code> ¡no es un valor válido en el tipo <code>byte</code>!
+<span class="twemoji" title="Rango de valores válidos de byte: [-128 .. 127]."><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"></path></svg></span></p>
+<p>Así que si intentamos cambiar el valor inicial de nuestra variable a 300 lo que sucederá es que el sistema simplemente
+no nos va a dejar y nos indicará el error <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+<p>Por eso es importante siempre intentar anticiparse a este tipo de cambios o, dicho de otra forma, no confiarse en que las
+especificaciones no cambiarán. Siempre será mejor trabajar con tipos de datos que tengan un buen margen para esos cambios.</p>
+<p>Lxs invitamos a que hagan la prueba de modificar su variable de tipo byte a un valor más grande que el admitido, a ver
+qué pasa, si total… la diferencia es muy chiquita <img alt="🤏🏾" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f90f-1f3fe.svg" title=":pinching_hand_tone4:"/>. Qué tan grave pueden ser unos bits más unos
+bits menos <img alt="🤪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f92a.svg" title=":zany_face:"/></p>
+<h2 id="constantes">Constantes<a class="headerlink" href="#constantes" title="Permanent link">¶</a></h2>
+<p>Las constantes son un tipo especial de Variable. Y por su nombre suponemos ya sospechan qué es lo que
+será diferente en este elemento: su mutabilidad. Evidentemente las constantes son… constantes y no pueden variar su
+valor a lo largo del programa.</p>
+<details class="note" open="open">
+<summary>Constantes</summary>
+<p>Las constantes son un contenedor en el que podemos guardar datos o valores.</p>
+<ul>
+<li>Tienen un identificador <img alt="🏷" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3f7.svg" title=":label:"/></li>
+<li>Su valor es inalterable durante toda la ejecución del programa <img alt="🔒" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f512.svg" title=":lock:"/></li>
+</ul>
+</details>
+<p>Cualquier dato que no cambie es candidato a guardarse en una constante. Ejemplos:</p>
+<ul>
+<li>El número pi (π)</li>
+<li>La cantidad de meses que tiene un año</li>
+<li>La velocidad de la luz</li>
+<li>La burguesía Argentina :P</li>
+</ul>
+<p>La declaración de las constantes es igual a la de las variables, pero le tenemos que sumar una palabra que las definirá como
+constantes: <code>final</code>. Veamos unos ejemplos.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Declaramos las constantes porque hay cosas que nunca cambian (¿?).</span>
+<span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">NUMERO_PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1415926535</span><span class="p">;</span>
+<span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">MEJOR_PAIS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Argentina"</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="identificadores">Identificadores<a class="headerlink" href="#identificadores" title="Permanent link">¶</a></h3>
+<p>Para usar los identificadores, que no son más que el 'nombre' que le damos a nuestras variables y constantes, debemos tener
+algunas reglas en cuenta.</p>
+<div class="admonition abstract annotate">
+<p class="admonition-title">Sintaxis de los identificadores</p>
+<ul>
+<li>No se pueden utilizar <a href="#palabras-reservadas" title="Dejamos acá abajo el machete.">palabras reservadas</a></li>
+<li>El identificador debe ser único.</li>
+<li>Deben comenzar siempre por una letra (1).</li>
+<li>Los siguientes caractéres pueden ser letras, dígitos, guión bajo (<code>_</code>) o el signo de pesos (<code>$</code>).</li>
+<li>Se distingue entre mayúsculas y minúsculas. (2)</li>
+<li>No hay una largo máximo ni mínimo establecido.</li>
+</ul>
+</div>
+<ol>
+<li>La gente de Oracle (la empresa que desarrolló Java) recomienda NO utilizar giuones bajos (<code>_</code>) ni signo de pesos (<code>$</code>)
+   como primer caracter de un identificador aunque estos estén permitidos.</li>
+<li><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.96 13.71 12 8.29l2.03 5.43M11.14 6 6.43 18h1.93l.96-2.57h5.36l.96 2.57h1.93L12.86 6zM20 2H4c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h16c1.11 0 2-.89 2-2V4a2 2 0 0 0-2-2m0 18H4V4h16z"></path></svg></span> <img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f440.svg" title=":eyes:"/> Java es sensible a mayúsculas y minúsculas, con lo cual, el identificador <code>coso</code> será
+   diferente a <code>Coso</code> o <code>COSO</code> (o cualquier otra variación).</li>
+</ol>
+<p>Además de estas reglas de sintaxis hay otro conjunto de cuestiones a tener en cuenta que se suelen denominar "buenas
+prácticas" de programación.</p>
+<p>Estas son, como su nombre lo indica, una serie de buenos modales a la hora de escribir código, que pueden variar de lenguaje
+en lenguaje. No van a hacer que nuestro código falle en sentido estricto, pero seguirlas le facilita (¡mucho!) la lectura
+de nuestro código tanto a otras personas como a nosotrxs mismxs.</p>
+<p>Hay bastantes estándares de programación que se pueden seguir y, por supuesto, siempre hay competencia entre cuál estándar
+es mejor, pero con el tiempo una suele adoptar el que sea más utilizado en el lenguaje o tecnología que desarrolla o
+incluso en el ámbito social en el que programamos (grupo de amigxs, trabajo, etc…).</p>
+<p>Dentro de las buenas prácticas más extendidas de Java, hay algunas que aplican a los identificadores y las detallamos a
+continuación:</p>
+<div class="admonition success">
+<p class="admonition-title">Buenas prácticas</p>
+<ul>
+<li>Usar identificadores que reflejen el <strong>significado</strong> o el <strong>uso</strong> de los elementos. Ejemplos:<ul>
+<li><code>unasCosas</code> <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"/></li>
+<li><code>cantidadSillas</code> <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:"/></li>
+</ul>
+</li>
+<li>Usar "<a href="https://es.wikipedia.org/wiki/Camel_case">camelCase</a>" (es un anglicismo que se podría traducir como "tipoCamello")
+  para identificar variables. Ejemplos:<ul>
+<li><code>cantidad_sillas</code> <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"/></li>
+<li><code>cantidadsillas</code> <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"/></li>
+<li><code>cantidadSillas</code> <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:"/></li>
+</ul>
+</li>
+<li>Usar mayúsculas para identificar constantes. Ejemplos:<ul>
+<li><code>mejor_pais</code> <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"/></li>
+<li><code>MejorPais</code> <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"/></li>
+<li><code>MEJOR_PAIS</code> <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/2705.svg" title=":white_check_mark:"/></li>
+</ul>
+</li>
+<li>Se recomienda no usar nombres muy largos ni muy cortos. Los nombres cortos solo se recomiendan para variables
+<em>temporales</em> de corta vida útil.</li>
+<li>No podremos usar tildes, diéresis ni <code>ñ</code> en nuestros identificadores <img alt="💔" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f494.svg" title=":broken_heart:"/><ul>
+<li><code>añoActual</code> <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"/></li>
+<li><code>canciónFinal</code> <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"/></li>
+<li><code>PINGÜINOS</code> <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/274c.svg" title=":x:"/></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="expresiones">Expresiones<a class="headerlink" href="#expresiones" title="Permanent link">¶</a></h2>
+<p>Junto con los operadores, las <strong>expresiones son los elementos básicos con los que armaremos nuestras sentencias</strong>.</p>
+<p class="annotate">Repasemos qué era una sentencia: visualmente las vimos como líneas de código (1) que representan una <strong>acción</strong> que debe ser ejecutada. Los bloques nos permiten agrupar líneas de
+código que serán "leídas" como una única sentencia.</p>
+<ol>
+<li>En Java -y otros lenguajes- terminan con un punto y coma <code>;</code></li>
+</ol>
+<p>En términos muy muy generales diremos que <strong>una sentencia NO devuelve nada</strong> y que <strong>una expresión SÍ devuelve alguna cosa</strong>.</p>
+<p>Podemos definir una expresión como un fragmento de código que utiliza operadores para manipular valores y <ins>producir un
+resultado</ins>.</p>
+<p>Lo que en matemática llamamos "hacer una cuenta" sería en programación "crear una expresión". La diferencia principal es
+que las expresiones en programación además de valores numéricos (como en las cuentas) podemos también trabajar con palabras,
+caractéres y <em>booleanos</em>.</p>
+<details class="note" open="open">
+<summary>Expresiones</summary>
+<p>Una expresión es un conjunto de operadores, valores, variables, constantes y funciones que devuelve un resultado.</p>
+</details>
+<p>Veamos un ejemplo básico para determinar qué es una expresión, qué es un operador y qué es una sentencia y poder así
+diferenciarlos.</p>
+<div class="highlight"><pre><span></span><code><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+</code></pre></div>
+<ul>
+<li><code>a</code>, <code>b</code> y <code>c</code>: Son <strong>valores</strong> o datos.</li>
+<li><code>=</code> y <code>+</code>: Son <strong>operadores</strong>.</li>
+<li><code>a + b</code>: Es una <strong>expresión</strong>.</li>
+<li><code>c = a + b;</code>: Es una <strong>sentencia</strong>.</li>
+</ul>
+<p><mark class="critic">[Agregar otros ejemplos fáciles para que detecten en clase qué es cada cosa]</mark></p>
+<h3 id="type-cast-y-precedencia"><mark class="critic">Type cast y precedencia ?</mark><a class="headerlink" href="#type-cast-y-precedencia" title="Permanent link">¶</a></h3>
+<h2 id="palabras-reservadas">Palabras reservadas<a class="headerlink" href="#palabras-reservadas" title="Permanent link">¶</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Palabras reservadas en Java</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><code>abstract</code></td>
+<td style="text-align: center;"><code>continue</code></td>
+<td style="text-align: center;"><code>for</code></td>
+<td style="text-align: center;"><code>new</code></td>
+<td style="text-align: center;"><code>switch</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>assert</code></td>
+<td style="text-align: center;"><code>default</code></td>
+<td style="text-align: center;"><code>goto</code></td>
+<td style="text-align: center;"><code>package</code></td>
+<td style="text-align: center;"><code>synchronize</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>boolean</code></td>
+<td style="text-align: center;"><code>do</code></td>
+<td style="text-align: center;"><code>if</code></td>
+<td style="text-align: center;"><code>private</code></td>
+<td style="text-align: center;"><code>this</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>break</code></td>
+<td style="text-align: center;"><code>double</code></td>
+<td style="text-align: center;"><code>implement</code></td>
+<td style="text-align: center;"><code>protected</code></td>
+<td style="text-align: center;"><code>throw</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>byte</code></td>
+<td style="text-align: center;"><code>else</code></td>
+<td style="text-align: center;"><code>import</code></td>
+<td style="text-align: center;"><code>public</code></td>
+<td style="text-align: center;"><code>thows</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>case</code></td>
+<td style="text-align: center;"><code>enum</code></td>
+<td style="text-align: center;"><code>instanceof</code></td>
+<td style="text-align: center;"><code>return</code></td>
+<td style="text-align: center;"><code>transient</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>catch</code></td>
+<td style="text-align: center;"><code>extends</code></td>
+<td style="text-align: center;"><code>int</code></td>
+<td style="text-align: center;"><code>short</code></td>
+<td style="text-align: center;"><code>try</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>char</code></td>
+<td style="text-align: center;"><code>final</code></td>
+<td style="text-align: center;"><code>interface</code></td>
+<td style="text-align: center;"><code>static</code></td>
+<td style="text-align: center;"><code>void</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>class</code></td>
+<td style="text-align: center;"><code>finally</code></td>
+<td style="text-align: center;"><code>long</code></td>
+<td style="text-align: center;"><code>strictfp</code></td>
+<td style="text-align: center;"><code>volatile</code></td>
+</tr>
+<tr>
+<td style="text-align: center;"><code>const</code></td>
+<td style="text-align: center;"><code>float</code></td>
+<td style="text-align: center;"><code>native</code></td>
+<td style="text-align: center;"><code>super</code></td>
+<td style="text-align: center;"><code>while</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="footnote">
+<hr/>
+<ol>
+<li id="fn:1">
+<p>En situaciones excepcionales no nos va a tirar un error, sino que obtendremos valores totalmente inesperados. Ya
+veremos esto en detalle más adelante. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+</ol>
+</div>
 </article>
 </div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
