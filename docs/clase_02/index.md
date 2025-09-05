@@ -10,15 +10,15 @@ qué se llama "expresión" y cómo las construimos.
 ## Variables
 Una variable es un contenedor en el que se guarda un valor o dato. Sería algo similar a una caja donde _metemos_ un valor
 y a la que le ponemos una etiqueta en el frente.
-La etiqueta es el nombre o, técnicamente hablando el **identificador** de la variable, que nos va a permitir acceder a ella
-(y así a su valor), manipularla y reutilizarla.
+La etiqueta es el nombre o, técnicamente hablando, el **identificador** de la variable, que nos va a permitir acceder a
+ella (y así a su valor), manipularla y reutilizarla.
 
 Las variables nos permiten reutilizar valores tantas veces como queramos sin tener que estar repitiendo ese valor cada
-vez. El nombre de la variable se convierte entonces en una **representación del valor** que le *_asignamos_* (atención a esta
-palabrita).
+vez. El nombre de la variable se convierte entonces en una **representación del valor** que le *_asignamos_* (atención a
+esta palabrita).
 
 Por otro lado, y como lo indica su nombre, las variables pueden cambiar su valor a lo largo de nuestro programa. Por
-ejemplo, una variable `nombre` puede tener un valor inicial de **"Juan Domingo"** luego ese valor puede transformarse
+ejemplo, una variable `nombre` puede tener un valor inicial de **"Juan Domingo"** y luego ese valor puede transformarse
 en **"Cristina"**.
 
 ???+ note "Variable"
@@ -26,11 +26,15 @@ en **"Cristina"**.
 
      - Tienen un identificador (o nombre) :label:
      - Su valor puede modificarse a lo largo de la ejecución del programa :fontawesome-solid-arrows-spin:
+     - En Java, debemos especificar su _tipo_ :material-shape:
 
-¿Cómo creamos entonces una variable? Bien sencillo, vamos a escribir el nombre o identificador de nuestra variable, pero
-¡OJO! :eyes: En Java, al ser un lenguaje de tipado estricto, debemos además decirle al sistema qué tipo de dato vamos a querer
-guardar ahí. Esto se llama en programación **declaración de variables**. Porque al crearla estamos también declarando su
-**tipo** y comprometiéndonos con el sistema a sólo guardar valores que sean admitidos por ese tipo. Veamos:
+¿Cómo creamos entonces una variable? Bien sencillo, vamos a escribir el nombre o **identificador** de nuestra variable,
+pero ¡OJO! :eyes: En Java, al ser un lenguaje de tipado estricto, debemos además decirle al sistema qué tipo de dato
+vamos a querer guardar ahí. Esto se llama en programación **declaración de variables**. Porque al crearla estamos también
+declarando su **tipo** y comprometiéndonos con el sistema a sólo guardar valores que sean admitidos por ese tipo. Veamos:
+
+Imaginemos que estamos trabajando en un sistema que manejará la compra de entradas en una sala de teatro, y necesitamos
+entonces en algún momento de nuestro programa definir y guardar la cantidad total de asientos que tiene la sala.
 
 ```java
 byte totalAsientos;
@@ -40,16 +44,21 @@ del tipo `byte`. El sistema entonces nos tomará la palabra y reservará en memo
 requiere un byte. Noten como nuestra línea termina con un punto y coma. Eso forma parte de la sintaxis de Java y lo
 veremos más adelante cuando veamos [Expresiones](#expresiones).
 
-Vamos ahora a **asignarle** un valor a nuestra flamante variable. ¿Les suena de algún lado esa palabrita "asignar"?
-Ciertamente, ya la habíamos visto cuando vimos [Operadores](../clase_01/index.md/#operadores-de-asignacion), así que usaremos el
-operador de asignación (`=`) para asignarle un valor:
+Vamos ahora a **asignarle** un valor a nuestra flamante variable. ¿Les suena de algún lado esa palabra "asignar"?
+Ciertamente, ya la habíamos visto cuando vimos [Operadores](../clase_01/index.md/#operadores-de-asignacion), así que
+usaremos el operador de asignación (`=`) para asignarle un valor:
 
 ```java
-totalAsientos = 125;
+byte totalAsientos; // --> Aquí la declaramos.
+
+totalAsientos = 125; // --> Aquí le asignamos un valor.
 ```
 
-Estas dos líneas de código también se pueden sintetizar en una sola si queremos **declarar** nuestra variable Y **asignarle** un
-valor en el mismo momento, simplemente unimos las dos sentencias:
+Vean como cuando la declaramos, debemos definir su tipo, pero luego cuando queremos asignarle un valor, simplemente
+ponemos su identificador seguido del operador de asignación y el valor.
+
+Estas dos líneas de código también se pueden sintetizar en una sola si queremos **declarar** nuestra variable Y
+**asignarle** un valor en el mismo momento, simplemente unimos las dos sentencias:
 
 ```java
   byte totalAsientos  =  125;
@@ -58,13 +67,33 @@ valor en el mismo momento, simplemente unimos las dos sentencias:
 ```
 De esta manera estaremos declarando nuestra variable de tipo byte y le asignaremos un valor numérico de 125.
 
-### :warning: Atención máxima :eyes:
-Ahora bien, ¿qué pasa si cuando estamos desarrollando nuestro programa algo cambia y resulta que el total de asientos
-disponibles ya no es 125, sino 300?
+Usando nuestro primer ejemplo con cadenas podemos ver como es que se le cambia el valor a una variable:
 
-Cuando decimos que el valor de la variable puede cambiar y el sistema no nos va
-a reprochar nada, pues las _variables varían_... debemos prestar mucha atención a un tema ya a esta altura recurrente:
-**Java es un lenguaje estricto con sus tipos de datos**.
+```java
+      String nombre = "Juan Domingo";
+      System.out.println("Nombre inicial: " + nombre);
+      // Acá pasan cosas.
+      System.out.println("Pasan muchos años y muchas cosas...");
+      nombre = "Cristina";
+      System.out.println("Nombre luego: " + nombre);
+```
+
+### :warning: Atención máxima :eyes:
+Ahora bien, ¿qué pasa si un tiempo después nos llaman de la sala de teatro y nos dicen que remodelaron la sala y la
+ampliaron, que ahora tiene 300 butacas? Bueno, en principio si nos caían bien nos vamos a poner contentxs, y luego
+buscaremos nuestro código e iremos a modificar nuestra variable que tenía el total de asientos para actualizarla con el
+nuevo valor. Pareciera tan sencillo como encontrar la línea donde la declaramos y simplemente cambiar el número:
+
+```java
+byte totalAsientos  =  300;
+```
+
+Prueben declarar esta variable de este modo ^ a ver qué sucede :boom: .
+Por más que la diferencia sea muy chiquita :pinching_hand_tone4: para Java ese no es un valor válido.
+
+Cuando decimos que el valor de la variable puede cambiar y el sistema no nos va a reprochar nada, pues las _variables
+varían_... debemos prestar mucha atención a un tema ya a esta altura recurrente: **Java es un lenguaje estricto con sus
+tipos de datos**.
 
 Ya nos habíamos comprometido con el sistema a guardar valores de tipo byte en nuestra variable `totalAsientos`, y el
 sistema ya nos había reservado ese espacio en memoria, pero resulta que `300` ¡no es un valor válido en el tipo `byte`!
@@ -79,14 +108,32 @@ veremos esto en detalle más adelante.
 Por eso es importante siempre intentar anticiparse a este tipo de cambios o, dicho de otra forma, no confiarse en que las
 especificaciones no cambiarán. Siempre será mejor trabajar con tipos de datos que tengan un buen margen para esos cambios.
 
-Lxs invitamos a que hagan la prueba de modificar su variable de tipo byte a un valor más grande que el admitido, a ver
-qué pasa, si total... la diferencia es muy chiquita :pinching_hand_tone4:. Qué tan grave pueden ser unos bits más unos
-bits menos :zany_face:
+En este ejemplo que dimos queda muy evidente que nos estamos "pasando" porque simplemente le asignamos un valor más alto
+cuando declaramos la variable, pero imaginen el siguiente ejemplo en donde una variable `totalEntradas` no tiene un valor
+definido por nosotrxs 'a mano', sino que hay una serie de operaciones que definen su valor. Por ejemplo:
+
+```java
+byte totalEntradas;
+
+// Unas cosas muy interesantes que hace nuestro programa.
+
+byte entradasVendidas = estoVieneDeUnCalculoComplejo;
+byte invitaciones = estoVieneDeOtroCalculo;
+
+totalEntradas = entradasVendidas + invitaciones;
+
+```
+Si la operación de suma que determina el valor de nuestra variable es un número entero más grande que 127, vamos a estar
+en problemas.
+
+Para situaciones muy específicas en donde necesitamos explicitar que una variable no puede cambiar su valor,
+es decir, para declarar variables que no varían (¡qué contradicción!) podemos hacer uso de otro elemento. Esos elementos
+se llaman "constantes".
 
 
 ## Constantes
-Las constantes son un tipo especial de Variable. Y por su nombre suponemos ya sospechan qué es lo que
-será diferente en este elemento: su mutabilidad. Evidentemente las constantes son... constantes y no pueden variar su
+Las constantes son un tipo especial de variable. Y su nombre ya nos dice qué es lo que
+será diferente en este elemento: su _mutabilidad_. Evidentemente, las constantes son... constantes y no pueden variar su
 valor a lo largo del programa.
 
 ???+ note "Constantes"
@@ -94,16 +141,17 @@ valor a lo largo del programa.
 
     - Tienen un identificador :label:
     - Su valor es inalterable durante toda la ejecución del programa :lock:
+    - En Java, debemos especificar su _tipo_ :material-shape:
 
-Cualquier dato que no cambie es candidato a guardarse en una constante. Ejemplos:
+Cualquier dato que no cambie es buen candidato para guardarse en una constante. Ejemplos:
 
-- El número pi (π)
+- El número pi (`π`)
 - La cantidad de meses que tiene un año
 - La velocidad de la luz
 - La burguesía Argentina :P
 
-La declaración de las constantes es igual a la de las variables, pero le tenemos que sumar una palabra que las definirá como
-constantes: `final`. Veamos unos ejemplos.
+La declaración de las constantes es igual a la de las variables, pero le tenemos que sumar una palabra que las definirá
+como constantes: `final`. Veamos unos ejemplos.
 
 ``` java
 // Declaramos las constantes porque hay cosas que nunca cambian (¿?).
@@ -112,8 +160,8 @@ final String MEJOR_PAIS = "Argentina";
 ```
 
 ### Identificadores
-Para usar los identificadores, que no son más que el 'nombre' que le damos a nuestras variables y constantes, debemos tener
-algunas reglas en cuenta.
+Para usar los identificadores, que no son más que el 'nombre' que le damos a nuestras variables y constantes, debemos
+tener algunas reglas en cuenta.
 
 !!! abstract annotate "Sintaxis de los identificadores"
 
@@ -124,7 +172,7 @@ algunas reglas en cuenta.
     - Se distingue entre mayúsculas y minúsculas. (2)
     - No hay una largo máximo ni mínimo establecido.
 
-1. La gente de Oracle (la empresa que desarrolló Java) recomienda NO utilizar giuones bajos (`_`) ni signo de pesos (`$`)
+1. La gente de Oracle (la empresa que desarrolló Java) recomienda NO utilizar guiones bajos (`_`) ni signo de pesos (`$`)
    como primer caracter de un identificador aunque estos estén permitidos.
 2. :material-caps-lock: :eyes: Java es sensible a mayúsculas y minúsculas, con lo cual, el identificador `coso` será
    diferente a `Coso` o `COSO` (o cualquier otra variación).
@@ -197,11 +245,6 @@ c = a + b;
 - `=` y `+`: Son **operadores**.
 - `a + b`: Es una **expresión**.
 - `c = a + b;`: Es una **sentencia**.
-
-{==[Agregar otros ejemplos fáciles para que detecten en clase qué es cada cosa]==}
-
-
-### {==Type cast y precedencia ?==}
 
 ## Palabras reservadas
 
