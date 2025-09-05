@@ -14,14 +14,14 @@ Es como decirle a Java: “tratá este valor como si fuera de este otro tipo”.
 ¡Buena pregunta!
 
 Hagamos está operación en nuestra IDE:
-
+```java
 int numero1 = 19; <br>
 int numero2 = 2;
 
 double resultado = numero1 / número 2;
 
 System.out.print("El resultado de la división es: " + resultado);
-
+```
 Ejecutamos el programa y vamos a tener la salida por consola: 9.0 <br>
 Sabemos que el tipo de dato double maneja número con coma, entonces ¿Por qué el resultado es incorrecto, 
 sabemos que es 9,5? <br>
@@ -56,14 +56,14 @@ Pasemos ahora a como se hace el casteo. Es muy simple.
 
 
 Nuestro ejemplo quedaría así
-
+```java
 int numero1 = 19;
 int numero2 = 2;
 
 double resultado = (double) numero1 / número 2;
 
 System.out.print("El resultado de la división es: " + resultado);
-
+```
 Si ejecutamos el programa ahora vamos a tener el resultado que necesitamos.
 <br>
 <br>
@@ -82,15 +82,16 @@ pero no nos dan el valor sino que nos piden que se lo pidamos al usuario.
 
 Tenemos que crear una variable usando la Clase Scanner.
 
-Hacemos en nuestra IDE dentro de nuestra función Main:<br>
+Hacemos en nuestra IDE dentro de nuestra función Main:<br><br>
+```java
 Scanner ingreso = new Scanner(System.in);<br>
-System.out.println(“Ingrese el valor del lado del cuadrado ”);<br> 
+System.out.println("Ingrese el valor del lado del cuadrado ");<br> 
 int lado = ingreso.nextInt();
 
 int area = lado * lado;
 
-System.out.println(“El area del cuadrado es: ” +  area);
-
+System.out.println("El area del cuadrado es: " +  area);
+```
 Si ejecutamos el programa vamos a ver en consola que el programa queda detenido en el mensaje: <br>
 **Ingrese el valor del lado del cuadrado** 
 
@@ -104,8 +105,14 @@ Scanner ingreso = new Scanner(System.in);) <br><br>
 Algunos ejemplos son:
 
 Para textos: <br>
+```java
 String nombre = ingreso.next()<br>
-Para un número float:<br<
+```
+Para un número float:<br>
+```java
 float numFloat = ingreso.nextFloat();<br>
+```
 Para un número double:<br>
+```java
 double numDouble = ingreso.nextDouble();<br>
+```
