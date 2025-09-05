@@ -4,7 +4,7 @@ icon: material/code-braces
 
 # Clase 03: Más variables
 
-## {==A que llamamos "casteo"==} 
+## {==Conversión de tipos de datos (casteo)==} 
 ¿Qué es el casteo?
 
 En Java, castear significa convertir un valor de un tipo de dato a otro. <br>
