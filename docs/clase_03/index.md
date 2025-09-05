@@ -85,12 +85,12 @@ Tenemos que crear una variable usando la Clase Scanner.
 Hacemos en nuestra IDE dentro de nuestra función Main:<br><br>
 ```java
 Scanner ingreso = new Scanner(System.in);<br>
-System.out.println(“Ingrese el valor del lado del cuadrado ”);<br> 
+System.out.println("Ingrese el valor del lado del cuadrado ");<br> 
 int lado = ingreso.nextInt();
 
 int area = lado * lado;
 
-System.out.println(“El area del cuadrado es: ” +  area);
+System.out.println("El area del cuadrado es: " +  area);
 ```
 Si ejecutamos el programa vamos a ver en consola que el programa queda detenido en el mensaje: <br>
 **Ingrese el valor del lado del cuadrado** 
