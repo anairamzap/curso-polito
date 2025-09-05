@@ -580,9 +580,9 @@ vamos a querer guardar ahí. Esto se llama en programación <strong>declaración
 declarando su <strong>tipo</strong> y comprometiéndonos con el sistema a sólo guardar valores que sean admitidos por ese tipo. Veamos:</p>
 <p>Imaginemos que estamos trabajando en un sistema que manejará la compra de entradas en una sala de teatro, y necesitamos
 entonces en algún momento de nuestro programa definir y guardar la cantidad total de asientos que tiene la sala.</p>
-<p><div class="highlight"><pre><span></span><code><span class="kt">byte</span><span class="w"> </span><span class="n">totalAsientos</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kt">byte</span><span class="w"> </span><span class="n">totalAsientos</span><span class="p">;</span>
 </code></pre></div>
-Con esa línea ya estamos declarando nuestra variable y le estamos diciendo al sistema que <code>totalAsientos</code> tendrá un valor
+<p>Con esa línea ya estamos declarando nuestra variable y le estamos diciendo al sistema que <code>totalAsientos</code> tendrá un valor
 del tipo <code>byte</code>. El sistema entonces nos tomará la palabra y reservará en memoria ese cachito de espacio minúsculo que
 requiere un byte. Noten como nuestra línea termina con un punto y coma. Eso forma parte de la sintaxis de Java y lo
 veremos más adelante cuando veamos <a href="#expresiones">Expresiones</a>.</p>
@@ -597,11 +597,11 @@ usaremos el operador de asignación (<code>=</code>) para asignarle un valor:</p
 ponemos su identificador seguido del operador de asignación y el valor.</p>
 <p>Estas dos líneas de código también se pueden sintetizar en una sola si queremos <strong>declarar</strong> nuestra variable Y
 <strong>asignarle</strong> un valor en el mismo momento, simplemente unimos las dos sentencias:</p>
-<p><div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">byte</span><span class="w"> </span><span class="n">totalAsientos</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mi">125</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="kt">byte</span><span class="w"> </span><span class="n">totalAsientos</span><span class="w">  </span><span class="o">=</span><span class="w">  </span><span class="mi">125</span><span class="p">;</span>
 <span class="c1">//  ^        ^        ^   ^</span>
 <span class="c1">// TIPO    NOMBRE     OP  VAL</span>
 </code></pre></div>
-De esta manera estaremos declarando nuestra variable de tipo byte y le asignaremos un valor numérico de 125.</p>
+<p>De esta manera estaremos declarando nuestra variable de tipo byte y le asignaremos un valor numérico de 125.</p>
 <p>Usando nuestro primer ejemplo con cadenas podemos ver como es que se le cambia el valor a una variable:</p>
 <div class="highlight"><pre><span></span><code><span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Juan Domingo"</span><span class="p">;</span>
 <span class="w">      </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Nombre inicial: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="p">);</span>
@@ -622,9 +622,11 @@ Por más que la diferencia sea muy chiquita <img alt="🤏🏾" class="twemoji" 
 <p>Cuando decimos que el valor de la variable puede cambiar y el sistema no nos va a reprochar nada, pues las <em>variables
 varían</em>… debemos prestar mucha atención a un tema ya a esta altura recurrente: <strong>Java es un lenguaje estricto con sus
 tipos de datos</strong>.</p>
-<p>Ya nos habíamos comprometido con el sistema a guardar valores de tipo byte en nuestra variable <code>totalAsientos</code>, y el
-sistema ya nos había reservado ese espacio en memoria, pero resulta que <code>300</code> ¡no es un valor válido en el tipo <code>byte</code>!
-<span class="twemoji" title="Rango de valores válidos de byte: [-128 .. 127]."><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 9h2V7h-2m1 13c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8m0-18A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2m-1 15h2v-6h-2z"></path></svg></span></p>
+<p class="annotate">Ya nos habíamos comprometido con el sistema a guardar valores de tipo byte en nuestra variable <code>totalAsientos</code>, y el
+sistema ya nos había reservado ese espacio en memoria, pero resulta que <code>300</code> ¡no es un valor válido en el tipo <code>byte</code>! (1)</p>
+<ol>
+<li>Rango de valores válidos de byte: [-128 .. 127].</li>
+</ol>
 <p>Así que si intentamos cambiar el valor inicial de nuestra variable a 300 lo que sucederá es que el sistema simplemente
 no nos va a dejar y nos indicará el error <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
 <p>Por eso es importante siempre intentar anticiparse a este tipo de cambios o, dicho de otra forma, no confiarse en que las
@@ -632,7 +634,7 @@ especificaciones no cambiarán. Siempre será mejor trabajar con tipos de datos 
 <p>En este ejemplo que dimos queda muy evidente que nos estamos "pasando" porque simplemente le asignamos un valor más alto
 cuando declaramos la variable, pero imaginen el siguiente ejemplo en donde una variable <code>totalEntradas</code> no tiene un valor
 definido por nosotrxs 'a mano', sino que hay una serie de operaciones que definen su valor. Por ejemplo:</p>
-<p><div class="highlight"><pre><span></span><code><span class="kt">byte</span><span class="w"> </span><span class="n">totalEntradas</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><code><span class="kt">byte</span><span class="w"> </span><span class="n">totalEntradas</span><span class="p">;</span>
 
 <span class="c1">// Unas cosas muy interesantes que hace nuestro programa.</span>
 
@@ -641,7 +643,7 @@ definido por nosotrxs 'a mano', sino que hay una serie de operaciones que define
 
 <span class="n">totalEntradas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entradasVendidas</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">invitaciones</span><span class="p">;</span>
 </code></pre></div>
-Si la operación de suma que determina el valor de nuestra variable es un número entero más grande que 127, vamos a estar
+<p>Si la operación de suma que determina el valor de nuestra variable es un número entero más grande que 127, vamos a estar
 en problemas.</p>
 <p>Para situaciones muy específicas en donde necesitamos explicitar que una variable no puede cambiar su valor,
 es decir, para declarar variables que no varían (¡qué contradicción!) podemos hacer uso de otro elemento. Esos elementos
@@ -682,15 +684,15 @@ tener algunas reglas en cuenta.</p>
 <li>El identificador debe ser único.</li>
 <li>Deben comenzar siempre por una letra (1).</li>
 <li>Los siguientes caractéres pueden ser letras, dígitos, guión bajo (<code>_</code>) o el signo de pesos (<code>$</code>).</li>
-<li>Se distingue entre mayúsculas y minúsculas. (2)</li>
+<li>Se distingue entre mayúsculas y minúsculas (2).</li>
 <li>No hay una largo máximo ni mínimo establecido.</li>
 </ul>
 </div>
 <ol>
-<li>La gente de Oracle (la empresa que desarrolló Java) recomienda NO utilizar guiones bajos (<code>_</code>) ni signo de pesos (<code>$</code>)
-   como primer caracter de un identificador aunque estos estén permitidos.</li>
-<li><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.96 13.71 12 8.29l2.03 5.43M11.14 6 6.43 18h1.93l.96-2.57h5.36l.96 2.57h1.93L12.86 6zM20 2H4c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h16c1.11 0 2-.89 2-2V4a2 2 0 0 0-2-2m0 18H4V4h16z"></path></svg></span> <img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f440.svg" title=":eyes:"/> Java es sensible a mayúsculas y minúsculas, con lo cual, el identificador <code>coso</code> será
-   diferente a <code>Coso</code> o <code>COSO</code> (o cualquier otra variación).</li>
+<li>La gente de Oracle (la empresa que desarrolló Java) recomienda NO utilizar guiones bajos (<code>_</code>) ni signo de
+    pesos (<code>$</code>) como primer caracter de un identificador aunque estos estén permitidos.</li>
+<li><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.96 13.71 12 8.29l2.03 5.43M11.14 6 6.43 18h1.93l.96-2.57h5.36l.96 2.57h1.93L12.86 6zM20 2H4c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h16c1.11 0 2-.89 2-2V4a2 2 0 0 0-2-2m0 18H4V4h16z"></path></svg></span> <img alt="👀" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f440.svg" title=":eyes:"/> Java es sensible a mayúsculas y minúsculas, con lo cual, el identificador <code>coso</code>
+    será diferente a <code>Coso</code> o <code>COSO</code> (o cualquier otra variación).</li>
 </ol>
 <p>Además de estas reglas de sintaxis hay otro conjunto de cuestiones a tener en cuenta que se suelen denominar "buenas
 prácticas" de programación.</p>
