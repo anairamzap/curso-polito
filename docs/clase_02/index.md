@@ -39,6 +39,7 @@ entonces en algún momento de nuestro programa definir y guardar la cantidad tot
 ```java
 byte totalAsientos;
 ```
+
 Con esa línea ya estamos declarando nuestra variable y le estamos diciendo al sistema que `totalAsientos` tendrá un valor
 del tipo `byte`. El sistema entonces nos tomará la palabra y reservará en memoria ese cachito de espacio minúsculo que
 requiere un byte. Noten como nuestra línea termina con un punto y coma. Eso forma parte de la sintaxis de Java y lo
@@ -65,6 +66,7 @@ Estas dos líneas de código también se pueden sintetizar en una sola si querem
 //  ^        ^        ^   ^
 // TIPO    NOMBRE     OP  VAL
 ```
+
 De esta manera estaremos declarando nuestra variable de tipo byte y le asignaremos un valor numérico de 125.
 
 Usando nuestro primer ejemplo con cadenas podemos ver como es que se le cambia el valor a una variable:
@@ -96,8 +98,10 @@ varían_... debemos prestar mucha atención a un tema ya a esta altura recurrent
 tipos de datos**.
 
 Ya nos habíamos comprometido con el sistema a guardar valores de tipo byte en nuestra variable `totalAsientos`, y el
-sistema ya nos había reservado ese espacio en memoria, pero resulta que `300` ¡no es un valor válido en el tipo `byte`!
-:material-information-outline:{ title="Rango de valores válidos de byte: [-128 .. 127]." }
+sistema ya nos había reservado ese espacio en memoria, pero resulta que `300` ¡no es un valor válido en el tipo `byte`! (1)
+{ .annotate }
+
+1.  Rango de valores válidos de byte: [-128 .. 127].
 
 Así que si intentamos cambiar el valor inicial de nuestra variable a 300 lo que sucederá es que el sistema simplemente
 no nos va a dejar y nos indicará el error [^1].
@@ -123,6 +127,7 @@ byte invitaciones = estoVieneDeOtroCalculo;
 totalEntradas = entradasVendidas + invitaciones;
 
 ```
+
 Si la operación de suma que determina el valor de nuestra variable es un número entero más grande que 127, vamos a estar
 en problemas.
 
@@ -169,13 +174,14 @@ tener algunas reglas en cuenta.
     - El identificador debe ser único.
     - Deben comenzar siempre por una letra (1).
     - Los siguientes caractéres pueden ser letras, dígitos, guión bajo (`_`) o el signo de pesos (`$`).
-    - Se distingue entre mayúsculas y minúsculas. (2)
+    - Se distingue entre mayúsculas y minúsculas (2).
     - No hay una largo máximo ni mínimo establecido.
 
-1. La gente de Oracle (la empresa que desarrolló Java) recomienda NO utilizar guiones bajos (`_`) ni signo de pesos (`$`)
-   como primer caracter de un identificador aunque estos estén permitidos.
-2. :material-caps-lock: :eyes: Java es sensible a mayúsculas y minúsculas, con lo cual, el identificador `coso` será
-   diferente a `Coso` o `COSO` (o cualquier otra variación).
+1.  La gente de Oracle (la empresa que desarrolló Java) recomienda NO utilizar guiones bajos (`_`) ni signo de
+    pesos (`$`) como primer caracter de un identificador aunque estos estén permitidos.
+2.  :material-caps-lock: :eyes: Java es sensible a mayúsculas y minúsculas, con lo cual, el identificador `coso`
+    será diferente a `Coso` o `COSO` (o cualquier otra variación).
+
 
 Además de estas reglas de sintaxis hay otro conjunto de cuestiones a tener en cuenta que se suelen denominar "buenas
 prácticas" de programación.

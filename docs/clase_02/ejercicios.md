@@ -7,10 +7,11 @@ En esta clase vimos variables, constantes y expresiones.
 
 Primeros pasos para estos ejercicios:
 
-1. Abrir la IDE (Netbeans)
-2. Crear un nuevo programa (o abrir uno existente)
-     1. Si estás creando uno nuevo, acordate de seleccionar la opción "Java with Ant".
-     ![img.png](img.png)
+- Abrir la IDE (Netbeans)
+- Crear un nuevo programa (o abrir uno existente)
+    - Si estás creando uno nuevo, acordate de seleccionar la opción "Java with Ant".
+    <img src="../../images/ejercicios/ide_init.png" width="400" height="auto">
+
 
 **NOTA:** Para todos estos ejercicios, cuando proponemos mostrar 'cosas' por consola, agreguen además un pequeño texto
 descriptivo antes del resultado o valor, así se entiende qué es lo que estamos imprimiendo :material-console: :material-heart:
