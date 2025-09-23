@@ -136,3 +136,94 @@ Al hacerlo de está manera el compilador entiende que cada coma separa un valor 
 **En resumen un array es una colección ordenada porque tiene un índice único, una vez creado no puede cambiar la 
 cantidad de elementos que va a contener pero sí se puede cambiar el valor que guardaremos en cada ubicación del
 array**
+<br><br>
+## {==Matrices (Arrays bidimensionales)==}
+
+Ahora ampliemos la analogía que usamos para el vector.<br>
+Vamos a crear una estantería en lugar de solo un estante. Entonces vamos a tener varios estantes del mismo tamaño
+<br><br>
+<img src="../../images/estanteria.png">
+<br><br>
+Fíjense que ahora cada estante tiene otro índice.<br>
+Para que lo veamos claramente lo pusimos en color verde.<br>
+Tenemos 4 filas (los números en verde) y cada fila tiene 10 columnas (los números en celeste)<br>
+En nuestra estantería armamos un primer estante (0, recordemos que nuestro primer número natural es 0, no 1) con 
+10 cajas.<br>
+De la misma manera para el segundo: Tendrá el índice 1 y 10 cajas también.<br>
+Así hasta el último estante = 3.<br>
+Es importante recordar que no puede hacer un estante con 3 cajas. Todos los estantes tienen el mismo tamaño.<br>
+Vayamos a como lo declaramos nuestra estantería en java.<br>
+
+```java
+int[][] matriz = new int[4][10];
+```
+Fíjense que es similar al vector, solo le agregamos otra dimensión.<br>
+En el vector hacíamos, por ejemplo
+```java
+int[] vector = new int[10];
+```
+
+Solo decimos cuantos lugares va a tener el estante. En este caso va a tener 10 lugares.<br>
+En la matriz le agregamos cuantas filas va a tener.<br>
+Esa nueva dimensión va antes de lo que teníamos, por eso [4] va antes de las columnas:<br>
+
+```java
+int[][] matriz = new int[4][10]
+```
+Ahora hablemos de como el asignamos valores. Como hay dos dimensiones si queremos darle valor a nuestra
+matriz tenemos que especificar a qué fila y qué columna nos referimos.<br>
+Si queremos cargar un valor en el primer lugar. Nuestra primer caja de nuestro primer estante<br>
+<img src="../../images/primerLugar.png">
+<br>
+<br>
+Lo hacemos así:
+
+```java
+matriz[0][0] = 22;
+```
+
+Es la fila 0 y la columna 0.<br>
+Si queremos llenar más cajas de nuestro primer estante tenemos que usar la referencia al estante y 
+vamos cambiando la caja donde guardar el valor. Por ej: el primer estante con la segunda y tercer caja.<br>
+
+```java
+matriz[0][1] = 13;
+matriz[0][2] = 8;
+```
+
+¿Y si queremos guardar en la décima caja?<br>
+
+```java
+matriz[0][9] = 2;
+```
+
+¿Y si queremos guardar en la cuarta caja del tercer estante?<br>
+<img src="../../images/cuartoLugarTercerEstante.png">
+<br>
+<br>
+```java
+matriz[2][3] = 55;
+```
+
+De manera similar si lo queremos mostrar por consola. Tenemos que hacer referencia a los dos 
+índices: el de la fila y el de la columna.
+
+```java
+System.out.println(“Mostramos el último valor que agregamos: ” + matriz[2][3]);
+```
+
+**En resumen**<br>
+
+Definición técnica en Java<br><br>
+***Array (vector 1D):***
+1. Ordenado
+2. Tamaño fijo
+3. Acceso indexado (1 índice)
+4. Mutable en contenido
+
+***Array bidimensional (matriz):***
+
+1. Ordenada en dos dimensiones (filas y columnas)
+2. Tamaño fijo (cantidad de filas y de columnas)
+3. Acceso indexado con 2 índices
+4. Mutable en contenido
