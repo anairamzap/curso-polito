@@ -335,7 +335,7 @@ posición correspondiente a la profundidad: El eje Z**
 Por ejemplo si quiero imprimir por consola el valor 129 que está en está parte del código:<br>
 <pre>
 { //Está llave es la apertura de las posiciones correspondiente a la fila 1<br>
-        {33,5,6},    {12,0,8},    {129,65,1}<br>
+        {33,5,6},    {12,0,8},    {129,65,113}<br>
 	//Columna0, Columna1,  Columna2
 },
 </pre>
