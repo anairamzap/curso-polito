@@ -132,10 +132,6 @@ En la quinta caja, con el índice 4, le penemos el valor 44 adentro.<br>
 En la sexta caja, con el índice 5, le penemos el valor 100 adentro.<br>
 
 Al hacerlo de está manera el compilador entiende que cada coma separa un valor de otro.
-
-**En resumen un array es una colección ordenada porque tiene un índice único, una vez creado no puede cambiar la 
-cantidad de elementos que va a contener pero sí se puede cambiar el valor que guardaremos en cada ubicación del
-array**
 <br><br>
 ## {==Matrices (Arrays bidimensionales)==}
 
@@ -211,19 +207,161 @@ De manera similar si lo queremos mostrar por consola. Tenemos que hacer referenc
 ```java
 System.out.println(“Mostramos el último valor que agregamos: ” + matriz[2][3]);
 ```
+<br><br>
+### Ahora vamos a declarar la matriz y asignarle valores a las posiciones, lo hacemos de está manera.
 
-**En resumen**<br>
+```java
+int [ ][ ] numeros = {{72,55,89},{21,3,1}};
+```
 
-Definición técnica en Java<br><br>
-***Array (vector 1D):***
-1. Ordenado
-2. Tamaño fijo
-3. Acceso indexado (1 índice)
+Separemos por grupos para ver como se construye la asignación de valores.<br><br>
+Tomemos la parte de asignación de valores -> {{72,55,89},{21,3,1}}<br><br>
+Las primeras llaves { } corresponden al bloque que corresponde a la matriz completa.<br>
+Las llaves interiores separadas por la coma (,) agrupan los valores por fila y columna.<br>
+Por lo tanto {72,55,89} son los valores de la primera fila, la que tiene índice 0 y las columnas de esa fila.
+
+Fila 0 → Columna 0 = 72
+Fila 0 → Columna 1 = 55
+Fila 0 → Columna 2 = 89
+
+El otro grupo {21,3,1} son los valores de la segunda fila, con índice 1 y sus correspondientes columnas.
+
+Fila 1 → Columna 0 = 21
+Fila 1 → Columna 1 = 3
+Fila 1 → Columna 2 = 1
+La impresión por consola es igual a lo que ya hemos hecho.
+
+## {==Matrices (Arrays tridimensionales)==}
+
+Algo importante a tener en cuenta es que se puede agregar una capa más.<br>
+Este escenario es del caso de la programación y diseño 3D. Por ejemplo: Unity.<br>
+Unity es un motor de videojuegos que se programa y diseña en 3D.
+
+Vayamos a ver un ejemplo.<br>
+Supongamos que nuestra estantería es como un cubo: 3 estantes con 3 cajas en cada columna y 3 filas de cajas 
+en cada estante. 
+
+<img src="../../images/cubo_original.png"> <br><br>
+
+Para poder usarlo como figura de referencia tenemos que determinar sobre que lados vamos a 
+identificar nuestras filas, columnas y la profundidad del cubo.
+
+<img src="../../images/cubo_matriz_ejes.png"> <br><br>
+
+O sea todos los lugares del cubo se van a identificar de está forma general: <br>
+cubo[x][y][z]
+<br>
+En la figura marcamos cada eje, su índice y la “dirección” en la que tiene su dominio con un mismo color.<br> 
+El eje X es en color naranja, el eje Y en negro y el eje Z en azul.<br>
+Ahora marquemos 3 lugares de nuestro cubo para poder determinar sus coordenadas.<br>
+Veamos la siguiente figura:
+
+
+<img src="../../images/cubo_matriz_ejes_puntos.png"> <br><br>
+
+Podemos ver los lugares donde están a, b y c.<br>
+Para el lugar “a” vemos que está en línea con la coordenada 1 de X. La coordenada 1 de Y. Pero no tiene 
+desplazamiento sobre el eje Z, está al frente del cubo. O sea corresponde con la coordenada 0 del eje Z.<br>
+Obviando por ahora la sintaxis de java podemos identificar el punto a de la siguiente manera.<br><br>
+cubo[1][1][0] <br><br>
+Analicemos el punto “b”. Sobre el eje X está en la coordenada 2. Sobre el eje Y está en la coordenada 1 y tiene 
+la coordenada 1 del eje Z.<br>
+Por lo tanto lo podemos identificar así:<br><br>
+cubo[2][1][1] <br><br>
+Por último tenemos el punto “c” que su coordenada X es 2, su coordenada Y es 0 y la coordenada Z es 2.<br>
+Nos quedaría así:<br><br>
+cubo[2][0][2]
+
+Ahora pasemos a como declaramos una matriz tridimensional en java.<br>
+Sigamos con el tamaño de la matriz que tenemos en la figura, la declaramos así<br>
+```java
+int[ ][ ][ ] matriz3D = new int[3][3][3];
+```
+
+Recuerden que al igual que en el caso del vector y de la matriz bidimensional en este tipo de declaración 
+hacemos una matriz nueva indicando solo el tamaño. No le estamos asignando valores a la matriz.
+<br>
+Para asignarle valores hacemos parecido a lo que ya hicimos en los casos anteriores solo que necesitamos indicar 
+las 3 coordenadas.<br>
+Vamos a ingresar un valor en la primera ubicación de la matriz. La 0, 0, 0.<br>
+
+<img src="../../images/cubo_matriz_ejes_punto0-0-0.png"> <br><br>
+
+```java
+matriz3D[0][0][0] = 77;
+```
+
+Si por el contrario queremos ingresar un valor en la última ubicación de la matriz, sería:
+```java
+matriz3D[2][2][2] = 134;
+```
+
+Y en la figura sería el punto que está al fondo y abajo a la derecha.<br>
+
+<img src="../../images/cubo_matriz_ejes_punto2-2-2.png"> <br><br>
+
+Ahora nos falta crear la matriz y asignar valores al mismo tiempo.<br>
+Como referencia tenemos que pensar que necesitamos un par de llaves de apertura y de cierre por cada capa 
+que agreguemos a nuestra matriz.
+Nuestra matriz, la de la figura es de 3 x 3 x 3. Al crearla vamos a tener esto:<br>
+
+```java
+int[][][] cubo = { //Está llave representa al contenedor más grande que sería el cubo en sí
+            
+            {//Está llave es la apertura de todas las posiciones de la fila 0
+                
+                {72,55,89}, {21,3,1}, {18,19,4}
+                    
+            },
+            {//Está llave es la apertura de las posiciones correspondiente a la fila 1
+                
+                {33,5,6}, {12,0,8}, {129,65,113}
+                    
+            },
+            { //Está llave es la apertura de las posiciones correspondiente a la fila 2
+                {77,54,7}, {88,11,71}, {54,7,10}
+            }
+        
+    };
+```
+Tomemos este trozo de código:
+
+{72,55,89}, {21,3,1}, {18,3,4}
+
+Aquí tenemos que **cada coma entre las llaves separa las columnas y cada número separado por coma es la 
+posición correspondiente a la profundidad: El eje Z**
+
+
+Por ejemplo si quiero imprimir por consola el valor 129 que está en está parte del código:<br>
+<pre>
+{ //Está llave es la apertura de las posiciones correspondiente a la fila 1<br>
+        {33,5,6},    {12,0,8},    {129,65,1}<br>
+	//Columna0, Columna1,  Columna2
+},
+</pre>
+Lo haríamos así:<br>
+```java
+System.out.println("Valor que se encuentra en el lugar  [1][2][0]: " + cubo[1][2][0]);
+```
+<br>
+**En resumen** <br><br>
+**Definición técnica en Java**<br>
+
+**Array (vector 1D):**
+1. Ordenado en una dimensión
+2. Tamaño fijo (cantidad de elementos)
+3. Acceso indexado con 1 índice
 4. Mutable en contenido
-
-***Array bidimensional (matriz):***
-
-1. Ordenada en dos dimensiones (filas y columnas)
+<br>
+**Array bidimensional (matriz 2D):**
+1. Ordenado en dos dimensiones (filas y columnas)
 2. Tamaño fijo (cantidad de filas y de columnas)
-3. Acceso indexado con 2 índices
+3. Acceso indexado con 2 índices [fila][columna]
 4. Mutable en contenido
+
+**Array tridimensional (cubo 3D):**
+1. Ordenado en tres dimensiones (ejes X, Y y Z)
+2. Tamaño fijo en cada dimensión
+3. Acceso indexado con 3 índices [x][y][z]
+4. Mutable en contenido
+5. Puede pensarse como un conjunto de matrices 2D apiladas
