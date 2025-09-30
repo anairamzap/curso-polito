@@ -1,1415 +1,638 @@
 
-<!doctype html>
-<html lang="es" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-        <meta name="description" content="Clases, documentación, ejercicios y glosario del curso de Programación de la Polito Arcuschin :)">
-      
-      
-      
-      
-        <link rel="prev" href="../clase_00/">
-      
-      
-        <link rel="next" href="ejercicios/">
-      
-      
-      <link rel="icon" href="../images/libro_abierto.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
-    
-    
-      
-        <title>¿Qué es un programa? | Fases de desarrollo | estructura y sintaxis - Polito - Curso de programación 2025</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
-      
+<!DOCTYPE html>
 
-  
-  
-  
-  
-  <style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
-
-
-    
-    
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-      <link rel="stylesheet" href="../css/overrides.css">
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-blue" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#que-es-un-programa-fases-de-desarrollo-estructura-y-sintaxis" class="md-skip">
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="Clases, documentación, ejercicios y glosario del curso de Programación de la Polito Arcuschin :)" name="description"/>
+<link href="../clase_00/" rel="prev"/>
+<link href="ejercicios/" rel="next"/>
+<link href="../images/libro_abierto.ico" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.18" name="generator"/>
+<title>¿Qué es un programa? | Fases de desarrollo | estructura y sintaxis - Polito - Curso de programación 2025</title>
+<link href="../assets/stylesheets/main.7e37652d.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.06af60db.min.css" rel="stylesheet"/>
+<style>:root{--md-annotation-icon:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M17%2013h-4v4h-2v-4H7v-2h4V7h2v4h4m-5-9A10%2010%200%200%200%202%2012a10%2010%200%200%200%2010%2010%2010%2010%200%200%200%2010-10A10%2010%200%200%200%2012%202%22/%3E%3C/svg%3E');}</style>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../css/overrides.css" rel="stylesheet"/>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="light-blue" data-md-color-scheme="default" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#que-es-un-programa-fases-de-desarrollo-estructura-y-sintaxis">
           Saltar a contenido
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
-  
-
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="Polito - Curso de programación 2025" class="md-header__button md-logo" aria-label="Polito - Curso de programación 2025" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M192 0c17.7 0 32 14.3 32 32v208h-64V32c0-17.7 14.3-32 32-32m96 160c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32m64 64c0-17.7 14.3-32 32-32s32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32zM61.3 51.2 143.9 240H74.1L2.7 76.8c-7.1-16.2.3-35 16.5-42.1s35 .3 42.1 16.5m27 221.3-.2-.5H184c22.1 0 40 17.9 40 40s-17.9 40-40 40h-56c-8.8 0-16 7.2-16 16s7.2 16 16 16h56c39.8 0 72-32.2 72-72v-.6c9.4 5.4 20.3 8.6 32 8.6 13.2 0 25.4-4 35.6-10.8 8.7 24.9 32.5 42.8 60.4 42.8 11.7 0 22.6-3.1 32-8.6v8.6c0 88.4-71.6 160-160 160h-61.7c-42.4 0-83.1-16.9-113.1-46.9l-11.7-11.6c-24-24-37.5-56.6-37.5-90.5v-27c0-32.7 24.6-59.7 56.3-63.5"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="Cabecera" class="md-header__inner md-grid">
+<a aria-label="Polito - Curso de programación 2025" class="md-header__button md-logo" data-md-component="logo" href=".." title="Polito - Curso de programación 2025">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M192 0c17.7 0 32 14.3 32 32v208h-64V32c0-17.7 14.3-32 32-32m96 160c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32m64 64c0-17.7 14.3-32 32-32s32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32zM61.3 51.2 143.9 240H74.1L2.7 76.8c-7.1-16.2.3-35 16.5-42.1s35 .3 42.1 16.5m27 221.3-.2-.5H184c22.1 0 40 17.9 40 40s-17.9 40-40 40h-56c-8.8 0-16 7.2-16 16s7.2 16 16 16h56c39.8 0 72-32.2 72-72v-.6c9.4 5.4 20.3 8.6 32 8.6 13.2 0 25.4-4 35.6-10.8 8.7 24.9 32.5 42.8 60.4 42.8 11.7 0 22.6-3.1 32-8.6v8.6c0 88.4-71.6 160-160 160h-61.7c-42.4 0-83.1-16.9-113.1-46.9l-11.7-11.6c-24-24-37.5-56.6-37.5-90.5v-27c0-32.7 24.6-59.7 56.3-63.5" fill="currentColor"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             Polito - Curso de programación 2025
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               ¿Qué es un programa? | Fases de desarrollo | estructura y sintaxis
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-      
-    
-    
-    
-    
-      
-      
-        <label class="md-header__button md-icon" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-        <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Buscar">
-        
-        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Búsqueda" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Búsqueda" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Buscar" class="md-search__options">
+<button aria-label="Limpiar" class="md-search__icon md-icon" tabindex="-1" title="Limpiar" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             Inicializando búsqueda
           </div>
-          <ol class="md-search-result__list" role="presentation"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list" role="presentation"></ol>
 </div>
-      
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/anairamzap/curso-polito" title="Ir al repositorio" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/anairamzap/curso-polito" title="Ir al repositorio">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4" fill="currentColor"></path></svg>
+</div>
+<div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
-  </nav>
-  
+</div>
+<a class="md-header-nav__button md-icon" href="../pdf/prog_polito_2025.pdf" title="PDF">
+<svg viewbox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+<path d="M128,0c-17.6,0-32,14.4-32,32v448c0,17.6,14.4,32,32,32h320c17.6,0,32-14.4,32-32V128L352,0H128z" fill="#E2E5E7"></path>
+<path d="m384 128h96l-128-128v96c0 17.6 14.4 32 32 32z" fill="#B0B7BD"></path>
+<polygon fill="#CAD1D8" points="480 224 384 128 480 128"></polygon>
+<path d="M416,416c0,8.8-7.2,16-16,16H48c-8.8,0-16-7.2-16-16V256c0-8.8,7.2-16,16-16h352c8.8,0,16,7.2,16,16  V416z" fill="#F15642"></path>
+<g fill="#fff">
+<path d="m101.74 303.15c0-4.224 3.328-8.832 8.688-8.832h29.552c16.64 0 31.616 11.136 31.616 32.48 0 20.224-14.976 31.488-31.616 31.488h-21.36v16.896c0 5.632-3.584 8.816-8.192 8.816-4.224 0-8.688-3.184-8.688-8.816v-72.032zm16.88 7.28v31.872h21.36c8.576 0 15.36-7.568 15.36-15.504 0-8.944-6.784-16.368-15.36-16.368h-21.36z"></path>
+<path d="m196.66 384c-4.224 0-8.832-2.304-8.832-7.92v-72.672c0-4.592 4.608-7.936 8.832-7.936h29.296c58.464 0 57.184 88.528 1.152 88.528h-30.448zm8.064-72.912v57.312h21.232c34.544 0 36.08-57.312 0-57.312h-21.232z"></path>
+<path d="m303.87 312.11v20.336h32.624c4.608 0 9.216 4.608 9.216 9.072 0 4.224-4.608 7.68-9.216 7.68h-32.624v26.864c0 4.48-3.184 7.92-7.664 7.92-5.632 0-9.072-3.44-9.072-7.92v-72.672c0-4.592 3.456-7.936 9.072-7.936h44.912c5.632 0 8.96 3.344 8.96 7.936 0 4.096-3.328 8.704-8.96 8.704h-37.248v0.016z"></path>
+</g>
+<path d="m400 432h-304v16h304c8.8 0 16-7.2 16-16v-16c0 8.8-7.2 16-16 16z" fill="#CAD1D8"></path>
+</svg>
+</a></nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-
-<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Polito - Curso de programación 2025" class="md-nav__button md-logo" aria-label="Polito - Curso de programación 2025" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M192 0c17.7 0 32 14.3 32 32v208h-64V32c0-17.7 14.3-32 32-32m96 160c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32m64 64c0-17.7 14.3-32 32-32s32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32zM61.3 51.2 143.9 240H74.1L2.7 76.8c-7.1-16.2.3-35 16.5-42.1s35 .3 42.1 16.5m27 221.3-.2-.5H184c22.1 0 40 17.9 40 40s-17.9 40-40 40h-56c-8.8 0-16 7.2-16 16s7.2 16 16 16h56c39.8 0 72-32.2 72-72v-.6c9.4 5.4 20.3 8.6 32 8.6 13.2 0 25.4-4 35.6-10.8 8.7 24.9 32.5 42.8 60.4 42.8 11.7 0 22.6-3.1 32-8.6v8.6c0 88.4-71.6 160-160 160h-61.7c-42.4 0-83.1-16.9-113.1-46.9l-11.7-11.6c-24-24-37.5-56.6-37.5-90.5v-27c0-32.7 24.6-59.7 56.3-63.5"/></svg>
-
-    </a>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navegación" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Polito - Curso de programación 2025" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Polito - Curso de programación 2025">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M192 0c17.7 0 32 14.3 32 32v208h-64V32c0-17.7 14.3-32 32-32m96 160c17.7 0 32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32v-64c0-17.7 14.3-32 32-32m64 64c0-17.7 14.3-32 32-32s32 14.3 32 32v64c0 17.7-14.3 32-32 32s-32-14.3-32-32zM61.3 51.2 143.9 240H74.1L2.7 76.8c-7.1-16.2.3-35 16.5-42.1s35 .3 42.1 16.5m27 221.3-.2-.5H184c22.1 0 40 17.9 40 40s-17.9 40-40 40h-56c-8.8 0-16 7.2-16 16s7.2 16 16 16h56c39.8 0 72-32.2 72-72v-.6c9.4 5.4 20.3 8.6 32 8.6 13.2 0 25.4-4 35.6-10.8 8.7 24.9 32.5 42.8 60.4 42.8 11.7 0 22.6-3.1 32-8.6v8.6c0 88.4-71.6 160-160 160h-61.7c-42.4 0-83.1-16.9-113.1-46.9l-11.7-11.6c-24-24-37.5-56.6-37.5-90.5v-27c0-32.7 24.6-59.7 56.3-63.5" fill="currentColor"></path></svg>
+</a>
     Polito - Curso de programación 2025
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/anairamzap/curso-polito" title="Ir al repositorio" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
-  </div>
-  <div class="md-source__repository">
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/anairamzap/curso-polito" title="Ir al repositorio">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4" fill="currentColor"></path></svg>
+</div>
+<div class="md-source__repository">
     GitHub
   </div>
 </a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23 17c0 3.31-2.69 6-6 6v-1.5c2.5 0 4.5-2 4.5-4.5zM1 7c0-3.31 2.69-6 6-6v1.5c-2.5 0-4.5 2-4.5 4.5zm7-2.68-4.59 4.6c-3.22 3.22-3.22 8.45 0 11.67s8.45 3.22 11.67 0l7.07-7.09c.49-.47.49-1.26 0-1.75a1.25 1.25 0 0 0-1.77 0l-4.42 4.42-.71-.71 6.54-6.54c.49-.49.49-1.28 0-1.77s-1.29-.49-1.79 0L14.19 13l-.69-.73 6.87-6.89c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-6.89 6.89-.71-.7 5.5-5.48c.5-.49.5-1.28 0-1.77s-1.28-.49-1.77 0l-7.62 7.62a4 4 0 0 1-.33 5.28l-.71-.71a3 3 0 0 0 0-4.24l-.35-.35 4.07-4.07c.49-.49.49-1.28 0-1.77-.5-.48-1.29-.48-1.79.01"/></svg>
-  
-  <span class="md-ellipsis">
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 17c0 3.31-2.69 6-6 6v-1.5c2.5 0 4.5-2 4.5-4.5zM1 7c0-3.31 2.69-6 6-6v1.5c-2.5 0-4.5 2-4.5 4.5zm7-2.68-4.59 4.6c-3.22 3.22-3.22 8.45 0 11.67s8.45 3.22 11.67 0l7.07-7.09c.49-.47.49-1.26 0-1.75a1.25 1.25 0 0 0-1.77 0l-4.42 4.42-.71-.71 6.54-6.54c.49-.49.49-1.28 0-1.77s-1.29-.49-1.79 0L14.19 13l-.69-.73 6.87-6.89c.49-.49.49-1.28 0-1.77s-1.28-.49-1.77 0l-6.89 6.89-.71-.7 5.5-5.48c.5-.49.5-1.28 0-1.77s-1.28-.49-1.77 0l-7.62 7.62a4 4 0 0 1-.33 5.28l-.71-.71a3 3 0 0 0 0-4.24l-.35-.35 4.07-4.07c.49-.49.49-1.28 0-1.77-.5-.48-1.29-.48-1.79.01"></path></svg>
+<span class="md-ellipsis">
     Inicio
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../clase_00/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 2H2v6h18zm-2 4H4V4h14zm-2 3c-1.31 0-2.54.37-3.59 1H8.5c-.28 0-.5.22-.5.5V12h2.26A6.94 6.94 0 0 0 9 16c0 .7.11 1.37.29 2H5V9H3v11h7.26c1.27 1.81 3.36 3 5.74 3 3.87 0 7-3.13 7-7s-3.13-7-7-7m0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m.5-4.75 2.86 1.69-.75 1.22L15 17v-5h1.5z"/></svg>
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../clase_00/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H2v6h18zm-2 4H4V4h14zm-2 3c-1.31 0-2.54.37-3.59 1H8.5c-.28 0-.5.22-.5.5V12h2.26A6.94 6.94 0 0 0 9 16c0 .7.11 1.37.29 2H5V9H3v11h7.26c1.27 1.81 3.36 3 5.74 3 3.87 0 7-3.13 7-7s-3.13-7-7-7m0 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5m.5-4.75 2.86 1.69-.75 1.22L15 17v-5h1.5z"></path></svg>
+<span class="md-ellipsis">
     Clase 00: Historia y fundamentos
     
   </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_2_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
             Clase 00: Historia y fundamentos
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0 1-1V4H8a1 1 0 0 0-1 1v11H5V5a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v1h-2V5a1 1 0 0 0-1-1 1 1 0 0 0-1 1v14a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-1h11a2 2 0 0 0 2 2M9 6h5v2H9zm0 4h5v2H9zm0 4h5v2H9z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link md-nav__link--active" href="./">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 20a1 1 0 0 0 1-1V4H8a1 1 0 0 0-1 1v11H5V5a3 3 0 0 1 3-3h11a3 3 0 0 1 3 3v1h-2V5a1 1 0 0 0-1-1 1 1 0 0 0-1 1v14a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-1h11a2 2 0 0 0 2 2M9 6h5v2H9zm0 4h5v2H9zm0 4h5v2H9z"></path></svg>
+<span class="md-ellipsis">
     Clase 01: Programa y Operadores
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+<label class="md-nav__link md-nav__link--active" for="__nav_3" id="__nav_3_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
             Clase 01: Programa y Operadores
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="ejercicios/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../clase_02/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"/></svg>
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../clase_02/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"></path></svg>
+<span class="md-ellipsis">
     Clase 02: Variables y Expresiones
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
             Clase 02: Variables y Expresiones
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clase_02/ejercicios/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clase_02/ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../clase_03/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"/></svg>
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../clase_03/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"></path></svg>
+<span class="md-ellipsis">
     Clase 03: Variables II
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
             Clase 03: Variables II
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clase_03/ejercicios/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clase_03/ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../clase_04/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"/></svg>
-  
-  <span class="md-ellipsis">
-    Clase 04: Estructuras de control
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../clase_04/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"></path></svg>
+<span class="md-ellipsis">
+    Clase 04: Arrays
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
-            <span class="md-nav__icon md-icon"></span>
-            Clase 04: Estructuras de control
+</a>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+            Clase 04: Arrays
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clase_04/ejercicios/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clase_04/ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../clase_05/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.6 5.29c-1.1-.1-2.07.71-2.17 1.82L13.18 10H16v2h-3l-.44 5.07a3.986 3.986 0 0 1-4.33 3.63 4 4 0 0 1-3.06-1.87l1.5-1.5c.24.74.9 1.31 1.73 1.38 1.1.1 2.07-.71 2.17-1.82L11 12H8v-2h3.17l.27-3.07c.19-2.2 2.13-3.83 4.33-3.63 1.31.11 2.41.84 3.06 1.87l-1.5 1.5c-.24-.74-.9-1.31-1.73-1.38"/></svg>
-  
-  <span class="md-ellipsis">
-    Clase 05: Funciones
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_7" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../clase_05/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 3a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2H3v2h1a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h2v-2H8v-5a2 2 0 0 0-2-2 2 2 0 0 0 2-2V5h2V3m6 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3z"></path></svg>
+<span class="md-ellipsis">
+    Clase 05: Estructuras de control
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
-            <span class="md-nav__icon md-icon"></span>
-            Clase 05: Funciones
+</a>
+<label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_7_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_7">
+<span class="md-nav__icon md-icon"></span>
+            Clase 05: Estructuras de control
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clase_05/ejercicios/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clase_05/ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../clase_06/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.6 5.29c-1.1-.1-2.07.71-2.17 1.82L13.18 10H16v2h-3l-.44 5.07a3.986 3.986 0 0 1-4.33 3.63 4 4 0 0 1-3.06-1.87l1.5-1.5c.24.74.9 1.31 1.73 1.38 1.1.1 2.07-.71 2.17-1.82L11 12H8v-2h3.17l.27-3.07c.19-2.2 2.13-3.83 4.33-3.63 1.31.11 2.41.84 3.06 1.87l-1.5 1.5c-.24-.74-.9-1.31-1.73-1.38"/></svg>
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_8" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../clase_06/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15.6 5.29c-1.1-.1-2.07.71-2.17 1.82L13.18 10H16v2h-3l-.44 5.07a3.986 3.986 0 0 1-4.33 3.63 4 4 0 0 1-3.06-1.87l1.5-1.5c.24.74.9 1.31 1.73 1.38 1.1.1 2.07-.71 2.17-1.82L11 12H8v-2h3.17l.27-3.07c.19-2.2 2.13-3.83 4.33-3.63 1.31.11 2.41.84 3.06 1.87l-1.5 1.5c-.24-.74-.9-1.31-1.73-1.38"></path></svg>
+<span class="md-ellipsis">
     Clase 06: Funciones II
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+<label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_8_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_8">
+<span class="md-nav__icon md-icon"></span>
             Clase 06: Funciones II
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clase_06/ejercicios/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clase_06/ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../clase_07/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"/></svg>
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_9" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../clase_07/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 7H5a2 2 0 0 0-2 2v8h2v-4h2v4h2V9a2 2 0 0 0-2-2m0 4H5V9h2m7-2h-4v10h2v-4h2a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2m0 4h-2V9h2m6 0v6h1v2h-4v-2h1V9h-1V7h4v2Z"></path></svg>
+<span class="md-ellipsis">
     Clase 07: API de Java
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+<label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_9_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_9">
+<span class="md-nav__icon md-icon"></span>
             Clase 07: API de Java
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clase_07/ejercicios/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clase_07/ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../clase_08/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 3h2v2H5v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5h2v2H5c-1.07-.27-2-.9-2-2v-4a2 2 0 0 0-2-2H0v-2h1a2 2 0 0 0 2-2V5a2 2 0 0 1 2-2m14 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3zm-7 12a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-4 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m8 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1"/></svg>
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_10" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../clase_08/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 3h2v2H5v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5h2v2H5c-1.07-.27-2-.9-2-2v-4a2 2 0 0 0-2-2H0v-2h1a2 2 0 0 0 2-2V5a2 2 0 0 1 2-2m14 0a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h1v2h-1a2 2 0 0 0-2 2v4a2 2 0 0 1-2 2h-2v-2h2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5h-2V3zm-7 12a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-4 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m8 0a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1"></path></svg>
+<span class="md-ellipsis">
     Clase 08: Clases
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+<label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_10_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_10">
+<span class="md-nav__icon md-icon"></span>
             Clase 08: Clases
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clase_08/ejercicios/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clase_08/ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../clase_09/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm3 1v12h4v-2H8V8h2V6zm10 10h-2v2h4V6h-4v2h2z"/></svg>
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_11" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../clase_09/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zm3 1v12h4v-2H8V8h2V6zm10 10h-2v2h4V6h-4v2h2z"></path></svg>
+<span class="md-ellipsis">
     Clase 09: Arrays
     
   </span>
-  
-
-            </a>
-            
-              
-              <label class="md-nav__link " for="__nav_11" id="__nav_11_label" tabindex="0">
-                <span class="md-nav__icon md-icon"></span>
-              </label>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_11">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+<label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_11_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_11">
+<span class="md-nav__icon md-icon"></span>
             Clase 09: Arrays
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../clase_09/ejercicios/" class="md-nav__link">
-        
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../clase_09/ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../glosario/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../glosario/">
+<span class="md-ellipsis">
     Glosario
     
   </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-          
-        
-      
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
-        
-          
-          <div class="md-nav__link md-nav__container">
-            <a href="../ejercicios/" class="md-nav__link ">
-              
-  
-  
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
-  
-  <span class="md-ellipsis">
+</a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_13" type="checkbox"/>
+<div class="md-nav__link md-nav__container">
+<a class="md-nav__link" href="../ejercicios/">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"></path></svg>
+<span class="md-ellipsis">
     Ejercicios
     
   </span>
-  
-
-            </a>
-            
-          </div>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
-            <span class="md-nav__icon md-icon"></span>
+</a>
+</div>
+<nav aria-expanded="false" aria-labelledby="__nav_13_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_13">
+<span class="md-nav__icon md-icon"></span>
             Ejercicios
           </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-  </ul>
+<ul class="md-nav__list" data-md-scrollfix="">
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Tabla de contenidos" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       Tabla de contenidos
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#breve-repaso" class="md-nav__link">
-    <span class="md-ellipsis">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#breve-repaso">
+<span class="md-ellipsis">
       Breve repaso
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#programa" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#programa">
+<span class="md-ellipsis">
       Programa
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fases-de-desarrollo" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#fases-de-desarrollo">
+<span class="md-ellipsis">
       Fases de desarrollo
     </span>
-  </a>
-  
+</a>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#estructura-de-un-programa" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#estructura-de-un-programa">
+<span class="md-ellipsis">
       Estructura de un programa
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Estructura de un programa">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sentencias-y-bloques" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Estructura de un programa" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#sentencias-y-bloques">
+<span class="md-ellipsis">
       Sentencias y bloques
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#llaves-y-parentesis" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#llaves-y-parentesis">
+<span class="md-ellipsis">
       Llaves y paréntesis
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#indentacion" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#indentacion">
+<span class="md-ellipsis">
       Indentación
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#comentarios" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#comentarios">
+<span class="md-ellipsis">
       Comentarios
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ciclo-del-programa-inicio-proceso-final" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ciclo-del-programa-inicio-proceso-final">
+<span class="md-ellipsis">
       Ciclo del programa: Inicio, proceso, final.
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#tipos-de-datos-y-valores" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-de-datos-y-valores">
+<span class="md-ellipsis">
       Tipos de datos y valores
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tipos de datos y valores">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tipos-primitivos" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Tipos de datos y valores" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-primitivos">
+<span class="md-ellipsis">
       Tipos primitivos
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#tipos-primitivos-tabla" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#tipos-primitivos-tabla">
+<span class="md-ellipsis">
       Tipos primitivos - Tabla
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#operadores" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores">
+<span class="md-ellipsis">
       Operadores
     </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Operadores">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#operadores-relacionales" class="md-nav__link">
-    <span class="md-ellipsis">
+</a>
+<nav aria-label="Operadores" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-relacionales">
+<span class="md-ellipsis">
       Operadores relacionales
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#operadores-logicos" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-logicos">
+<span class="md-ellipsis">
       Operadores lógicos
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#operadores-aritmeticos" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-aritmeticos">
+<span class="md-ellipsis">
       Operadores aritméticos
     </span>
-  </a>
-  
+</a>
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#operadores-de-asignacion" class="md-nav__link">
-    <span class="md-ellipsis">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#operadores-de-asignacion">
+<span class="md-ellipsis">
       Operadores de asignación
     </span>
-  </a>
-  
+</a>
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-
-  
-  
-
-
-<h1 id="que-es-un-programa-fases-de-desarrollo-estructura-y-sintaxis">¿Qué es un programa? | Fases de desarrollo | estructura y sintaxis<a class="headerlink" href="#que-es-un-programa-fases-de-desarrollo-estructura-y-sintaxis" title="Permanent link">&para;</a></h1>
-<h2 id="breve-repaso">Breve repaso<a class="headerlink" href="#breve-repaso" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="que-es-un-programa-fases-de-desarrollo-estructura-y-sintaxis">¿Qué es un programa? | Fases de desarrollo | estructura y sintaxis<a class="headerlink" href="#que-es-un-programa-fases-de-desarrollo-estructura-y-sintaxis" title="Permanent link">¶</a></h1>
+<h2 id="breve-repaso">Breve repaso<a class="headerlink" href="#breve-repaso" title="Permanent link">¶</a></h2>
 <p>En la clase pasada habíamos llegado a una definición para la acción de programar.
 Vimos que programar no era exclusivo de la informática, sino una forma de pensar (lógica) para elaborar una serie de
 instrucciones (algoritmo) que serán ejecutadas por una máquina o sistema.</p>
@@ -1422,7 +645,7 @@ instrucciones (algoritmo) que serán ejecutadas por una máquina o sistema.</p>
 <ul>
 <li>Un algoritmo es una creación humana.</li>
 <li>Se lo puede definir como una serie de instrucciones ordenadas o una lista ordenada de pasos para lograr un objetivo.</li>
-<li>Ejemplos clásicos: Una receta de cocina 📖🥣, un manual para armar un mueble 🗒️, tomarse el colectivo <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 3H7V2H6a1.78 1.78 0 0 0-1.41 1H2v2h1.73C2 10.58 2 22 2 22h5V5h13m2 3.5a2.5 2.5 0 1 0-3 2.5v11h1V11a2.5 2.5 0 0 0 2-2.5m-7 3V16h-1v6h-1.5v-5h-1v5H10v-6H9v-4.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5m-3-5A1.5 1.5 0 1 0 13.5 8 1.5 1.5 0 0 0 12 6.5"/></svg></span></li>
+<li>Ejemplos clásicos: Una receta de cocina 📖🥣, un manual para armar un mueble 🗒️, tomarse el colectivo <span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 3H7V2H6a1.78 1.78 0 0 0-1.41 1H2v2h1.73C2 10.58 2 22 2 22h5V5h13m2 3.5a2.5 2.5 0 1 0-3 2.5v11h1V11a2.5 2.5 0 0 0 2-2.5m-7 3V16h-1v6h-1.5v-5h-1v5H10v-6H9v-4.5a1.5 1.5 0 0 1 1.5-1.5h3a1.5 1.5 0 0 1 1.5 1.5m-3-5A1.5 1.5 0 1 0 13.5 8 1.5 1.5 0 0 0 12 6.5"></path></svg></span></li>
 </ul>
 </details>
 <p>Vimos también qué era un lenguaje de programación: una forma de escribir esas instrucciones. Y los categorizamos por
@@ -1440,12 +663,12 @@ pueda ejecutar nuestras instrucciones de la manera en que las pensamos.</p>
 <li>Al igual que el lenguaje humano, cada lenguaje tiene reglas <strong>sintácticas</strong> y <strong>semánticas</strong>.</li>
 </ul>
 </details>
-<p>A partir de estas definiciones, ya podemos adentrarnos en dilucidar&hellip; ¿qué es entonces un programa?</p>
-<h2 id="programa">Programa<a class="headerlink" href="#programa" title="Permanent link">&para;</a></h2>
+<p>A partir de estas definiciones, ya podemos adentrarnos en dilucidar… ¿qué es entonces un programa?</p>
+<h2 id="programa">Programa<a class="headerlink" href="#programa" title="Permanent link">¶</a></h2>
 <p>La palabra programa puede hacer referencia a muchas cosas no tan disímiles como aparentan:
 Un programa de una materia de la facu, un programa de televisión, un programa político
 (quienes tengan cercanía a espacios de discusión política, habrán notado los constantes reclamos de la existencia de
-dicha cosa), etc&hellip;</p>
+dicha cosa), etc…</p>
 <p>Como podrán observar, todas esas acepciones de la palabra "programa" son bastante similares: Es un conjunto ordenado de
 tópicos que se deben seguir en el orden establecido y de una forma más o menos constante.</p>
 <p>Pues bien, entonces un programa informático no es más que una seguidilla de sentencias que se ejecutan desde el inicio
@@ -1454,7 +677,7 @@ hasta el final (ya veremos un poco más esto), realizando así las acciones que 
 <summary>¿Qué es un programa?</summary>
 <p>Un programa informático es un conjunto de sentencias que se ejecutan desde el inicio hasta el final realizando así las acciones definidas.</p>
 </details>
-<h2 id="fases-de-desarrollo">Fases de desarrollo<a class="headerlink" href="#fases-de-desarrollo" title="Permanent link">&para;</a></h2>
+<h2 id="fases-de-desarrollo">Fases de desarrollo<a class="headerlink" href="#fases-de-desarrollo" title="Permanent link">¶</a></h2>
 <p>Esto lo veremos en detalle más adelante cuando veamos ejercicios de <em>problemas</em>, pero vale la pena mencionarlo aquí para
 tener una idea general de las fases que tiene el desarrollo de un programa.</p>
 <p>¿Por qué insistimos tanto en esto de que programar no es exclusivamente escribir código en un lenguaje elegido? La
@@ -1472,7 +695,7 @@ lenguaje que hayamos elegido.</p>
 <li>Traducir las soluciones elegidas a código</li>
 </ol>
 </details>
-<h2 id="estructura-de-un-programa">Estructura de un programa<a class="headerlink" href="#estructura-de-un-programa" title="Permanent link">&para;</a></h2>
+<h2 id="estructura-de-un-programa">Estructura de un programa<a class="headerlink" href="#estructura-de-un-programa" title="Permanent link">¶</a></h2>
 <p>Vamos a ver cómo se ve un programita básico ("<a href="https://es.wikipedia.org/wiki/Hola_mundo">Hola Mundo</a>"<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>) para intentar
 descomponer su estructura.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -1503,7 +726,7 @@ descomponer su estructura.</p>
 <span class="cm">     */</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">// TODO: el código a ejecutar viene acá abajo.</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;¡Hola mundo!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"¡Hola mundo!"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1516,11 +739,11 @@ descomponer su estructura.</p>
 <li>Hay unas líneas "especiales" que empiezan con símbolos: barras y asteriscos (<code>/**</code> <code>//</code>)</li>
 <li>La línea que imprime el texto (<code>System.out.print()</code>), "ya viene" con el lenguaje.</li>
 </ul>
-<h3 id="sentencias-y-bloques">Sentencias y bloques<a class="headerlink" href="#sentencias-y-bloques" title="Permanent link">&para;</a></h3>
-<p>Las líneas de nuestro programa son&hellip; ¡las sentencias! Una sentencia es una representación de la acción que nuestro
+<h3 id="sentencias-y-bloques">Sentencias y bloques<a class="headerlink" href="#sentencias-y-bloques" title="Permanent link">¶</a></h3>
+<p>Las líneas de nuestro programa son… ¡las sentencias! Una sentencia es una representación de la acción que nuestro
 programa debe ejecutar.</p>
 <p>A la agrupación de líneas de código que conforman una sola sentencia, las llamaremos bloques.</p>
-<h3 id="llaves-y-parentesis">Llaves y paréntesis<a class="headerlink" href="#llaves-y-parentesis" title="Permanent link">&para;</a></h3>
+<h3 id="llaves-y-parentesis">Llaves y paréntesis<a class="headerlink" href="#llaves-y-parentesis" title="Permanent link">¶</a></h3>
 <p>Las llaves son las que construyen la estructura del código, delimitando los bloques. Indican que todo lo que está entre
 la llave de apertura (<code>{</code>) y la de clausura (<code>}</code>) "pertence" a la línea que antecede inmediatamente a la apertura.</p>
 <p>En nuestro ejemplo tenemos dos "conjuntos" de llaves:</p>
@@ -1562,42 +785,42 @@ que está dentro de un paréntesis "pertenece" a la <em>palabra</em> o expresió
 <span class="cm">     */</span>
 <span class="hll"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span class="w">        </span><span class="c1">// TODO: el código a ejecutar viene acá abajo.</span>
-<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;¡Hola mundo!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"¡Hola mundo!"</span><span class="p">);</span>
 <span class="hll"><span class="w">    </span><span class="p">}</span>
 </span><span class="hll"><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<h3 id="indentacion">Indentación<a class="headerlink" href="#indentacion" title="Permanent link">&para;</a></h3>
+<h3 id="indentacion">Indentación<a class="headerlink" href="#indentacion" title="Permanent link">¶</a></h3>
 <p>El espacio en blanco que vemos antes de las líneas de código es la indentación o el indentado. En la sintaxis de los
 lenguajes humanos esto se conoce como sangría. En el caso de Java la indentación no tiene importancia sintáctica ni
 semántica, peeeero es importante respetarla porque facilita visualmente la comprensión y la identificación de los bloques.</p>
-<h3 id="comentarios">Comentarios<a class="headerlink" href="#comentarios" title="Permanent link">&para;</a></h3>
+<h3 id="comentarios">Comentarios<a class="headerlink" href="#comentarios" title="Permanent link">¶</a></h3>
 <p>Un comentario es una línea de texto que no es ejecutada, es una nota que agrega quien escribe el programa
 para hacer aclaraciones sobre ese código. Pueden ser notas sobre la funcionalidad (qué hace), o para facilitar la
 comprensión de la solución implementada (cómo lo hace).</p>
 <p>Es una buena práctica utilizar los comentarios para "documentar" nuestro código y así facilitar que otras personas
 puedan modificarlo (o incluso para nuestro <em>yo del futuro</em> :) ).</p>
-<h3 id="ciclo-del-programa-inicio-proceso-final">Ciclo del programa: Inicio, proceso, final.<a class="headerlink" href="#ciclo-del-programa-inicio-proceso-final" title="Permanent link">&para;</a></h3>
-<p>Veremos esto en clase cuando "corramos" <img alt="🏃🏿‍➡️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3c3-1f3ff-200d-27a1-fe0f.svg" title=":person_running_facing_right_tone5:" /> nuestro programa, pero dejamos aquí una
+<h3 id="ciclo-del-programa-inicio-proceso-final">Ciclo del programa: Inicio, proceso, final.<a class="headerlink" href="#ciclo-del-programa-inicio-proceso-final" title="Permanent link">¶</a></h3>
+<p>Veremos esto en clase cuando "corramos" <img alt="🏃🏿‍➡️" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f3c3-1f3ff-200d-27a1-fe0f.svg" title=":person_running_facing_right_tone5:"/> nuestro programa, pero dejamos aquí una
 definición muy esquemática de un ciclo.</p>
 <p>Analicemos el ciclo:</p>
 <ul>
 <li><strong>Inicio</strong>: Punto de entrada (o <em>entrypoint</em> en inglés)</li>
 <li><strong>Proceso</strong>: Una vez que se cargó en memoria, el código es ejecutado y el sistema operativo gestionará los recursos del
-  entorno (asignando recursos, comunicando con dispositivos de entrada y salida, archivos, etc&hellip;).</li>
+  entorno (asignando recursos, comunicando con dispositivos de entrada y salida, archivos, etc…).</li>
 <li><strong>Final</strong>: Código de salida.</li>
 </ul>
-<h2 id="tipos-de-datos-y-valores">Tipos de datos y valores<a class="headerlink" href="#tipos-de-datos-y-valores" title="Permanent link">&para;</a></h2>
+<h2 id="tipos-de-datos-y-valores">Tipos de datos y valores<a class="headerlink" href="#tipos-de-datos-y-valores" title="Permanent link">¶</a></h2>
 <p>Los tipos de datos <strong>clasifican datos según sus características específicas</strong>. Los valores son los datos en sí mismos
 (y pertenecerán a un tipo u otro).
 Entenderemos un poco más el concepto de valor y dato cuando veamos Variables.</p>
 <p>Recuerdan que en la primera clase vimos que había lenguajes fuertemente tipados o débilmente tipados, esta
 caractéristica de los lenguajes hará que en nuestro programa debamos explicitar (o no) el tipo de dato que vamos a
 manipular. Veamos entonces ahora los tipos de datos llamados primitivos o elementales que nos ofrece Java.</p>
-<h3 id="tipos-primitivos">Tipos primitivos<a class="headerlink" href="#tipos-primitivos" title="Permanent link">&para;</a></h3>
+<h3 id="tipos-primitivos">Tipos primitivos<a class="headerlink" href="#tipos-primitivos" title="Permanent link">¶</a></h3>
 <p>Los "tipos primitivos"<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>, a veces llamados también Tipos Elementales, son los tipos de datos originales de cada lenguaje.
 Es decir que cada lenguaje ya nos proporciona esos tipos y así también los define:</p>
 <ol>
-<li>Qué <strong>tipo de dato</strong> se puede representar (números -enteros o decimales-, caractéres -letras y símbolos-, etc&hellip;)</li>
+<li>Qué <strong>tipo de dato</strong> se puede representar (números -enteros o decimales-, caractéres -letras y símbolos-, etc…)</li>
 <li>Sus <strong>rangos de valores posibles</strong></li>
 <li>Y por lo anterior entonces también se define <strong>el espacio que ocuparán en memoria</strong> los datos pertenecientes a cada
    tipo</li>
@@ -1607,7 +830,7 @@ ejecutar unos y ceros. Por lo tanto, para las máquinas todo será una combinaci
 como <strong>bits</strong>: Un bit puede tener un valor de 1 o de 0.</p>
 <p>Esto lo tenemos que tener claro para entender como se definen los tipos de datos primitivos.</p>
 <p>Aprovechemos el primer tipo de datos para profundizar en esto:</p>
-<h4 id="byte-byte-anglicismo-u-octeto">byte (byte -anglicismo- u octeto)<a class="headerlink" href="#byte-byte-anglicismo-u-octeto" title="Permanent link">&para;</a></h4>
+<h4 id="byte-byte-anglicismo-u-octeto">byte (byte -anglicismo- u octeto)<a class="headerlink" href="#byte-byte-anglicismo-u-octeto" title="Permanent link">¶</a></h4>
 <p>Es un tipo de dato que representa una estructura de <strong>8 bits</strong>. O sea, es el conjunto de 8 bits:</p>
 <div class="highlight"><pre><span></span><code>byte = 00000000
 </code></pre></div>
@@ -1622,27 +845,27 @@ un <code>1</code> o un <code>0</code>.</p>
 <p>Cuando nosotros creamos un dato, la computadora reserva en memoria el tamaño mayor que puede llegar a alcanzar ese dato.
 En el ejemplo que estamos usando, un byte, la máquina va a reservar 8 bits (8 lugares para poner unos y ceros).</p>
 <p>Entonces es importante que <strong>antes de crear datos pensemos qué valores vamos a querer manejar</strong>.</p>
-<h4 id="short-entero-corto">short (entero corto)<a class="headerlink" href="#short-entero-corto" title="Permanent link">&para;</a></h4>
+<h4 id="short-entero-corto">short (entero corto)<a class="headerlink" href="#short-entero-corto" title="Permanent link">¶</a></h4>
 <p>Representa un tipo de dato de <strong>16 bits</strong>. O sea, que usará el doble de memoria que nuestro tipo anterior: <code>00000000 00000000</code>.</p>
 <p>Puede almacenar <strong>valores numéricos enteros desde -32.768 hasta 32.767</strong>. Por supuesto también lo hace combinando <code>1</code>s y <code>0</code>s
 en esas 16 posiciones.</p>
-<h4 id="int-entero">int (entero)<a class="headerlink" href="#int-entero" title="Permanent link">&para;</a></h4>
+<h4 id="int-entero">int (entero)<a class="headerlink" href="#int-entero" title="Permanent link">¶</a></h4>
 <p>Este tipo de dato puede almacenar <strong>valores numéricos enteros</strong> de 32 bits, o sea <strong>4 veces nuestro primer dato <code>00000000</code></strong>
 Los valores van desde -2<sup>31</sup> hasta 2<sup>31</sup>-1. Como pueden ver, el tamaño del número que permite manejar en mucho más
 grande.</p>
 <p>Podemos trabajar con números un poco superiores a los 2 mill millones -2.147.483.648 y 2.147.483.647.</p>
-<h4 id="long-entero-largo">long (entero largo)<a class="headerlink" href="#long-entero-largo" title="Permanent link">&para;</a></h4>
+<h4 id="long-entero-largo">long (entero largo)<a class="headerlink" href="#long-entero-largo" title="Permanent link">¶</a></h4>
 <p>Es un tipo de datos de <strong>64 bits</strong> o sea <strong>8 veces nuestro primer tipo de dato</strong>:
 <code>00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000</code>
 Y puede almacenar <strong>números enteros que van desde -2<sup>63</sup> hasta 2<sup>63</sup>-1</strong>. Como se puede imaginar es extremadamente grande:
 9.223372 × 10<sup>18</sup></p>
-<h4 id="float-coma-flotante-o-real">float (coma flotante o 'real')<a class="headerlink" href="#float-coma-flotante-o-real" title="Permanent link">&para;</a></h4>
+<h4 id="float-coma-flotante-o-real">float (coma flotante o 'real')<a class="headerlink" href="#float-coma-flotante-o-real" title="Permanent link">¶</a></h4>
 <p>Es un tipo de dato de <strong>32 bits</strong>, como el int, pero permite manejar números com coma flotante. Por ejemplo <code>16,4</code> o
 <code>1879223,45</code>. Estos números son los que usualmente se conocen como "decimales".</p>
 <p>Este tipo de dato tiene una precisión simple, esto es algo que veremos más adelante, pero por el momento alcanza con
 saber que no debe ser utilizado si vamos a necesitar números con alta precisión (es decir, lo podemos usar para
 aplicaciones gráficas o videojuegos, pero no para información científica o financiera).</p>
-<h4 id="double-coma-flotante-doble-o-real-largo">double (coma flotante doble o 'real largo')<a class="headerlink" href="#double-coma-flotante-doble-o-real-largo" title="Permanent link">&para;</a></h4>
+<h4 id="double-coma-flotante-doble-o-real-largo">double (coma flotante doble o 'real largo')<a class="headerlink" href="#double-coma-flotante-doble-o-real-largo" title="Permanent link">¶</a></h4>
 <p>En este caso es un tipo de dato de <strong>64 bits</strong>, como el long, pero permite manejar números con coma flotante, como el float.</p>
 <p>Las diferencias entre el float y double son:</p>
 <ul>
@@ -1651,22 +874,22 @@ aplicaciones gráficas o videojuegos, pero no para información científica o fi
   Al ser un número decimal su "exactitud" depende de la cantidad de dígitos que puede manejar después de la coma. Por eso,
   el tipo de dato "double" tiene el doble de precisión que el "float".</li>
 </ul>
-<h4 id="boolean-booleano-anglicismo-o-logico">boolean (booleano -anglicismo- o lógico)<a class="headerlink" href="#boolean-booleano-anglicismo-o-logico" title="Permanent link">&para;</a></h4>
+<h4 id="boolean-booleano-anglicismo-o-logico">boolean (booleano -anglicismo- o lógico)<a class="headerlink" href="#boolean-booleano-anglicismo-o-logico" title="Permanent link">¶</a></h4>
 <p>Este es un tipo de dato de <strong>un bit</strong> que representa verdadero (en inglés "true") o falso (en inglés "false")
-(que también podría ser sí o no, 1 o 0, lleno o vacío, etc&hellip;).</p>
+(que también podría ser sí o no, 1 o 0, lleno o vacío, etc…).</p>
 <p>Se los llama así porque está basado en el álgebra "booleana", del filósofo y matemático inglés
 <a href="https://es.wikipedia.org/wiki/George_Boole">George Boole</a>.</p>
-<h4 id="char-caracter-o-simbolo">char (carácter o símbolo)<a class="headerlink" href="#char-caracter-o-simbolo" title="Permanent link">&para;</a></h4>
+<h4 id="char-caracter-o-simbolo">char (carácter o símbolo)<a class="headerlink" href="#char-caracter-o-simbolo" title="Permanent link">¶</a></h4>
 <p>Es un tipo de dato que representa un carácter <a href="https://www.rapidtables.org/code/text/unicode-characters.html">Unicode</a>
 de <strong>16 bits</strong>. Se utiliza mucho el tipo de dato char para manejar un símbolo o una letra (¡que es en última instancia un
 símbolo!) y no un fragmento de texto.</p>
-<h4 id="string-cadena-de-texto">String (cadena de texto)<a class="headerlink" href="#string-cadena-de-texto" title="Permanent link">&para;</a></h4>
+<h4 id="string-cadena-de-texto">String (cadena de texto)<a class="headerlink" href="#string-cadena-de-texto" title="Permanent link">¶</a></h4>
 <p>Este tipo de dato lo ponemos como primitivo ¡pero no lo es! Lo incluimos aquí porque es tan utilizado como los primitivos.</p>
 <p>En principio hay que observar que empieza con una mayúscula. En casi todos los lenguajes de programación orientada a
 objetos esto tiene un significado importante. Por ahora podemos decir que cuando tenemos que trabajar con textos (frases
 o palabras), usamos este tipo de dato.</p>
-<hr />
-<h3 id="tipos-primitivos-tabla">Tipos primitivos - Tabla<a class="headerlink" href="#tipos-primitivos-tabla" title="Permanent link">&para;</a></h3>
+<hr/>
+<h3 id="tipos-primitivos-tabla">Tipos primitivos - Tabla<a class="headerlink" href="#tipos-primitivos-tabla" title="Permanent link">¶</a></h3>
 <details class="tip">
 <summary>Tipos primitivos de JAVA</summary>
 <table>
@@ -1739,7 +962,7 @@ o palabras), usamos este tipo de dato.</p>
 </tbody>
 </table>
 </details>
-<h2 id="operadores">Operadores<a class="headerlink" href="#operadores" title="Permanent link">&para;</a></h2>
+<h2 id="operadores">Operadores<a class="headerlink" href="#operadores" title="Permanent link">¶</a></h2>
 <p>Los operadores son símbolos o palabras que utilizamos para manipular y combinar expresiones.
 Son elemento que nos permiten realizar, como su nombre lo indica, operaciones como:</p>
 <ul>
@@ -1748,7 +971,7 @@ Son elemento que nos permiten realizar, como su nombre lo indica, operaciones co
 <li>Cálculos aritméticos</li>
 <li>Asignaciones</li>
 </ul>
-<h3 id="operadores-relacionales">Operadores relacionales<a class="headerlink" href="#operadores-relacionales" title="Permanent link">&para;</a></h3>
+<h3 id="operadores-relacionales">Operadores relacionales<a class="headerlink" href="#operadores-relacionales" title="Permanent link">¶</a></h3>
 <p>Utilizamos los operadores relacionales cuando necesitamos comparar dos elementos o valores.</p>
 <p>Dependiendo el operador que usemos tendremos que tener en cuenta, o no, la posición de los elementos con relación al
 operador.</p>
@@ -1795,7 +1018,7 @@ operador.</p>
 </table>
 <p>Es decir, decir que <code>a == b</code> es lo mismo que decir que <code>b == a</code>, sin embargo, no sería lo mismo intercambiar los operandos
 cuando hacemos una comparación o relación mayor/menor: <code>a &lt; b</code> no es lo mismo que <code>b &lt; a</code>.</p>
-<h3 id="operadores-logicos">Operadores lógicos<a class="headerlink" href="#operadores-logicos" title="Permanent link">&para;</a></h3>
+<h3 id="operadores-logicos">Operadores lógicos<a class="headerlink" href="#operadores-logicos" title="Permanent link">¶</a></h3>
 <p>A diferencia de los relacionales que <strong>comparan</strong> elementos o valores, los operadores lógicos <strong>combinan</strong> operaciones
 <em>booleanas</em>.</p>
 <p>Son muy utilizados en estructuras condicionadles y <em>loops</em>, que veremos más adelante, para combinar condiciones y obtener
@@ -1833,7 +1056,7 @@ luego un resultado.</p>
 <p>Cuando usamos los operadores <code>&amp;&amp;</code> si nuestra primera condición devuelve <em>falso</em> o usando el comparador <code>||</code> sin nuestra primera
 condición devuelve <em>verdadero</em> , en ambos casos la segunda condición no se evaluará.</p>
 <p>Los operadores de negación simplemente invierten un valor lógico.</p>
-<h3 id="operadores-aritmeticos">Operadores aritméticos<a class="headerlink" href="#operadores-aritmeticos" title="Permanent link">&para;</a></h3>
+<h3 id="operadores-aritmeticos">Operadores aritméticos<a class="headerlink" href="#operadores-aritmeticos" title="Permanent link">¶</a></h3>
 <p>Los operadores aritméticos se utilizan para realizar operaciones matemáticas básicas.</p>
 <table>
 <thead>
@@ -1865,7 +1088,7 @@ condición devuelve <em>verdadero</em> , en ambos casos la segunda condición no
 </tr>
 </tbody>
 </table>
-<h3 id="operadores-de-asignacion">Operadores de asignación<a class="headerlink" href="#operadores-de-asignacion" title="Permanent link">&para;</a></h3>
+<h3 id="operadores-de-asignacion">Operadores de asignación<a class="headerlink" href="#operadores-de-asignacion" title="Permanent link">¶</a></h3>
 <p>Los operadores de asignación se utilizan para asignar valores a las variables.</p>
 <table>
 <thead>
@@ -1902,81 +1125,47 @@ condición devuelve <em>verdadero</em> , en ambos casos la segunda condición no
 </tbody>
 </table>
 <div class="footnote">
-<hr />
+<hr/>
 <ol>
 <li id="fn:1">
 <p>"Hola, mundo" en informática es un programa que muestra el texto «Hola, mundo» en un dispositivo de visualización,
 en la mayoría de los casos la pantalla de un monitor. Este programa suele ser usado como introducción al estudio de un
-lenguaje de programación, siendo un primer ejercicio típico considerado fundamental desde el punto de vista didáctico.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+lenguaje de programación, siendo un primer ejercicio típico considerado fundamental desde el punto de vista didáctico. <a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:2">
 <p>En todos los elementos de Java vamos a ver que estos reciben nombres en inglés. Junto a cada tipo vamos a poner su
-traducción en castellano para entenderlos, pero cuando los utilicemos siempre tendrá que ser con su nombre inglés.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+traducción en castellano para entenderlos, pero cuando los utilicemos siempre tendrá que ser con su nombre inglés. <a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 </ol>
 </div>
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
+</article>
+</div>
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
-        </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+</div>
+<button class="md-top md-icon" data-md-component="top" hidden="" type="button">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
   Volver al principio
 </button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
-  
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-    
-    
-      
-      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.footnote.tooltips", "navigation.top", "navigation.path", "navigation.indexes"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
-      
-    
-  </body>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy", "content.code.select", "content.code.annotate", "content.footnote.tooltips", "navigation.top", "navigation.path", "navigation.indexes"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+<script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+</body>
 </html>
