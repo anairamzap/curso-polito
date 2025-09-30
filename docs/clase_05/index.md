@@ -45,7 +45,6 @@ System.out.println("Ingrese su nombre: ");
 String miNombre = ingreso.next();
 System.out.println("Hola ¿cómo estás? " + miNombre);
 ```
-
 Cuando lo ejecutamos, la consola muestra:
 
 ***Ingrese su nombre:***
@@ -53,7 +52,6 @@ Cuando lo ejecutamos, la consola muestra:
 El programa se detiene y espera que el usuario escriba un valor y presione Enter.
 
 Cuando lo hacíamos y apretábamos enter
-
 
 El flujo continúa:
 
@@ -63,16 +61,13 @@ Juan
 
 Hola ¿cómo estás? Juan
 
-
 Esto nos enseña que un programa no siempre avanza de manera automática: a veces depende de datos externos o 
 de condiciones.
-
 
 Por lo tanto, ya podemos deducir que un programa no siempre sigue un único camino. A veces necesita 
 **tomar decisiones** o **esperar una intervención externa**.
 
 Las **estructuras de control** son justamente las que permiten al programa **elegir qué camino tomar**.
-
 
 ## Estructuras condicionales
 Tomemos un ejemplo de la vida real:
@@ -93,7 +88,6 @@ Sino
 
 	salgo sin paraguas.
 ```
-
 Si analizamos lo que escribimos arriba tenemos 
 
 1. →  “Si” Es la declaración inicial de la condición.
@@ -120,7 +114,6 @@ if (llueve) {
     System.out.println("Salgo sin paraguas");
 }
 ```
-
 Cuando lo ejecutamos nos va a mostrar por consola:
 
 ***→ Salgo con paraguas***
@@ -140,7 +133,6 @@ if (llueve) {
 Al ejecutar el programa vemos por consola:
 
 ***→ Salgo sin paraguas***
-
 
 👉 Acá conviene entender bien el concepto de que evalúa que se cumpla la condición.
 
@@ -169,7 +161,6 @@ if (!estado) {
     System.out.println("Salgo sin paraguas");
 }
 ```
-
 En este caso, estado es true, pero !estado significa “NO verdadero”, es decir, false.
 
 Por lo tanto, el programa muestra:
