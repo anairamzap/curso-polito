@@ -16,10 +16,10 @@ nav:
   - "Clase 03: Variables II":
       - clase_03/index.md
       - Ejercicios: clase_03/ejercicios.md
-  - "Clase 04: Estructuras de control":
+  - "Clase 04: Arrays":
     - clase_04/index.md
     - Ejercicios: clase_04/ejercicios.md
-  - "Clase 05: Funciones":
+  - "Clase 05: Estructuras de control":
     - clase_05/index.md
     - Ejercicios: clase_05/ejercicios.md
   - "Clase 06: Funciones II":
