@@ -1,47 +1,117 @@
 ---
 icon: material/pencil
 ---
-# Ejercicios Inciales
 
-ScanEjercicios de práctica: if – else
-1. Mayoría de edad<br>
-Pedir al usuario su edad e indicar si es mayor de edad (18 o más) o menor de edad.<br><br>
-2. Número positivo o negativo<br>
-Leer un número entero y decir si es positivo, negativo o cero.<br><br>
-3. Par o impar<br>
-Pedir un número entero e indicar si es par o impar.<br><br>
-4. Descuento en tienda<br>
-Ingresar el precio de un producto.<br>
-    • Si el precio es mayor a 1000, aplicar un 10% de descuento.<br>
-    • Si no, dejar el precio igual.<br>
-Mostrar el precio final.<br><br>
-5. Nota de examen<br>
-Pedir una nota (0 a 10).<br>
-    • Si es 7 o más → Aprobado.<br>
-    • Si es menor → Desaprobado.<br><br>
-6. Comparar dos números<br>
-Ingresar dos números enteros y mostrar cuál es el mayor.<br>
-(Si son iguales, mostrar un mensaje especial).<br><br>
-7. Acceso a una página web<br>
-Pedir usuario y contraseña (simulados con variables).<br>
-    • Si coinciden con los valores almacenados en el programa (ej: usuario = "admin", contraseña = "1234"), 
-mostrar “Acceso permitido”.<br>
-    • Si no, mostrar “Acceso denegado”.<br><br>
-8. Determinar estación del año<br>
-Pedir el número de mes (1–12).<br>
-    • Si está entre 12, 1, 2 → Verano<br>
-    • Si está entre 3, 4, 5 → Otoño<br>
-    • Si está entre 6, 7, 8 → Invierno<br>
-    • Si está entre 9, 10, 11 → Primavera<br>
-(Podés usar if – else if para este problema)<br><br>
-9. Descuento por edad<br>
-Pedir la edad de una persona:<br>
-    • Menores de 12 → Entrada gratis.<br>
-    • Entre 12 y 17 → 50% de descuento.<br>
-    • 18 o más → Paga completo.<br><br>
-10. Semáforo<br>
-Pedir el color del semáforo (texto: “rojo”, “amarillo” o “verde”).<br>
-    • Si es “rojo” → “Detenerse”<br>
-    • Si es “amarillo” → “Precaución”<br>
-    • Si es “verde” → “Avanzar”<br<
-    • Si es otro valor → “Color no válido”<br>
+# Ejercicios iniciales
+En esta clase vimos estructuras de control **condicionales**. Y aprendimos a escribir
+[expresiones](../clase_02/index.md/#expresiones) con las siguientes estructuras
+
+**Condición simple** (`if`)
+```java
+if (cond) {
+    // Pasará algo si la condición (cond) se cumple.
+}
+```
+**Condición compuesta** (`if` y `else`)
+
+```java
+if (cond) {
+    // Pasará algo si la condición (cond) se cumple.
+} else {
+   // Pasará otra cosa si la condición NO se cumple.
+}
+```
+**Condición múltiple** (`if`, `else if` y `else`)
+
+```java
+if (cond) {
+    // Pasará algo si la condición (cond) se cumple.
+} else if (cond2) {
+   // Pasará algo si la otra condición (cond2) se cumple.
+} else {
+   // Pasará otra cosa si ninguna de las condiciones anteriores se cumple.
+}
+```
+## Ejercicios con condicionales y clase Scanner
+
+### Mayoría de edad
+Pedir al usuario su edad e indicar si es mayor de edad (18 o más) o menor de edad.
+
+### Número positivo o negativo
+Leer un número entero y mostrar un mensaje indicando si es positivo, negativo o cero.
+
+### Par o impar.
+Pedir el ingreso de un número entero y mostrar un mensaje indicando si el número es par o impar.
+
+### Descuento en tienda
+Pedir que se ingrese el precio de un producto y mostrar un mensaje con el descuento que se aplicará y el precio
+final.
+
+- Si el precio es mayor a 1000, se aplicará un 10% de descuento.
+- Si no, no se aplica descuento.
+
+### Nota de examen
+Pedir que se ingrese una nota (números enteros del 0 al 10) y mostrar un mensaje que indique si se aprobó o no.
+
+- Si la nota es 7 o más → Aprobado.
+- Si la nota es menor → Desaprobado.
+
+### Comparar dos números
+Ingresar dos números enteros y mostrar cuál es el mayor. Si son iguales, mostrar un mensaje especial.
+
+### (simular) acceso a una página web
+1. Declarar dos variables de tipo String para `usuario` y `clave` y asignarles un valor.
+2. Pedir que se ingresen los datos para "usuario" y "clave"
+3. Si los valores ingresados coinciden con los declarados, mostrar un mensaje de "Acceso permitido"
+4. Si no coinciden mostrar "Ingreso denegado"
+
+### Detectar la estación del año usando el mes.
+Pedir que se ingrese el número del mes (1–12) y mostrar un mensaje que diga la estación del año que corresponde a
+ese mes.
+
+Usar una estructura de control con `else if()`:
+```
+if(cond1)
+else if(cond2)
+else if(cond3)
+// etc...
+```
+
+Para saber que estación mostrar, podés ayudarte con esta lista:
+
+- Los meses de diciembre, enero y febrero → verano.
+- Los meses de marzo, abril y mayo → otoño.
+- Para junio, julio y agosto → invierno.
+- Y finalmente: septiembre, octubre y noviembre → primavera.
+
+### Descuento por edad
+Pedir la edad de una persona y mostrar un mensaje con el descuento que se aplicará:
+
+- Menores de 12 → Entrada gratis.
+- Entre 12 y 17 → 50% de descuento.
+- 18 o más → Paga completo.
+
+### Semáforo
+Pedir el color del semáforo (texto/String: "rojo", "amarillo" o "verde") y mostrar un mensaje con la acción que
+se deberá seguir.
+
+- Si el color es "rojo" → La acción será "Detenerse".
+- Si es "amarillo" → "Precaución"
+- Si es "verde" → "Avanzar"
+- Si es otro valor → "Color no válido"
+
+## Acertar la posición :dart:
+Ejercicio con condicionales, clase Scanner y vectores bidimensionales para integrar lo que vimos la clase
+anterior (vectores) con condicionales.
+
+1. Declarar un vector bidimensional (4x4) y asignarle valores a cada posición siguiendo la siguiente imagen
+   
+   ![biblioteca](../images/biblioteca_4x4.jpg){ width="250" }
+/// caption
+Una biblioteca de 4 estantes y 4 'columnas'.
+///
+2. Usando la clase Scanner, preguntar qué valor tendrá una posición. Por ejemplo, "¿Qué valor tiene nuestra
+   biblioteca en la posición [0][0]?".
+3. Si el valor ingresado coincide con el valor del vector, mostrar un mensaje de coincidencia. Si no coincide
+   mostrar un mensaje de "pifie" y el valor correcto.
+4. Repetir el último paso unas 3 o 4 veces, con distintas posiciones.
