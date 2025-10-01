@@ -95,10 +95,10 @@ Pedir la edad de una persona y mostrar un mensaje con el descuento que se aplica
 Pedir el color del semáforo (texto/String: "rojo", "amarillo" o "verde") y mostrar un mensaje con la acción que
 se deberá seguir.
 
-- Si el color es "rojo" → La acción será "Detenerse".
-- Si es "amarillo" → "Precaución"
-- Si es "verde" → "Avanzar"
-- Si es otro valor → "Color no válido"
+- Si el color es "rojo" → La acción será "¡Frená!".
+- Si es "amarillo" → "Ojo..."
+- Si es "verde" → "Dale nomás."
+- Si es otro valor → "Mhhh, en esta ciudad no tenemos semáforos con ese color."
 
 ## Acertar la posición :dart:
 Ejercicio con condicionales, clase Scanner y vectores bidimensionales para integrar lo que vimos la clase
