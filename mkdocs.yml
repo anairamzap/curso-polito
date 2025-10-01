@@ -106,7 +106,7 @@ plugins:
       toc_title: "Índice"
       heading_shift: true
       toc_level: 3
-      ordered_chapter_level: 3
+      ordered_chapter_level: 1
       two_columns_level: 0
       render_js: false
       verbose: false
